@@ -1,0 +1,20 @@
+barista
+
+Copyright 2020 Optum
+
+Project Description:
+====================
+Project Barista is a developer focused, cloud native, pure open source solution for open source license and vulnerability management.
+
+Contributors:
+@vsurge - application architect and primary developer
+@rolinge - infrastructure as code architect and our jenkins/docker guru
+@pkn4645 - project owner
+@integral-llc - developer
+@sbero - developer
+@mdadamio - developer
+@mambourn - developer
+@psinha25 - developer
+@woodrbe - developer
+@amyschoen - developer and our git/github guru
+@egb2016 - security consultant
