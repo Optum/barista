@@ -1,0 +1,45 @@
+{
+  "rulesDirectory": [
+    "node_modules/tslint-lines-between-class-members"
+  ],
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-etc"
+  ],
+  "jsRules": {
+    "no-unused-expression": true
+  },
+  "rules": {
+    "quotemark": [true, "single"],
+    "member-access": [false],
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "groups": [
+          "^@nestjs/testing"
+        ]
+      }
+    ],
+    "max-line-length": [true, 150],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+          "static-method",
+          "instance-method"
+        ],
+        "alphabetize": true
+      }
+    ],
+    "interface-name": [false],
+    "arrow-parens": false,
+    "object-literal-sort-keys": false,
+    "max-classes-per-file": [false, 1],
+    "no-unused-declaration": true,
+    "lines-between-class-members": [true, 1]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "preserveSymlinks": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@app/*": ["src/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "exclude": ["node_modules", "../../barista-api", "tools"]
+}
