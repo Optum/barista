@@ -31,6 +31,11 @@ Barista allows a developer to set up their project for scanning from any Git com
 
   Start with our [developer documentation](./doc/README.md).
 
+  ## Project Credits
+
+  Please see [our original project team](./doc/barista-project-credits.md).
+
+
 
 ## Sample Screen Shots
 
