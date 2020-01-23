@@ -27,6 +27,10 @@ Barista allows a developer to set up their project for scanning from any Git com
   - ![alt text](./doc/images/barista-yellow-warning.png) Warning
   - ![alt text](./doc/images/barista-red-stop.png) Disapproved
 
+  ## Join our growing community!
+
+  Start with our [developer documentation](./doc/README.md).
+
 
 ## Sample Screen Shots
 
@@ -44,7 +48,3 @@ Barista allows a developer to set up their project for scanning from any Git com
 
 ### Project Obligations
 ![alt text](./doc/images/barista-project-obligations.png)
-
-## Join our growing community!
-
-Start with our [developer documentation](./doc/README.md).
