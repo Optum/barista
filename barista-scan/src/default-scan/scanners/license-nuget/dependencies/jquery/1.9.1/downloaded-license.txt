@@ -1,0 +1,122 @@
+ * jQuery [https://jquery.com/]
+ * jQuery UI [https://jqueryui.com/]
+ * jQuery Mobile [https://jquerymobile.com/]
+ * Sizzle [https://sizzlejs.com/]
+ * QUnit [https://qunitjs.com/]
+
+ * Plugins [https://plugins.jquery.com/]
+ * Contribute [https://contribute.jquery.org/] * CLA [https://js.foundation/CLA]
+    * Style Guides
+      [https://contribute.jquery.org/style-guide/]
+    * Bug Triage
+      [https://contribute.jquery.org/triage/]
+    * Code
+      [https://contribute.jquery.org/code/]
+    * Documentation
+      [https://contribute.jquery.org/documentation/]
+    * Web Sites
+      [https://contribute.jquery.org/web-sites/]
+   
+   
+ * Events [https://js.foundation/events]
+   
+ * Support [https://jquery.org/support/] * Learning Center
+      [https://learn.jquery.com/]
+    * IRC/Chat [https://irc.jquery.org/]
+    * Forums [https://forum.jquery.com/]
+    * Stack Overflow
+      [https://stackoverflow.com/tags/jquery/info]
+    * Commercial Support
+      [https://jquery.org/support/]
+   
+   
+ * JS Foundation [https://js.foundation/] * Join
+      [https://js.foundation/about/join]
+    * Members
+      [https://js.foundation/about/members]
+    * Leadership
+      [https://js.foundation/about/leadership]
+    * Conduct
+      [https://js.foundation/community/code-of-conduct]
+    * Donate
+      [https://js.foundation/about/donate]
+   
+   
+
+JQUERY FOUNDATION [/]
+Support the JS Foundation [/jquery-wp-content/themes/jquery/content/donate.png]
+[https://js.foundation/about/donate] * Home [https://jquery.org/]
+ * Projects [https://jquery.org/projects/]
+ * Join [https://jquery.org/join/]
+ * Members [https://jquery.org/members/]
+ * Support [https://jquery.org/support/]
+ * Team [https://jquery.org/team/]
+ * Conduct [https://jquery.org/conduct/]
+ * Meetings [https://meetings.jquery.org/]
+ * History [https://jquery.org/history/]
+ * Brand Guide [https://brand.jquery.org/]
+ * Donate [https://jquery.org/donate/]
+
+searchSearch jQuery FoundationLICENSE
+Note: For the purposes of this document, the term "Project" will refer to any JS
+Foundation [https://js.foundation] project using the MIT license AND referencing
+this document in the header of the distributed Project code or Project website
+source code.
+
+LINK SOURCE CODE
+Projects referencing this document are released under the terms of the MIT
+license [https://tldrlegal.com/license/mit-license].
+
+The MIT License is simple and easy to understand and it places almost no
+restrictions on what you can do with the Project.
+
+You are free to use the Project in any other project (even commercial projects)
+as long as the copyright header is left intact.
+
+LINK SAMPLE CODE
+All demos and examples, whether in a Project's repository or displayed on a
+Project site, are released under the terms of the license as specified in the
+relevant repository. Many Projects choose to release their sample code under the
+terms of CC0 [https://tldrlegal.com/l/cc0-1.0].
+
+CC0 is even more permissive than the MIT license, allowing you to use the code
+in any manner you want, without any copyright headers, notices, or other
+attribution.
+
+LINK WEB SITES
+The content on a Project web site referencing this document in its header is
+released under the terms of the license specified in the website's repository or
+if not specified, under the MIT license
+[https://tldrlegal.com/license/mit-license].
+
+The design, layout, and look-and-feel of JS Foundation project web sites are not
+licensed for use and may not be used on any site, personal or commercial,
+without prior written consent from the JS Foundation.
+
+For further information regarding JS Foundation licensing and intellectual
+property, please review the JS Foundation IP Policy
+[https://js.foundation/pdf/ip-policy.pdf].
+
+BOOKS
+ * Learning jQuery 4th Edition by Karl Swedberg and Jonathan Chaffer
+   [//jquery.org/jquery-wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg]
+   Learning jQuery Fourth EditionKarl Swedberg and Jonathan Chaffer
+   [https://www.packtpub.com/web-development/learning-jquery-fourth-edition]
+ * jQuery in Action by Bear Bibeault, Yehuda Katz, and Aurelio De Rosa
+   [//jquery.org/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg]
+   jQuery in ActionBear Bibeault, Yehuda Katz, and Aurelio De Rosa
+   [https://www.manning.com/books/jquery-in-action-third-edition]
+ * jQuery Succinctly by Cody Lindley
+   [//jquery.org/jquery-wp-content/themes/jquery/content/books/jquery-succinctly.jpg]
+   jQuery SuccinctlyCody Lindley [https://www.syncfusion.com/ebooks/jquery]
+
+ * Learning Center [https://learn.jquery.com/]
+ * Forum [https://forum.jquery.com/]
+ * API [https://api.jquery.com/]
+ * Twitter [https://twitter.com/jquery]
+ * IRC [https://irc.jquery.org/]
+ * GitHub [https://github.com/jquery]
+
+Copyright 2019 The jQuery Foundation [https://jquery.org/team/].jQuery License
+[https://jquery.org/license/]Web hosting by Digital Ocean
+[https://www.digitalocean.com] | CDN by StackPath [https://www.stackpath.com]

@@ -1,0 +1,89 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box {
+
+}
+
+.licenses-filter-field {
+
+}
+
+.selected-license-container {
+  display: flex;
+  flex-direction: row;
+
+  .selected-license {
+    padding: 20px 20px 20px 10px;
+    font-size: 125%;
+    border: solid gray 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.selections-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+
+  .deployment-type-container {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .select {
+      padding-bottom: 10px;
+    }
+  }
+
+  .status-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .select {
+      padding-bottom: 10px;
+    }
+  }
+
+  .add-exception-to-license-container {
+    padding-top: 103px;
+  }
+}
+
+.exceptions-container {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: red;
+  }
+}
+
+button.add-exceptions {
+  background: red;
+  color: white;
+}
+
+button.remove-exception {
+  background: red;
+  color: white;
+}
+
+
+.full-width {
+  width: 100%;
+}

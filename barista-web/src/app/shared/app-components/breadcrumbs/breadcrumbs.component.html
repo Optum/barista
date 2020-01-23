@@ -1,0 +1,10 @@
+<div class="breadcrumbs">
+  <div *ngFor="let breadcrumb of breadcrumbs; index as i">
+    <div *ngIf="i === breadcrumbs.length - 1 && !isLastSelectable">{{ breadcrumb.title }}</div>
+    <a *ngIf="i < breadcrumbs.length - 1 || isLastSelectable" [routerLink]="breadcrumb.url" [queryParams]="breadcrumb.params">{{ breadcrumb.title }}</a>
+
+    <div *ngIf="i < breadcrumbs.length - 1">
+      <mat-icon>chevron_right</mat-icon>
+    </div>
+  </div>
+</div>

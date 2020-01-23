@@ -1,0 +1,5 @@
+npm-debug.log
+barista-scan
+.idea
+node_modules
+.env.development.local

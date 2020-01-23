@@ -1,0 +1,14 @@
+<mat-card class="output-format-type-details" fxFill >
+    <mat-card-header>
+        <mat-card-title>
+        Output Format Type
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+        <form [formGroup]="form" (ngSubmit)="submit()" >
+        <formly-form type="submit" [model]="outputFormatType" [fields]="fields" [options]="options" [form]="form"></formly-form>
+        <button  type="submit" mat-button color="primary" *ngIf="!newOutputFormatType">Update</button> 
+        <button mat-button color="primary" *ngIf="newOutputFormatType">Create</button>
+        </form>
+    </mat-card-content>
+</mat-card>

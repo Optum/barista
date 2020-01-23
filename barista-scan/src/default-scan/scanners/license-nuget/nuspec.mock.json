@@ -1,0 +1,105 @@
+[
+  {
+    "id": "jQuery",
+    "version": "1.9.1",
+    "title": "jQuery",
+    "authors": "jQuery Foundation, Inc.",
+    "owners": "jQuery Foundation, Inc.",
+    "licenseUrl": "http://jquery.org/license",
+    "projectUrl": "http://jquery.com/",
+    "requireLicenseAcceptance": "false",
+    "description": "jQuery is a new kind of JavaScript Library.\n        jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript.\n        NOTE: This package is maintained on behalf of the library owners by the NuGet Community Packages project at http://nugetpackages.codeplex.com/",
+    "language": "en-US",
+    "tags": "jQuery",
+    "dir": "/Users/vincilbishop/Documents/Code/Surge/UHG/UHG-Code/barista/barista-scan/src/default-scan/scanners/license-nuget/dependencies/jquery/1.9.1"
+  },
+  {
+    "$": {
+      "minClientVersion": "2.12"
+    },
+    "id": "NUnit",
+    "version": "3.12.0",
+    "title": "NUnit",
+    "authors": "Charlie Poole, Rob Prouse",
+    "owners": "Charlie Poole, Rob Prouse",
+    "requireLicenseAcceptance": "false",
+    "license": {
+      "_": "LICENSE.txt",
+      "$": {
+        "type": "file"
+      }
+    },
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "projectUrl": "https://nunit.org/",
+    "iconUrl": "https://cdn.rawgit.com/nunit/resources/master/images/icon/nunit_256.png",
+    "description": "NUnit features a fluent assert syntax, parameterized, generic and theory tests and is user-extensible.\r\n\r\nThis package includes the NUnit 3 framework assembly, which is referenced by your tests. You will need to install version 3 of the nunit3-console program or a third-party runner that supports NUnit 3 in order to execute tests. Runners intended for use with NUnit 2.x will not run NUnit 3 tests correctly.\r\n\r\nSupported platforms:\r\n- .NET Framework 3.5+\r\n- .NET Standard 1.4+\r\n- .NET Core",
+    "summary": "NUnit is a unit-testing framework for all .NET languages with a strong TDD focus.",
+    "releaseNotes": "This package includes the NUnit 3 framework assembly, which is referenced by your tests. You will need to install version 3 of the nunit3-console program or a third-party runner that supports NUnit 3 in order to execute tests. Runners intended for use with NUnit 2.x will not run NUnit 3 tests correctly.",
+    "copyright": "Copyright (c) 2019 Charlie Poole, Rob Prouse",
+    "language": "en-US",
+    "tags": "nunit test testing tdd framework fluent assert theory plugin addin",
+    "repository": {
+      "$": {
+        "type": "git",
+        "url": "https://github.com/nunit/nunit"
+      }
+    },
+    "dependencies": {
+      "group": [
+        {
+          "$": {
+            "targetFramework": ".NETFramework3.5"
+          }
+        },
+        {
+          "$": {
+            "targetFramework": ".NETFramework4.0"
+          }
+        },
+        {
+          "$": {
+            "targetFramework": ".NETFramework4.5"
+          }
+        },
+        {
+          "$": {
+            "targetFramework": ".NETStandard1.4"
+          },
+          "dependency": [
+            {
+              "$": {
+                "id": "NETStandard.Library",
+                "version": "1.6.1"
+              }
+            },
+            {
+              "$": {
+                "id": "System.ComponentModel.TypeConverter",
+                "version": "4.3.0"
+              }
+            },
+            {
+              "$": {
+                "id": "System.Reflection.TypeExtensions",
+                "version": "4.4.0",
+                "exclude": "compile"
+              }
+            }
+          ]
+        },
+        {
+          "$": {
+            "targetFramework": ".NETStandard2.0"
+          },
+          "dependency": {
+            "$": {
+              "id": "NETStandard.Library",
+              "version": "2.0.0"
+            }
+          }
+        }
+      ]
+    },
+    "dir": "/Users/vincilbishop/Documents/Code/Surge/UHG/UHG-Code/barista/barista-scan/src/default-scan/scanners/license-nuget/dependencies/nunit/3.12.0"
+  }
+]

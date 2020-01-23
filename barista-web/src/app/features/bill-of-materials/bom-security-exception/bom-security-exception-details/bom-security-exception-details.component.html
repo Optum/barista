@@ -1,0 +1,51 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      <h1 mat-dialog-title>
+        <span *ngIf="isNewRecord">{{packageName}} - New Exception</span>
+        <span *ngIf="!isNewRecord">{{packageName}} - Update Exception</span>
+      </h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div mat-dialog-content>
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div fxLayout="column">
+          <mat-form-field class="field top-margin">
+            <input matInput
+                   placeholder="CVE-XXXX-XXXXX"
+                   [(ngModel)]="cveId"
+                   name="cveId" [disabled]="isBusy">
+          </mat-form-field>
+          <mat-form-field class="field" >
+            <mat-select placeholder="Status"
+                        [(ngModel)]="projectScanStatusType"
+                        required
+                        name="projectScanStatusType"
+                        [compareWith]="compareLookupModels">
+              <mat-option *ngFor="let status of projectScanStatusTypes$ | async" [value]="status">
+                {{status.description}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="field top-margin">
+            <textarea matInput placeholder="Notes"
+                      rows="5" required [disabled]="isBusy"
+                      [(ngModel)]="notes"
+                      name="notes"></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button class="mat-warn" (click)="onCancel()" [disabled]="isBusy">Cancel</button>
+      <button mat-button class="mat-warn" *ngIf="!isNewRecord" (click)="onDelete()">Delete</button>
+      <button type="submit" mat-button color="primary" *ngIf="!isNewRecord" (click)="onSubmit()"
+              [disabled]="!form.valid || isBusy" cdkFocusInitial>Update
+      </button>
+      <button mat-button class="mat-primary" *ngIf="isNewRecord" (click)="onSubmit()"
+              [disabled]="!form.valid || isBusy" cdkFocusInitial>Create
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,14 @@
+<mat-card class="obligation-details" fxFill >
+    <mat-card-header>
+        <mat-card-title>
+        Obligation
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+        <form [formGroup]="form" (ngSubmit)="submit()">
+        <formly-form type="submit" [model]="obligation" [fields]="fields" [options]="options" [form]="form"></formly-form>
+        <button type="submit" mat-button color="primary" *ngIf="!newObligation">Update</button>
+        <button mat-button color="primary" *ngIf="newObligation">Create</button>
+        </form>
+    </mat-card-content>
+</mat-card>

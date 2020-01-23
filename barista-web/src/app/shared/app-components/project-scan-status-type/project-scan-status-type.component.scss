@@ -1,0 +1,24 @@
+
+@import 'variables';
+
+
+$red: mat-palette($mat-red);
+$yellow: mat-palette($mat-yellow);
+$green: mat-palette($mat-green);
+$grey: mat-palette($mat-grey);
+
+.red-icon {
+  color: mat-color($red, 700);
+}
+
+.yellow-icon {
+  color: mat-color($yellow, 700);
+}
+
+.green-icon {
+  color: mat-color($green);
+}
+
+.unknown-icon {
+  color: mat-color($grey);
+}

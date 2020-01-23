@@ -1,0 +1,31 @@
+<h1>License Distribution</h1>
+<div *ngIf="!licenseData || licenseData.length < 1">
+  <h2>No licenses data to display.</h2>
+</div>
+<app-pie-chart
+  *ngIf="licenseData"
+  [labels]="licenseLabels"
+  [data]="licenseData"
+  [legend]="true"
+></app-pie-chart>
+<hr/>
+<h1>Severity Distribution</h1>
+<div *ngIf="!severityData || severityData.length < 1">
+  <h2>No severity data to display.</h2>
+</div>
+<app-pie-chart
+  *ngIf="severityData"
+  [labels]="severityLabels"
+  [data]="severityData"
+  [legend]="true"
+></app-pie-chart>
+<h1>Vulnerability Distribution</h1>
+<div *ngIf="!vulnerabilityData || vulnerabilityData.length < 1">
+  <h2>No vulnerability data to display.</h2>
+</div>
+<app-pie-chart
+  *ngIf="vulnerabilityData"
+  [labels]="vulnerabilityLabels"
+  [data]="vulnerabilityData"
+  [legend]="true"
+></app-pie-chart>

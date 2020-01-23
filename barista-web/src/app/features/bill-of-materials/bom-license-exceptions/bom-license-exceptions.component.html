@@ -1,0 +1,18 @@
+<div fxLayout="column">
+  <app-datatable
+    #datatable
+    class="material striped"
+    [columns]="columns"
+    [columnMode]="'flex'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="50"
+    [selected]="selected"
+    [selectionType]="'single'"
+    (select)="onSelect($event)"
+    [getPageResults]="getPagedResults.bind(this)">
+  </app-datatable>
+  <ng-template #statusTemplate let-row="row" let-value="value" ngx-datatable-cell-template>
+    <app-project-scan-status-type [statusCode]="value"></app-project-scan-status-type>
+  </ng-template>
+</div>

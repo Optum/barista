@@ -1,0 +1,29 @@
+@import 'variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  width: 100%;
+
+  .mat-list-item.active {
+    background-color: mat-color($primary, 50);
+  }
+  &:hover,
+  &:focus {
+    >.mat-list-item:not(.expanded) {
+      background-color: mat-color($primary, 100) !important;
+    }
+  }
+}
+
+.mat-list-item {
+  padding: 8px 0;
+  width: auto;
+  display:flex;
+
+  // margin-right creates the gap between the icon and its corresponding name
+  .routeIcon {
+    margin-right: 22px;
+  }
+}

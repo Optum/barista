@@ -1,0 +1,39 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      <h1 mat-dialog-title>
+        <span *ngIf="!projectNote">{{project.name}} - New Note</span>
+        <span *ngIf="!!projectNote">{{project.name}} - Update Note</span>
+      </h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div mat-dialog-content>
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div fxLayout="column">
+          <mat-form-field class="field top-margin">
+            <textarea matInput placeholder="Notes"
+                      rows="5" required [disabled]="isBusy"
+                      [(ngModel)]="notes"
+                      name="notes"></textarea>
+          </mat-form-field>
+          <mat-form-field class="field top-margin" *ngIf="projectNote">
+            <textarea matInput placeholder="Notes Payload"
+                      rows="10" required [disabled]="true"
+                      [(ngModel)]="projectNote.notePayload"
+                      name="notesPayload"></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button class="mat-warn" (click)="onCancel()" [disabled]="isBusy">Cancel</button>
+      <button type="submit" mat-button color="primary" *ngIf="!!projectNote" (click)="onSubmit()"
+              [disabled]="!form.valid || isBusy" cdkFocusInitial>Update
+      </button>
+      <button mat-button class="mat-primary" *ngIf="!projectNote" (click)="onSubmit()"
+              [disabled]="!form.valid || isBusy" cdkFocusInitial>Create
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

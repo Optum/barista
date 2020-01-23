@@ -1,0 +1,38 @@
+
+<mat-card class="content-card" fxFill>
+  <mat-card-header class="content-header">
+    <mat-card-title>
+      Projects Scans
+<!--      <button class="add-button" [routerLink]="['/project/new']" mat-icon-button><mat-icon>add</mat-icon></button>-->
+      <button *ngIf="showScanButton" class="scan-btn" type="button" mat-button color="warn" (click)="scan()">
+        <mat-icon>add</mat-icon>
+        <span>Scan</span>
+      </button>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+    <app-datatable
+      class="material striped"
+      [columns]="columns"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="50"
+      [selected]="selected"
+      [selectionType]="'single'"
+      (select)="onSelect($event)"
+      [getPageResults]="getPageResults.bind(this)"
+      >
+    </app-datatable>
+
+    <ng-template #dateCellTmpl let-value="value" ngx-datatable-cell-template>
+      {{ value | date: 'long' }}
+    </ng-template>
+
+    <ng-template #scanProgressTmpl let-row="row" let-value="value" ngx-datatable-cell-template>
+      {{value}}
+      <span *ngIf="row.isScanning" class="scan-progress">Scanning... <i class="material-icons animate">loop</i></span>
+    </ng-template>
+
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,45 @@
+<div class="signin-page">
+  <mat-toolbar color="primary">
+    <span>Barista</span>
+    <span class="example-fill-remaining-space"></span>
+    <span class="align-center"></span>
+    <span class="example-spacer"></span>
+    <app-dynamic-menu
+      [menuBtnTitle]="'About'"
+      [menuItemConfigProp]="'aboutMenu'"
+    >
+    </app-dynamic-menu>
+    <app-dynamic-menu
+      [menuBtnTitle]="'Contact'"
+      [menuItemConfigProp]="'contactMenu'"
+    >
+    </app-dynamic-menu>
+  </mat-toolbar>
+
+  <form>
+    <mat-card class="signin-card">
+      <mat-card-title>
+        <mat-card-title><strong>Login</strong></mat-card-title>
+      </mat-card-title>
+
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+        </mat-form-field>
+        <br/>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button (click)="signin()" color="primary" type="submit">Login</button>
+      </mat-card-actions>
+
+      <mat-card-footer *ngIf="!!message">
+        <strong class="error">{{message}}</strong>
+      </mat-card-footer>
+    </mat-card>
+  </form>
+</div>

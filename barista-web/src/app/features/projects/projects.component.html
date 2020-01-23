@@ -1,0 +1,28 @@
+<mat-form-field class="projects-filter-field">
+  <input matInput type="text" #projectsSearchInput placeholder="Search Filter">
+  <button mat-button *ngIf="filter" matSuffix mat-icon-button aria-label="Clear" (click)="filter=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-divider></mat-divider>
+
+<app-datatable
+  #searchProjectsDataTable
+  class="material striped"
+  [columns]="columns"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [selected]="selected"
+  [selectionType]="'single'"
+  (select)="onSelect($event)"
+  [getPageResults]="getPagedResults.bind(this)">
+</app-datatable>
+<ng-template #nameTemplate let-row="row" let-value="value" ngx-datatable-cell-template>
+  {{getName(row)}}
+</ng-template>
+<ng-template #statusTemplate let-row="row" let-value="value" ngx-datatable-cell-template>
+  <app-project-status-normal [project]="{id: value}"></app-project-status-normal>
+</ng-template>

@@ -1,0 +1,16 @@
+<mat-card class="license-details" fxFill >
+    <mat-card-header>
+        <mat-card-title>
+        License
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+        <form [formGroup]="form" (ngSubmit)="submit()" >
+        <formly-form type="submit" [model]="license" [fields]="fields" [options]="options" [form]="form"></formly-form>
+        <button  type="submit" mat-button color="primary" *ngIf="!newLicense">Update</button> 
+        <!-- type="submit" for both buttons eventually -->
+        <!--  put in the form directive -->
+        <button mat-button color="primary" *ngIf="newLicense">Create</button>
+        </form>
+    </mat-card-content>
+</mat-card>

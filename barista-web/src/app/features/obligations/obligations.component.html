@@ -1,0 +1,27 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      Obligations
+    </mat-card-title>
+    <div fxLayout="row" fxLayoutAlign="end center" fxFlex="grow">
+      <button class="add-button" [routerLink]="['/obligation/new']" mat-icon-button *ngIf="!project">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+    <app-datatable
+      class="material striped"
+      [columns]="columns"
+      [columnMode]="'flex'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [selected]="selected"
+      [selectionType]="'single'"
+      (select)="onSelect($event)"
+      [getPageResults]="getPagedResults.bind(this)"
+      >
+    </app-datatable>
+  </mat-card-content>
+</mat-card>

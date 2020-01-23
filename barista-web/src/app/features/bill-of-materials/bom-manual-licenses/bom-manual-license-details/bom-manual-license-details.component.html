@@ -1,0 +1,64 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      <h1 mat-dialog-title>Manual License</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div mat-dialog-content>
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div fxLayout="column">
+          <mat-form-field class="field">
+            <input matInput
+                   placeholder="Product Name"
+                   required
+                   [(ngModel)]="manualLicense.productName"
+                   [disabled]="readonlyProductName"
+                   name="productName">
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput
+                   placeholder="Product Version"
+                   required
+                   [(ngModel)]="manualLicense.productVersion"
+                   [disabled]="readonlyProductVersion"
+                   name="productVersion">
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input matInput placeholder="Reference URL"
+                   required
+                   [(ngModel)]="manualLicense.referenceUrl"
+                   url
+                   pattern="https?://.+"
+                   name="referenceUrl">
+          </mat-form-field>
+          <mat-form-field class="field">
+            <mat-select placeholder="License"
+                        [(ngModel)]="manualLicense.license"
+                        required
+                        name="license"
+                        [compareWith]="compareLookupModels">
+              <mat-option *ngFor="let license of licenses$ | async" [value]="license">
+                {{license.name}} - {{license.desc}} - {{license.code}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="field">
+            <textarea matInput placeholder="Notes"
+                      rows="10"
+                      [(ngModel)]="manualLicense.notes"
+                      name="notes"></textarea>
+          </mat-form-field>
+        </div>
+
+      </form>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button class="mat-warn" (click)="onCancel()">Cancel</button>
+      <button mat-button class="mat-warn" *ngIf="!newLicense" (click)="onDelete()">Delete</button>
+      <button type="submit" mat-button color="primary" *ngIf="!newLicense" (click)="onSubmit()" [disabled]="!form.valid" cdkFocusInitial>Update</button>
+      <button mat-button class="mat-primary" *ngIf="newLicense" (click)="onSubmit()" [disabled]="!form.valid" cdkFocusInitial>Create</button>
+    </div>
+  </mat-card-content>
+</mat-card>

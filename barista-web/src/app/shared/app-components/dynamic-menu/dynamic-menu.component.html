@@ -1,0 +1,9 @@
+<span>
+  <mat-menu #menu="matMenu">
+    <a *ngFor="let menuItem of menuItems" [href]="menuItem.url" target="_blank" mat-menu-item>{{ menuItem.title }}</a>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu">
+    {{ menuBtnTitle }}
+  </button>
+</span>

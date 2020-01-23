@@ -1,0 +1,3852 @@
+{
+  "licenseSummary": {
+    "dependencies": {
+      "dependency": [
+        {
+          "groupId": "ant",
+          "artifactId": "ant-launcher",
+          "version": "1.6.2",
+          "licenses": "\n        \n      "
+        },
+        {
+          "groupId": "ant",
+          "artifactId": "ant",
+          "version": "1.6.2",
+          "licenses": "\n        \n      "
+        },
+        {
+          "groupId": "antlr",
+          "artifactId": "antlr",
+          "version": "2.7.7",
+          "licenses": {
+            "license": {
+              "name": "BSD License",
+              "url": "http://www.antlr.org/license.html",
+              "distribution": "repo",
+              "file": "bsd license - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "aopalliance",
+          "artifactId": "aopalliance",
+          "version": "1.0",
+          "licenses": {
+            "license": {
+              "name": "Public Domain"
+            }
+          }
+        },
+        {
+          "groupId": "cglib",
+          "artifactId": "cglib-nodep",
+          "version": "2.2",
+          "licenses": {
+            "license": {
+              "name": "ASF 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "ch.qos.logback",
+          "artifactId": "logback-classic",
+          "version": "1.1.11",
+          "licenses": {
+            "license": [
+              {
+                "name": "Eclipse Public License - v 1.0",
+                "url": "http://www.eclipse.org/legal/epl-v10.html",
+                "file": "eclipse public license - v 1.0 - epl-v10.html"
+              },
+              {
+                "name": "GNU Lesser General Public License",
+                "url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+                "file": "gnu lesser general public license - lgpl-2.1.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "ch.qos.logback",
+          "artifactId": "logback-core",
+          "version": "1.1.11",
+          "licenses": {
+            "license": [
+              {
+                "name": "Eclipse Public License - v 1.0",
+                "url": "http://www.eclipse.org/legal/epl-v10.html",
+                "file": "eclipse public license - v 1.0 - epl-v10.html"
+              },
+              {
+                "name": "GNU Lesser General Public License",
+                "url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+                "file": "gnu lesser general public license - lgpl-2.1.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "com.beust",
+          "artifactId": "jcommander",
+          "version": "1.35",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.dongxiguo",
+          "artifactId": "fastring_2.11",
+          "version": "0.2.4",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-annotations",
+          "version": "2.8.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-core",
+          "version": "2.8.11",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": "2.8.11.3",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.dataformat",
+          "artifactId": "jackson-dataformat-csv",
+          "version": "2.8.11",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.datatype",
+          "artifactId": "jackson-datatype-guava",
+          "version": "2.8.11",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.datatype",
+          "artifactId": "jackson-datatype-jsr310",
+          "version": "2.8.11",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.jaxrs",
+          "artifactId": "jackson-jaxrs-base",
+          "version": "2.8.11",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.jaxrs",
+          "artifactId": "jackson-jaxrs-json-provider",
+          "version": "2.8.11",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-jaxb-annotations",
+          "version": "2.8.11",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.fasterxml",
+          "artifactId": "classmate",
+          "version": "1.3.4",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.flipkart.zjsonpatch",
+          "artifactId": "zjsonpatch",
+          "version": "0.3.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.ben-manes.caffeine",
+          "artifactId": "caffeine",
+          "version": "2.3.5",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.jknack",
+          "artifactId": "handlebars",
+          "version": "4.0.6",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.jnr",
+          "artifactId": "jffi",
+          "version": "1.2.9",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.jnr",
+          "artifactId": "jnr-constants",
+          "version": "0.8.7",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.jnr",
+          "artifactId": "jnr-enxio",
+          "version": "0.9",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.jnr",
+          "artifactId": "jnr-ffi",
+          "version": "2.0.3",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.jnr",
+          "artifactId": "jnr-posix",
+          "version": "3.0.12",
+          "licenses": {
+            "license": [
+              {
+                "name": "Common Public License - v 1.0",
+                "url": "http://www-128.ibm.com/developerworks/library/os-cpl.html",
+                "distribution": "repo",
+                "file": "common public license - v 1.0 - os-cpl.html"
+              },
+              {
+                "name": "GNU General Public License Version 2",
+                "url": "http://www.gnu.org/copyleft/gpl.html",
+                "distribution": "repo",
+                "file": "gnu general public license version 2 - gpl.html"
+              },
+              {
+                "name": "GNU Lesser General Public License Version 2.1",
+                "url": "http://www.gnu.org/licenses/lgpl.html",
+                "distribution": "repo",
+                "file": "gnu lesser general public license version 2.1 - lgpl.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "com.github.jnr",
+          "artifactId": "jnr-unixsocket",
+          "version": "0.8",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.jnr",
+          "artifactId": "jnr-x86asm",
+          "version": "1.0.2",
+          "licenses": {
+            "license": {
+              "name": "MIT License",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "distribution": "repo",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.scopt",
+          "artifactId": "scopt_2.11",
+          "version": "3.5.0",
+          "licenses": {
+            "license": {
+              "name": "MIT License",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "distribution": "repo",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "com.github.tomakehurst",
+          "artifactId": "wiremock",
+          "version": "2.8.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/license/LICENSE-2.0.txt",
+              "distribution": "repo"
+            }
+          }
+        },
+        {
+          "groupId": "com.google.guava",
+          "artifactId": "guava",
+          "version": "18.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.google.guava",
+          "artifactId": "guava",
+          "version": "20.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.googlecode.javaewah",
+          "artifactId": "JavaEWAH",
+          "version": "0.5.6",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "com.jayway.jsonpath",
+          "artifactId": "json-path",
+          "version": "2.2.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.jcraft",
+          "artifactId": "jsch",
+          "version": "0.1.46",
+          "licenses": {
+            "license": {
+              "name": "Revised BSD",
+              "url": "http://www.jcraft.com/jsch/LICENSE.txt",
+              "file": "revised bsd - license.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.nulab-inc",
+          "artifactId": "zxcvbn",
+          "version": "1.2.5",
+          "licenses": {
+            "license": {
+              "name": "MIT License",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "com.softwaremill.quicklens",
+          "artifactId": "quicklens_2.11",
+          "version": "1.4.8",
+          "licenses": {
+            "license": {
+              "name": "Apache2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.spotify",
+          "artifactId": "docker-client",
+          "version": "4.0.8",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.spotify",
+          "artifactId": "docker-maven-plugin",
+          "version": "0.4.10",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.sun.istack",
+          "artifactId": "istack-commons-runtime",
+          "version": "3.0.5",
+          "licenses": {
+            "license": [
+              {
+                "name": "CDDL 1.1",
+                "url": "https://glassfish.java.net/public/CDDL+GPL_1_1.html",
+                "distribution": "repo",
+                "file": "cddl 1.1 - cddl+gpl_1_1.html"
+              },
+              {
+                "name": "GPL2 w/ CPE",
+                "url": "https://glassfish.java.net/public/CDDL+GPL_1_1.html",
+                "distribution": "repo",
+                "file": "cddl 1.1 - cddl+gpl_1_1.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "com.sun.xml.fastinfoset",
+          "artifactId": "FastInfoset",
+          "version": "1.2.13",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.opensource.org/licenses/apache2.0.php",
+              "file": "apache license, version 2.0 - apache2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "com.tdunning",
+          "artifactId": "t-digest",
+          "version": "3.1",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.thoughtworks.xstream",
+          "artifactId": "xstream",
+          "version": "1.4.7",
+          "licenses": {
+            "license": {
+              "name": "BSD style",
+              "url": "http://xstream.codehaus.org/license.html",
+              "distribution": "repo"
+            }
+          }
+        },
+        {
+          "groupId": "com.typesafe.akka",
+          "artifactId": "akka-actor_2.11",
+          "version": "2.4.12",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.typesafe.akka",
+          "artifactId": "akka-slf4j_2.11",
+          "version": "2.4.12",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.typesafe.netty",
+          "artifactId": "netty-reactive-streams",
+          "version": "1.0.8",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.typesafe.scala-logging",
+          "artifactId": "scala-logging_2.11",
+          "version": "3.5.0",
+          "licenses": {
+            "license": {
+              "name": "Apache 2.0 License",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "com.typesafe",
+          "artifactId": "config",
+          "version": "1.2.0",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.typesafe",
+          "artifactId": "config",
+          "version": "1.3.1",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "com.vaadin.external.google",
+          "artifactId": "android-json",
+          "version": "0.0.20131108.vaadin1",
+          "licenses": {
+            "license": {
+              "name": "Apache License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "commons-codec",
+          "artifactId": "commons-codec",
+          "version": "1.10",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "commons-io",
+          "artifactId": "commons-io",
+          "version": "2.6",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "commons-lang",
+          "artifactId": "commons-lang",
+          "version": "2.6",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "commons-pool",
+          "artifactId": "commons-pool",
+          "version": "1.6",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "dom4j",
+          "artifactId": "dom4j",
+          "version": "1.6.1",
+          "licenses": "\n        \n      "
+        },
+        {
+          "groupId": "io.advantageous.boon",
+          "artifactId": "boon-json",
+          "version": "0.6.6",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.advantageous.boon",
+          "artifactId": "boon-reflekt",
+          "version": "0.6.6",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling.highcharts",
+          "artifactId": "gatling-charts-highcharts",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Gatling Highcharts License",
+              "url": "https://raw.githubusercontent.com/gatling/gatling-highcharts/master/LICENSE",
+              "distribution": "repo",
+              "file": "gatling highcharts license - license.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-app",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-charts",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-commons",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-core",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-http",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-jdbc",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-jms",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-metrics",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-recorder",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "gatling-redis",
+          "version": "2.2.5",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.gatling",
+          "artifactId": "jsonpath_2.11",
+          "version": "0.6.8",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "io.jsonwebtoken",
+          "artifactId": "jjwt",
+          "version": "0.7.0",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.netty",
+          "artifactId": "netty-buffer",
+          "version": "4.0.44.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.netty",
+          "artifactId": "netty-codec-http",
+          "version": "4.0.44.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.netty",
+          "artifactId": "netty-codec",
+          "version": "4.0.44.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.netty",
+          "artifactId": "netty-common",
+          "version": "4.0.44.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.netty",
+          "artifactId": "netty-handler",
+          "version": "4.0.44.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.netty",
+          "artifactId": "netty-transport-native-epoll",
+          "version": "4.0.44.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "io.netty",
+          "artifactId": "netty-transport",
+          "version": "4.0.44.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "javax.activation",
+          "artifactId": "activation",
+          "version": "1.1.1",
+          "licenses": {
+            "license": {
+              "name": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0",
+              "url": "https://glassfish.dev.java.net/public/CDDLv1.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "javax.annotation",
+          "artifactId": "javax.annotation-api",
+          "version": "1.2",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html",
+              "distribution": "repo",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "javax.annotation",
+          "artifactId": "jsr250-api",
+          "version": "1.0",
+          "licenses": {
+            "license": {
+              "name": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0",
+              "url": "https://glassfish.dev.java.net/public/CDDLv1.0.html",
+              "distribution": "repo"
+            }
+          }
+        },
+        {
+          "groupId": "javax.enterprise",
+          "artifactId": "cdi-api",
+          "version": "1.0",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "javax.inject",
+          "artifactId": "javax.inject",
+          "version": "1",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "javax.servlet",
+          "artifactId": "javax.servlet-api",
+          "version": "3.1.0",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html",
+              "distribution": "repo",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "javax.transaction",
+          "artifactId": "javax.transaction-api",
+          "version": "1.2",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html",
+              "distribution": "repo",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "javax.transaction",
+          "artifactId": "javax.transaction-api",
+          "version": "1.3",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://github.com/javaee/javax.transaction/blob/master/LICENSE",
+              "distribution": "repo",
+              "file": "cddl + gplv2 with classpath exception - license.html",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "javax.validation",
+          "artifactId": "validation-api",
+          "version": "1.1.0.Final",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "javax.ws.rs",
+          "artifactId": "javax.ws.rs-api",
+          "version": "2.0.1",
+          "licenses": {
+            "license": [
+              {
+                "name": "CDDL 1.1",
+                "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+                "distribution": "repo",
+                "file": "cddl 1.1 - cddl+gpl_1_1.html"
+              },
+              {
+                "name": "GPL2 w/ CPE",
+                "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+                "distribution": "repo",
+                "file": "cddl 1.1 - cddl+gpl_1_1.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "javax.xml.bind",
+          "artifactId": "jaxb-api",
+          "version": "2.3.0",
+          "licenses": {
+            "license": [
+              {
+                "name": "CDDL 1.1",
+                "url": "https://oss.oracle.com/licenses/CDDL+GPL-1.1",
+                "distribution": "repo",
+                "file": "cddl 1.1 - cddl+gpl-1.1.txt"
+              },
+              {
+                "name": "GPL2 w/ CPE",
+                "url": "https://oss.oracle.com/licenses/CDDL+GPL-1.1",
+                "distribution": "repo",
+                "file": "cddl 1.1 - cddl+gpl-1.1.txt"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "junit",
+          "artifactId": "junit",
+          "version": "4.12",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "me.chrons",
+          "artifactId": "boopickle_2.11",
+          "version": "1.2.4",
+          "licenses": {
+            "license": {
+              "name": "MIT license",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "net.debasishg",
+          "artifactId": "redisclient_2.11",
+          "version": "3.2",
+          "licenses": {
+            "license": {
+              "name": "Apache 2.0 License",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "net.minidev",
+          "artifactId": "accessors-smart",
+          "version": "1.1",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt",
+              "comments": "All files under Apache 2"
+            }
+          }
+        },
+        {
+          "groupId": "net.minidev",
+          "artifactId": "json-smart",
+          "version": "2.2.1",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt",
+              "comments": "All files under Apache 2"
+            }
+          }
+        },
+        {
+          "groupId": "net.sf.jopt-simple",
+          "artifactId": "jopt-simple",
+          "version": "5.0.3",
+          "licenses": {
+            "license": {
+              "name": "The MIT License",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "distribution": "repo",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "net.sf.saxon",
+          "artifactId": "Saxon-HE",
+          "version": "9.7.0-10",
+          "licenses": {
+            "license": {
+              "name": "Mozilla Public License Version 2.0",
+              "url": "http://www.mozilla.org/MPL/2.0/",
+              "distribution": "repo",
+              "file": "mozilla public license version 2.0 - 2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "nz.net.ultraq.thymeleaf",
+          "artifactId": "thymeleaf-layout-dialect",
+          "version": "1.4.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "ognl",
+          "artifactId": "ognl",
+          "version": "3.0.8",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.antlr",
+          "artifactId": "antlr4-runtime",
+          "version": "4.5.1-1",
+          "licenses": {
+            "license": {
+              "name": "The BSD License",
+              "url": "http://www.antlr.org/license.html",
+              "distribution": "repo",
+              "file": "bsd license - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.commons",
+          "artifactId": "commons-collections4",
+          "version": "4.1",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.commons",
+          "artifactId": "commons-compress",
+          "version": "1.9",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.commons",
+          "artifactId": "commons-exec",
+          "version": "1.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.commons",
+          "artifactId": "commons-lang3",
+          "version": "3.4",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.commons",
+          "artifactId": "commons-lang3",
+          "version": "3.6",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.geronimo.specs",
+          "artifactId": "geronimo-jms_1.1_spec",
+          "version": "1.1.1",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.httpcomponents",
+          "artifactId": "httpclient",
+          "version": "4.5.6",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.httpcomponents",
+          "artifactId": "httpcore",
+          "version": "4.4.10",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-aether-provider",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-artifact",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-builder-support",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-core",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-model-builder",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-model",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-plugin-api",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-repository-metadata",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-settings-builder",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.maven",
+          "artifactId": "maven-settings",
+          "version": "3.3.3",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.tomcat.embed",
+          "artifactId": "tomcat-embed-core",
+          "version": "8.5.35",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.tomcat.embed",
+          "artifactId": "tomcat-embed-el",
+          "version": "8.5.35",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.tomcat.embed",
+          "artifactId": "tomcat-embed-websocket",
+          "version": "8.5.35",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.tomcat",
+          "artifactId": "tomcat-annotations-api",
+          "version": "8.5.35",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.tomcat",
+          "artifactId": "tomcat-jdbc",
+          "version": "8.5.35",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.apache.tomcat",
+          "artifactId": "tomcat-juli",
+          "version": "8.5.35",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.asciidoctor",
+          "artifactId": "asciidoctorj",
+          "version": "1.5.4",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.aspectj",
+          "artifactId": "aspectjweaver",
+          "version": "1.8.13",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License - v 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "2.6.0",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.asynchttpclient",
+          "artifactId": "async-http-client-netty-utils",
+          "version": "2.0.29",
+          "licenses": {
+            "license": {
+              "name": "Apache License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.asynchttpclient",
+          "artifactId": "async-http-client",
+          "version": "2.0.29",
+          "licenses": {
+            "license": {
+              "name": "Apache License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.asynchttpclient",
+          "artifactId": "netty-codec-dns",
+          "version": "2.0.29",
+          "licenses": {
+            "license": {
+              "name": "Apache License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.asynchttpclient",
+          "artifactId": "netty-resolver-dns",
+          "version": "2.0.29",
+          "licenses": {
+            "license": {
+              "name": "Apache License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.asynchttpclient",
+          "artifactId": "netty-resolver",
+          "version": "2.0.29",
+          "licenses": {
+            "license": {
+              "name": "Apache License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.bouncycastle",
+          "artifactId": "bcpkix-jdk15on",
+          "version": "1.52",
+          "licenses": {
+            "license": {
+              "name": "Bouncy Castle Licence",
+              "url": "http://www.bouncycastle.org/licence.html",
+              "distribution": "repo",
+              "file": "bouncy castle licence - licence.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.bouncycastle",
+          "artifactId": "bcpkix-jdk15on",
+          "version": "1.55",
+          "licenses": {
+            "license": {
+              "name": "Bouncy Castle Licence",
+              "url": "http://www.bouncycastle.org/licence.html",
+              "distribution": "repo",
+              "file": "bouncy castle licence - licence.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.bouncycastle",
+          "artifactId": "bcprov-jdk15on",
+          "version": "1.52",
+          "licenses": {
+            "license": {
+              "name": "Bouncy Castle Licence",
+              "url": "http://www.bouncycastle.org/licence.html",
+              "distribution": "repo",
+              "file": "bouncy castle licence - licence.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.bouncycastle",
+          "artifactId": "bcprov-jdk15on",
+          "version": "1.55",
+          "licenses": {
+            "license": {
+              "name": "Bouncy Castle Licence",
+              "url": "http://www.bouncycastle.org/licence.html",
+              "distribution": "repo",
+              "file": "bouncy castle licence - licence.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.codehaus.groovy",
+          "artifactId": "groovy",
+          "version": "2.4.15",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.codehaus.plexus",
+          "artifactId": "plexus-classworlds",
+          "version": "2.5.2",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.codehaus.plexus",
+          "artifactId": "plexus-component-annotations",
+          "version": "1.5.5",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.codehaus.plexus",
+          "artifactId": "plexus-interpolation",
+          "version": "1.21",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.codehaus.plexus",
+          "artifactId": "plexus-utils",
+          "version": "3.0.20",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.eclipse.aether",
+          "artifactId": "aether-api",
+          "version": "1.0.2.v20150114",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License, Version 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.eclipse.aether",
+          "artifactId": "aether-impl",
+          "version": "1.0.2.v20150114",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License, Version 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.eclipse.aether",
+          "artifactId": "aether-spi",
+          "version": "1.0.2.v20150114",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License, Version 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.eclipse.aether",
+          "artifactId": "aether-util",
+          "version": "1.0.2.v20150114",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License, Version 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-continuation",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-http",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-io",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-security",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-server",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-servlet",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-servlets",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-util",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-webapp",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-xml",
+          "version": "9.4.12.v20180830",
+          "licenses": {
+            "license": [
+              {
+                "name": "Apache Software License - Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0",
+                "file": "apache license, version 2.0 - license-2.0.txt"
+              },
+              {
+                "name": "Eclipse Public License - Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/epl-v10.php",
+                "file": "eclipse public license - version 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.eclipse.jgit",
+          "artifactId": "org.eclipse.jgit",
+          "version": "3.2.0.201312181205-r",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Distribution License (New BSD License)",
+              "comments": "All rights reserved.\n\n       Redistribution and use in source and binary forms, with or\n       without modification, are permitted provided that the following\n       conditions are met:\n\n       - Redistributions of source code must retain the above copyright\n         notice, this list of conditions and the following disclaimer.\n\n       - Redistributions in binary form must reproduce the above\n         copyright notice, this list of conditions and the following\n         disclaimer in the documentation and/or other materials provided\n         with the distribution.\n\n       - Neither the name of the Eclipse Foundation, Inc. nor the\n         names of its contributors may be used to endorse or promote\n         products derived from this software without specific prior\n         written permission.\n\n       THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND\n       CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES,\n       INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES\n       OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n       ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR\n       CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n       SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT\n       NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n       LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n       CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,\n       STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n       ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF\n       ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+            }
+          }
+        },
+        {
+          "groupId": "org.eclipse.sisu",
+          "artifactId": "org.eclipse.sisu.inject",
+          "version": "0.3.0",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License, Version 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.eclipse.sisu",
+          "artifactId": "org.eclipse.sisu.plexus",
+          "version": "0.3.0",
+          "licenses": {
+            "license": {
+              "name": "Eclipse Public License, Version 1.0",
+              "url": "http://www.eclipse.org/legal/epl-v10.html",
+              "distribution": "repo",
+              "file": "eclipse public license - v 1.0 - epl-v10.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.hk2.external",
+          "artifactId": "aopalliance-repackaged",
+          "version": "2.5.0-b32",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl + gplv2 with classpath exception - cddl+gpl_1_1.html",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.hk2.external",
+          "artifactId": "javax.inject",
+          "version": "2.5.0-b32",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl + gplv2 with classpath exception - cddl+gpl_1_1.html",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.hk2",
+          "artifactId": "hk2-api",
+          "version": "2.5.0-b32",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl + gplv2 with classpath exception - cddl+gpl_1_1.html",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.hk2",
+          "artifactId": "hk2-locator",
+          "version": "2.5.0-b32",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl + gplv2 with classpath exception - cddl+gpl_1_1.html",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.hk2",
+          "artifactId": "hk2-utils",
+          "version": "2.5.0-b32",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl + gplv2 with classpath exception - cddl+gpl_1_1.html",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.hk2",
+          "artifactId": "osgi-resource-locator",
+          "version": "1.0.1",
+          "licenses": {
+            "license": {
+              "name": "CDDL + GPLv2 with classpath exception",
+              "url": "https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html",
+              "distribution": "repo",
+              "comments": "A business-friendly OSS license"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jaxb",
+          "artifactId": "jaxb-core",
+          "version": "2.3.0",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jaxb",
+          "artifactId": "jaxb-runtime",
+          "version": "2.3.0",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jaxb",
+          "artifactId": "txw2",
+          "version": "2.3.0",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jersey.bundles.repackaged",
+          "artifactId": "jersey-guava",
+          "version": "2.25.1",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jersey.connectors",
+          "artifactId": "jersey-apache-connector",
+          "version": "2.19",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jersey.core",
+          "artifactId": "jersey-client",
+          "version": "2.25.1",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jersey.core",
+          "artifactId": "jersey-common",
+          "version": "2.25.1",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jersey.ext",
+          "artifactId": "jersey-entity-filtering",
+          "version": "2.25.1",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.glassfish.jersey.media",
+          "artifactId": "jersey-media-json-jackson",
+          "version": "2.25.1",
+          "licenses": {
+            "license": {
+              "name": "CDDL+GPL License",
+              "url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo",
+              "file": "cddl 1.1 - cddl+gpl_1_1.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.hamcrest",
+          "artifactId": "hamcrest-core",
+          "version": "1.3",
+          "licenses": {
+            "license": {
+              "name": "New BSD License",
+              "url": "http://www.opensource.org/licenses/bsd-license.php",
+              "distribution": "repo",
+              "file": "new bsd license - bsd-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.hamcrest",
+          "artifactId": "hamcrest-library",
+          "version": "1.3",
+          "licenses": {
+            "license": {
+              "name": "New BSD License",
+              "url": "http://www.opensource.org/licenses/bsd-license.php",
+              "distribution": "repo",
+              "file": "new bsd license - bsd-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.hdrhistogram",
+          "artifactId": "HdrHistogram",
+          "version": "2.1.9",
+          "licenses": {
+            "license": {
+              "name": "Public Domain, per Creative Commons CC0",
+              "url": "http://creativecommons.org/publicdomain/zero/1.0/",
+              "file": "public domain, per creative commons cc0 - 1.0.html",
+              "comments": "* This code was Written by Gil Tene of Azul Systems, and released to the\n                * public domain, as explained at http://creativecommons.org/publicdomain/zero/1.0/"
+            }
+          }
+        },
+        {
+          "groupId": "org.hibernate.common",
+          "artifactId": "hibernate-commons-annotations",
+          "version": "5.0.1.Final",
+          "licenses": {
+            "license": {
+              "name": "GNU Lesser General Public License",
+              "url": "http://www.gnu.org/licenses/lgpl-2.1.html",
+              "distribution": "repo",
+              "file": "gnu lesser general public license - lgpl-2.1.html",
+              "comments": "See discussion at http://hibernate.org/license for more details."
+            }
+          }
+        },
+        {
+          "groupId": "org.hibernate.javax.persistence",
+          "artifactId": "hibernate-jpa-2.1-api",
+          "version": "1.0.0.Final",
+          "licenses": {
+            "license": [
+              {
+                "name": "Eclipse Public License (EPL), Version 1.0",
+                "url": "http://www.eclipse.org/legal/epl-v10.html",
+                "distribution": "repo",
+                "file": "eclipse public license - v 1.0 - epl-v10.html"
+              },
+              {
+                "name": "Eclipse Distribution License (EDL), Version 1.0",
+                "url": "http://www.eclipse.org/org/documents/edl-v10.php",
+                "file": "eclipse distribution license (edl), version 1.0 - edl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.hibernate",
+          "artifactId": "hibernate-core",
+          "version": "5.0.12.Final",
+          "licenses": {
+            "license": {
+              "name": "GNU Lesser General Public License",
+              "url": "http://www.gnu.org/licenses/lgpl-2.1.html",
+              "distribution": "repo",
+              "file": "gnu lesser general public license - lgpl-2.1.html",
+              "comments": "See discussion at http://hibernate.org/license for more details."
+            }
+          }
+        },
+        {
+          "groupId": "org.hibernate",
+          "artifactId": "hibernate-entitymanager",
+          "version": "5.0.12.Final",
+          "licenses": {
+            "license": {
+              "name": "GNU Lesser General Public License",
+              "url": "http://www.gnu.org/licenses/lgpl-2.1.html",
+              "distribution": "repo",
+              "file": "gnu lesser general public license - lgpl-2.1.html",
+              "comments": "See discussion at http://hibernate.org/license for more details."
+            }
+          }
+        },
+        {
+          "groupId": "org.hibernate",
+          "artifactId": "hibernate-validator",
+          "version": "5.3.6.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.hsqldb",
+          "artifactId": "hsqldb",
+          "version": "2.3.4",
+          "licenses": {
+            "license": {
+              "name": "HSQLDB License, a BSD open source license",
+              "url": "http://hsqldb.org/web/hsqlLicense.html",
+              "distribution": "repo",
+              "file": "hsqldb license, a bsd open source license - hsqllicense.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.javassist",
+          "artifactId": "javassist",
+          "version": "3.21.0-GA",
+          "licenses": {
+            "license": [
+              {
+                "name": "MPL 1.1",
+                "url": "http://www.mozilla.org/MPL/MPL-1.1.html",
+                "file": "mpl 1.1 - mpl-1.1.html"
+              },
+              {
+                "name": "LGPL 2.1",
+                "url": "http://www.gnu.org/licenses/lgpl-2.1.html",
+                "file": "gnu lesser general public license - lgpl-2.1.html"
+              },
+              {
+                "name": "Apache License 2.0",
+                "url": "http://www.apache.org/licenses/",
+                "file": "apache license 2.0 - licenses.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.jboss.logging",
+          "artifactId": "jboss-logging",
+          "version": "3.3.2.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.jboss",
+          "artifactId": "jandex",
+          "version": "2.0.0.Final",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.jodd",
+          "artifactId": "jodd-core",
+          "version": "3.8.0",
+          "licenses": {
+            "license": {
+              "name": "The BSD 2-Clause License",
+              "url": "http://jodd.org/license.html",
+              "distribution": "repo",
+              "file": "the bsd 2-clause license - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.jodd",
+          "artifactId": "jodd-lagarto",
+          "version": "3.8.0",
+          "licenses": {
+            "license": {
+              "name": "The BSD 2-Clause License",
+              "url": "http://jodd.org/license.html",
+              "distribution": "repo",
+              "file": "the bsd 2-clause license - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.jodd",
+          "artifactId": "jodd-log",
+          "version": "3.8.0",
+          "licenses": {
+            "license": {
+              "name": "The BSD 2-Clause License",
+              "url": "http://jodd.org/license.html",
+              "distribution": "repo",
+              "file": "the bsd 2-clause license - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.jruby",
+          "artifactId": "jruby-complete",
+          "version": "1.7.21",
+          "licenses": {
+            "license": [
+              {
+                "name": "GPL 3",
+                "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html",
+                "file": "gpl 3 - gpl-3.0-standalone.html"
+              },
+              {
+                "name": "LGPL 3",
+                "url": "http://www.gnu.org/licenses/lgpl-3.0-standalone.html",
+                "file": "lgpl 3 - lgpl-3.0-standalone.html"
+              },
+              {
+                "name": "EPL",
+                "url": "http://www.eclipse.org/legal/epl-v10.html",
+                "file": "eclipse public license - v 1.0 - epl-v10.html"
+              }
+            ]
+          }
+        },
+        {
+          "groupId": "org.jsoup",
+          "artifactId": "jsoup",
+          "version": "1.11.3",
+          "licenses": {
+            "license": {
+              "name": "The MIT License",
+              "url": "https://jsoup.org/license",
+              "distribution": "repo",
+              "file": "the mit license - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.jvnet.staxex",
+          "artifactId": "stax-ex",
+          "version": "1.7.8",
+          "licenses": {
+            "license": {
+              "name": "Dual license consisting of the CDDL v1.1 and GPL v2",
+              "url": "https://glassfish.dev.java.net/public/CDDL+GPL_1_1.html",
+              "distribution": "repo"
+            }
+          }
+        },
+        {
+          "groupId": "org.mockito",
+          "artifactId": "mockito-core",
+          "version": "1.10.19",
+          "licenses": {
+            "license": {
+              "name": "The MIT License",
+              "url": "http://github.com/mockito/mockito/blob/master/LICENSE",
+              "distribution": "repo"
+            }
+          }
+        },
+        {
+          "groupId": "org.objenesis",
+          "artifactId": "objenesis",
+          "version": "2.1",
+          "licenses": {
+            "license": {
+              "name": "Apache 2",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.ow2.asm",
+          "artifactId": "asm-analysis",
+          "version": "5.0.3",
+          "licenses": {
+            "license": {
+              "name": "BSD",
+              "url": "http://asm.objectweb.org/license.html",
+              "file": "bsd - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.ow2.asm",
+          "artifactId": "asm-commons",
+          "version": "5.0.3",
+          "licenses": {
+            "license": {
+              "name": "BSD",
+              "url": "http://asm.objectweb.org/license.html",
+              "file": "bsd - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.ow2.asm",
+          "artifactId": "asm-tree",
+          "version": "5.0.3",
+          "licenses": {
+            "license": {
+              "name": "BSD",
+              "url": "http://asm.objectweb.org/license.html",
+              "file": "bsd - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.ow2.asm",
+          "artifactId": "asm-util",
+          "version": "5.0.3",
+          "licenses": {
+            "license": {
+              "name": "BSD",
+              "url": "http://asm.objectweb.org/license.html",
+              "file": "bsd - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.ow2.asm",
+          "artifactId": "asm",
+          "version": "5.0.3",
+          "licenses": {
+            "license": {
+              "name": "BSD",
+              "url": "http://asm.objectweb.org/license.html",
+              "file": "bsd - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.encoder",
+          "artifactId": "encoder",
+          "version": "1.2",
+          "licenses": {
+            "license": {
+              "name": "The BSD 3-Clause License",
+              "url": "http://www.opensource.org/licenses/BSD-3-Clause",
+              "distribution": "repo",
+              "file": "the bsd 3-clause license - bsd-3-clause.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "auth-bypass",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "bypass-restrictions",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "challenge",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "chrome-dev-tools",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "cia",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "client-side-filtering",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "cross-site-scripting",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "csrf",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "html-tampering",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "http-basics",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "http-proxies",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "idor",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "insecure-deserialization",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "insecure-login",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "jwt",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "missing-function-ac",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "password-reset",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "secure-passwords",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "sql-injection",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "ssrf",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "vulnerable-components",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "webgoat-introduction",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "webwolf-introduction",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat.lesson",
+          "artifactId": "xxe",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.owasp.webgoat",
+          "artifactId": "webgoat-container",
+          "version": "v8.0.0-SNAPSHOT",
+          "licenses": {
+            "license": {
+              "name": "GNU General Public License, version 2",
+              "url": "https://www.gnu.org/licenses/gpl-2.0.txt",
+              "file": "gnu general public license, version 2 - gpl-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.postgresql",
+          "artifactId": "postgresql",
+          "version": "42.2.2",
+          "licenses": {
+            "license": {
+              "name": "BSD-2-Clause",
+              "url": "https://jdbc.postgresql.org/about/license.html",
+              "file": "bsd-2-clause - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.projectlombok",
+          "artifactId": "lombok",
+          "version": "1.18.4",
+          "licenses": {
+            "license": {
+              "name": "The MIT License",
+              "url": "https://projectlombok.org/LICENSE",
+              "distribution": "repo",
+              "file": "the mit license - license.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.reactivestreams",
+          "artifactId": "reactive-streams",
+          "version": "1.0.0",
+          "licenses": {
+            "license": {
+              "name": "CC0",
+              "url": "http://creativecommons.org/publicdomain/zero/1.0/",
+              "distribution": "repo",
+              "file": "public domain, per creative commons cc0 - 1.0.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.scala-lang.modules",
+          "artifactId": "scala-java8-compat_2.11",
+          "version": "0.8.0-RC7",
+          "licenses": {
+            "license": {
+              "name": "BSD 3-clause",
+              "url": "http://opensource.org/licenses/BSD-3-Clause",
+              "distribution": "repo",
+              "file": "bsd 3-clause - bsd-3-clause.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.scala-lang.modules",
+          "artifactId": "scala-parser-combinators_2.11",
+          "version": "1.0.4",
+          "licenses": {
+            "license": {
+              "name": "BSD 3-clause",
+              "url": "http://opensource.org/licenses/BSD-3-Clause",
+              "distribution": "repo",
+              "file": "bsd 3-clause - bsd-3-clause.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.scala-lang.modules",
+          "artifactId": "scala-swing_2.11",
+          "version": "1.0.2",
+          "licenses": {
+            "license": {
+              "name": "BSD 3-clause",
+              "url": "http://opensource.org/licenses/BSD-3-Clause",
+              "distribution": "repo",
+              "file": "bsd 3-clause - bsd-3-clause.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.scala-lang.modules",
+          "artifactId": "scala-xml_2.11",
+          "version": "1.0.4",
+          "licenses": {
+            "license": {
+              "name": "BSD 3-clause",
+              "url": "http://opensource.org/licenses/BSD-3-Clause",
+              "distribution": "repo",
+              "file": "bsd 3-clause - bsd-3-clause.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.scala-lang",
+          "artifactId": "scala-compiler",
+          "version": "2.11.7",
+          "licenses": {
+            "license": {
+              "name": "BSD 3-Clause",
+              "url": "http://www.scala-lang.org/license.html",
+              "distribution": "repo",
+              "file": "bsd 3-clause - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.scala-lang",
+          "artifactId": "scala-library",
+          "version": "2.11.8",
+          "licenses": {
+            "license": {
+              "name": "BSD 3-Clause",
+              "url": "http://www.scala-lang.org/license.html",
+              "distribution": "repo",
+              "file": "bsd 3-clause - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.scala-lang",
+          "artifactId": "scala-reflect",
+          "version": "2.11.7",
+          "licenses": {
+            "license": {
+              "name": "BSD 3-Clause",
+              "url": "http://www.scala-lang.org/license.html",
+              "distribution": "repo",
+              "file": "bsd 3-clause - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.skyscreamer",
+          "artifactId": "jsonassert",
+          "version": "1.4.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "jcl-over-slf4j",
+          "version": "1.7.25",
+          "licenses": {
+            "license": {
+              "name": "MIT License",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "distribution": "repo",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "jul-to-slf4j",
+          "version": "1.7.25",
+          "licenses": {
+            "license": {
+              "name": "MIT License",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "distribution": "repo",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "log4j-over-slf4j",
+          "version": "1.7.25",
+          "licenses": {
+            "license": {
+              "name": "Apache Software Licenses",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-api",
+          "version": "1.7.25",
+          "licenses": {
+            "license": {
+              "name": "MIT License",
+              "url": "http://www.opensource.org/licenses/mit-license.php",
+              "distribution": "repo",
+              "file": "mit license - mit-license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.sonatype.plexus",
+          "artifactId": "plexus-cipher",
+          "version": "1.4",
+          "licenses": {
+            "license": {
+              "name": "Apache Public License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.sonatype.plexus",
+          "artifactId": "plexus-sec-dispatcher",
+          "version": "1.3",
+          "licenses": {
+            "license": {
+              "name": "Apache Public License 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.sonatype.sisu",
+          "artifactId": "sisu-guice",
+          "version": "3.2.5",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-actuator",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-autoconfigure",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-actuator",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-aop",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-cache",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-data-jpa",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-jdbc",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-logging",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-security",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-test",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-thymeleaf",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-tomcat",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-web",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-test-autoconfigure",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-test",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot",
+          "version": "1.5.18.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.data",
+          "artifactId": "spring-data-commons",
+          "version": "1.13.17.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt",
+              "comments": "Copyright 2008-2017 the original author or authors.\n\n\t\t\tLicensed under the Apache License, Version 2.0 (the \"License\");\n\t\t\tyou may not use this file except in compliance with the License.\n\t\t\tYou may obtain a copy of the License at\n\n\t\t\t\t http://www.apache.org/licenses/LICENSE-2.0\n\n\t\t\tUnless required by applicable law or agreed to in writing, software\n\t\t\tdistributed under the License is distributed on an \"AS IS\" BASIS,\n\t\t\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n\t\t\timplied.\n\t\t\tSee the License for the specific language governing permissions and\n\t\t\tlimitations under the License."
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.data",
+          "artifactId": "spring-data-jpa",
+          "version": "1.11.17.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "file": "apache license, version 2.0 - license-2.0.txt",
+              "comments": "Copyright 2008-2017 the original author or authors.\n\n\t\t\tLicensed under the Apache License, Version 2.0 (the \"License\");\n\t\t\tyou may not use this file except in compliance with the License.\n\t\t\tYou may obtain a copy of the License at\n\n\t\t\t\t http://www.apache.org/licenses/LICENSE-2.0\n\n\t\t\tUnless required by applicable law or agreed to in writing, software\n\t\t\tdistributed under the License is distributed on an \"AS IS\" BASIS,\n\t\t\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n\t\t\timplied.\n\t\t\tSee the License for the specific language governing permissions and\n\t\t\tlimitations under the License."
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.security",
+          "artifactId": "spring-security-config",
+          "version": "4.2.10.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.security",
+          "artifactId": "spring-security-core",
+          "version": "4.2.10.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.security",
+          "artifactId": "spring-security-test",
+          "version": "4.1.3.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.security",
+          "artifactId": "spring-security-test",
+          "version": "4.2.10.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework.security",
+          "artifactId": "spring-security-web",
+          "version": "4.2.10.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-aop",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-aspects",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-beans",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-context-support",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-context",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-core",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-expression",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-jdbc",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-orm",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-test",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-tx",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-web",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.springframework",
+          "artifactId": "spring-webmvc",
+          "version": "4.3.21.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.thymeleaf.extras",
+          "artifactId": "thymeleaf-extras-springsecurity4",
+          "version": "2.1.2.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.thymeleaf.extras",
+          "artifactId": "thymeleaf-extras-springsecurity4",
+          "version": "2.1.3.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.thymeleaf",
+          "artifactId": "thymeleaf-spring4",
+          "version": "2.1.6.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.thymeleaf",
+          "artifactId": "thymeleaf",
+          "version": "2.1.6.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.unbescape",
+          "artifactId": "unbescape",
+          "version": "1.1.0.RELEASE",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.webjars",
+          "artifactId": "bootstrap",
+          "version": "3.3.7",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0",
+              "distribution": "repo",
+              "file": "apache license, version 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.webjars",
+          "artifactId": "jquery",
+          "version": "3.2.1",
+          "licenses": {
+            "license": {
+              "name": "MIT License",
+              "url": "https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt",
+              "distribution": "repo"
+            }
+          }
+        },
+        {
+          "groupId": "org.xmlunit",
+          "artifactId": "xmlunit-core",
+          "version": "2.3.0",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "org.xmlunit",
+          "artifactId": "xmlunit-legacy",
+          "version": "2.3.0",
+          "licenses": {
+            "license": {
+              "name": "The BSD 3-Clause License",
+              "url": "https://github.com/xmlunit/xmlunit/blob/master/xmlunit-legacy/LICENSE.txt",
+              "distribution": "repo",
+              "file": "the bsd 3-clause license - license.html"
+            }
+          }
+        },
+        {
+          "groupId": "org.yaml",
+          "artifactId": "snakeyaml",
+          "version": "1.17",
+          "licenses": {
+            "license": {
+              "name": "Apache License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "xml-resolver",
+          "artifactId": "xml-resolver",
+          "version": "1.2",
+          "licenses": {
+            "license": {
+              "name": "The Apache Software License, Version 2.0",
+              "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              "distribution": "repo",
+              "file": "asf 2.0 - license-2.0.txt"
+            }
+          }
+        },
+        {
+          "groupId": "xmlpull",
+          "artifactId": "xmlpull",
+          "version": "1.1.3.1",
+          "licenses": {
+            "license": {
+              "name": "Public Domain",
+              "url": "http://www.xmlpull.org/v1/download/unpacked/LICENSE.txt",
+              "file": "public domain - license.txt"
+            }
+          }
+        },
+        {
+          "groupId": "xpp3",
+          "artifactId": "xpp3_min",
+          "version": "1.1.4c",
+          "licenses": {
+            "license": [
+              {
+                "name": "Indiana University Extreme! Lab Software License, vesion 1.1.1",
+                "url": "http://www.extreme.indiana.edu/viewcvs/~checkout~/XPP3/java/LICENSE.txt",
+                "distribution": "repo",
+                "comments": "The license applies to the Xpp3 classes (all classes below the org.xmlpull package with exception of classes directly in package org.xmlpull.v1 )"
+              },
+              {
+                "name": "Public Domain",
+                "url": "http://creativecommons.org/licenses/publicdomain",
+                "distribution": "repo",
+                "file": "public domain - publicdomain.html",
+                "comments": "The license applies to the XmlPull API (all classes directly in the org.xmlpull.v1 package)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

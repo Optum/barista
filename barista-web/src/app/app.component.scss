@@ -1,0 +1,29 @@
+.content-container {
+  margin: 30px;
+}
+
+// aligns the top of the nav-bar
+.mat-nav-list.mat-list-base{
+  padding-top: 0px;
+  display: block;
+}
+
+.mat-sidenav-content{
+  //hard coded value, gets footer to be on bottom of screen
+  min-height: 86.5vh;
+}
+
+#footer {
+  width:100%;
+  height:60px;   /* Height of the footer */
+}
+
+datatable-body-row:hover {
+  cursor: pointer;
+}
+
+main app-signin{
+  display: block;
+  background-image: url("../assets/images/bg.jpg");
+  background-position: center;
+}

@@ -1,0 +1,20 @@
+
+<a mat-list-item [ngStyle]="{'padding-left': (depth * 12) + 'px'}" (click)="onItemSelected(item)"
+   [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}"
+   class="menu-list-item"
+   *ngIf="item">
+  <mat-icon class="routeIcon">{{item.iconName}}</mat-icon>
+  {{item.displayName}}
+  <!-- puts the carrot next to items if that item has children -->
+  <span fxFlex *ngIf="item.children && item.children.length">
+    <span fxFlex></span>
+    <mat-icon [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">
+      expand_more
+    </mat-icon>
+  </span>
+</a>
+<!-- shows the children of items -->
+<div *ngIf="!expanded && item">
+  <app-side-nav *ngFor="let child of item.children" [item]="child" [depth]="depth+1">
+  </app-side-nav>
+</div>

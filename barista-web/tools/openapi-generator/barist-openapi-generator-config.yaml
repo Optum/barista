@@ -1,0 +1,5 @@
+ngVersion: "8.0.0"
+fileNaming: "kebab-case"
+providedInRoot: "true"
+serviceSuffix: "ApiService"
+serviceFileSuffix: "-api.service"

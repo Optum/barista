@@ -1,0 +1,44 @@
+<mat-form-field class="projects-filter-field">
+  <input matInput type="text" #moduleSearchInput placeholder="Search Filter">
+  <button mat-button *ngIf="moduleFilter" matSuffix mat-icon-button aria-label="Clear"
+          (click)="resetSearchFilter()">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-divider></mat-divider>
+
+<app-datatable
+  #parentRecordsDataTable
+  class="material striped"
+  [columns]="parentRecordsColumns"
+  [columnMode]="'flex'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [selected]="parentRecordsSelected"
+  [selectionType]="'single'"
+  (select)="onSelectParentRecord($event)"
+  [getPageResults]="getParentRecordsPagedResults.bind(this)">
+</app-datatable>
+
+<mat-divider></mat-divider>
+<br>
+<br>
+<br>
+<h3 *ngIf="!this.selectedProject">No project selected</h3>
+<h3 *ngIf="this.selectedProject">Found Modules for project [{{selectedProject.projectName}}]</h3>
+
+<app-datatable
+  #childrenRecordsDataTable
+  class="material striped"
+  [columns]="childrenRecordsColumns"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [selected]="childrenRecordsSelected"
+  [selectionType]="'single'"
+  (select)="onSelectChildrenRecord($event)"
+  [getPageResults]="getChildrenRecordsPagedResults.bind(this)">
+</app-datatable>

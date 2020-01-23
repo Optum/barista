@@ -1,0 +1,67 @@
+version: '3.7'
+
+services:
+  barista-api:
+    build: ..
+    container_name: api
+    ports:
+      - '3000:3000'
+    links:
+      - db
+      - db-test
+      - redis
+    depends_on:
+      - db
+      - db-test
+      - redis
+    env_file:
+      - ../.env.local
+    environment:
+      - NODE_ENV=PRODUCTION
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=barista-${APP_UNIQUE_ID}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - API_PORT=3000
+      - TYPEORM_SYNC=1
+  barista-scan:
+    build: ../../barista-scan
+    container_name: scan
+    links:
+      - db
+      - db-test
+      - redis
+    depends_on:
+      - db
+      - db-test
+      - redis
+    env_file:
+      - ../.env.local
+    environment:
+      - NODE_ENV=PRODUCTION
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=barista-${APP_UNIQUE_ID}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - API_PORT=4000
+      - TYPEORM_SYNC=0
+  barista-web:
+    build: ../../barista-web
+    container_name: web
+    ports:
+      - '80:80'
+    links:
+      - barista-api
+    depends_on:
+      - barista-api
+    env_file:
+      - ../.env.local
+    environment:
+      - API_HOST=barista-api
+      - API_PORT=3000

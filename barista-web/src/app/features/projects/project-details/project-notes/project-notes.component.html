@@ -1,0 +1,33 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header class="content-header">
+    <mat-card-title>
+      Projects Notes
+      <button class="note-btn" type="button" mat-button color="warn" (click)="addNote()"
+        *ngIf="authService.canAddProjectNotes">
+        <mat-icon>add</mat-icon>
+        <span>Note</span>
+      </button>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+    <app-datatable
+      class="material striped"
+      #datatableComponent
+      [columns]="columns"
+      [columnMode]="'flex'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [selected]="selected"
+      [selectionType]="'single'"
+      (select)="onSelect($event)"
+      [canSelectRow]="canSelectRow.bind(this)"
+      [getPageResults]="getPageResults.bind(this)"
+    >
+    </app-datatable>
+    <ng-template #dateCellTmpl let-value="value" ngx-datatable-cell-template>
+      {{ value | date: 'long' }}
+    </ng-template>
+  </mat-card-content>
+</mat-card>
+

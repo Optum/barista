@@ -1,0 +1,17 @@
+
+.content-card {
+  box-sizing: border-box;
+}
+
+.projects {
+  &-filter {
+    &-field {
+      margin-top: 20px;
+      width: 400px;
+    }
+
+    &-button {
+      margin-left: 20px;
+    }
+  }
+}

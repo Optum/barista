@@ -1,0 +1,36 @@
+<mat-card *ngIf="!hasNoScans">
+  <mat-card-header>
+    <mat-card-title>Bill of Materials</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="main-container">
+      <div class="search-box">
+        <mat-form-field class="licenses-filter-field">
+          <input matInput type="text" #searchInput placeholder="Global BoM Search Filter" [(ngModel)]="filter">
+          <button mat-button *ngIf="filter" matSuffix mat-icon-button aria-label="Clear"
+                  (click)="clearSearchField()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <h2>License Exceptions</h2>
+      <app-bom-license-exceptions></app-bom-license-exceptions>
+      <h2>Licenses</h2>
+      <app-bom-grouped-licenses></app-bom-grouped-licenses>
+      <h2>Manual Licenses</h2>
+      <app-bom-manual-licenses></app-bom-manual-licenses>
+      <h2>Security Exceptions</h2>
+      <app-bom-security-exception [project]="project"></app-bom-security-exception>
+      <h2>Security Items</h2>
+      <app-bom-vulnerabilities></app-bom-vulnerabilities>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<div *ngIf="hasNoScans">
+  <h3>No scan information to display, please run a scan to populate the Bill of Materials.</h3>
+</div>
+
+
+

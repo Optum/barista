@@ -1,0 +1,14 @@
+.top-margin {
+  margin-top: 20px;
+}
+
+.selected-project {
+  font-size: 12px;
+  .no-project {
+    color: lightcoral;
+  }
+
+  .project {
+    color: #000;
+  }
+}

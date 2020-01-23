@@ -1,0 +1,14 @@
+<mat-card class="package-manager-details" fxFill >
+    <mat-card-header>
+        <mat-card-title>
+        Package Manager
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content >
+        <form [formGroup]="form" (ngSubmit)="submit()" >
+        <formly-form type="submit" [model]="packageManager" [fields]="fields" [options]="options" [form]="form"></formly-form>
+        <button  type="submit" mat-button color="primary" *ngIf="!newPackageManager">Update</button> 
+        <button mat-button color="primary" *ngIf="newPackageManager">Create</button>
+        </form>
+    </mat-card-content>
+</mat-card>

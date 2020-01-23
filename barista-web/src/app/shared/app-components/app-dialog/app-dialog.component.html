@@ -1,0 +1,17 @@
+<mat-card class="content-card">
+  <mat-card-header>
+    <mat-card-title>
+      {{title}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <div class="dialog-message" *ngIf="message">{{message}}</div>
+    <div class="dialog-message" *ngIf="json">{{json | json}}</div>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="onOk()">OK</button>
+  </mat-card-actions>
+</mat-card>
+

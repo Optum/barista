@@ -1,0 +1,66 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:4.0.14
+    container_name: redis
+    ports:
+      - '6379:6379'
+  db:
+    image: postgres:11.3
+    container_name: db
+    ports:
+      - '5432:5432'
+    env_file:
+      - ../.env.local
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=barista-${APP_UNIQUE_ID}
+  db-test: # Test database for integration test
+    image: postgres:11.3
+    container_name: db-test
+    ports:
+      - '5433:5432'
+    env_file:
+      - ../.env.local
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=barista-test
+  redis-commander:
+    image: rediscommander/redis-commander
+    container_name: redis-commander
+    ports:
+      - '8082:8082'
+    links:
+      - redis
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - PORT=8082
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    ports:
+      - '8081:8081'
+    links:
+      - db
+      - db-test
+    depends_on:
+      - db
+      - db-test
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=postgres@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+      - PGADMIN_LISTEN_PORT=8081
+  dozzle:
+    image: amir20/dozzle
+    container_name: dozzle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - '8080:8080'
+

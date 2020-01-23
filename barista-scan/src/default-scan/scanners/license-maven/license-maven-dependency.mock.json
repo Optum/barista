@@ -1,0 +1,27 @@
+{
+  "groupId": "com.github.jnr",
+  "artifactId": "jnr-posix",
+  "version": "3.0.12",
+  "licenses": {
+    "license": [
+      {
+        "name": "Common Public License - v 1.0",
+        "url": "http://www-128.ibm.com/developerworks/library/os-cpl.html",
+        "distribution": "repo",
+        "file": "common public license - v 1.0 - os-cpl.html"
+      },
+      {
+        "name": "GNU General Public License Version 2",
+        "url": "http://www.gnu.org/copyleft/gpl.html",
+        "distribution": "repo",
+        "file": "gnu general public license version 2 - gpl.html"
+      },
+      {
+        "name": "GNU Lesser General Public License Version 2.1",
+        "url": "http://www.gnu.org/licenses/lgpl.html",
+        "distribution": "repo",
+        "file": "gnu lesser general public license version 2.1 - lgpl.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+<div *ngIf="status">
+  APP-ONLINE
+</div>
+
+<div *ngIf="!status">
+  APP-ERROR
+</div>
+<div >
+  {{status | json}}
+</div>

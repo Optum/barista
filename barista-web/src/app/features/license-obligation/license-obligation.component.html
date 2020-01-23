@@ -1,0 +1,113 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      Licenses and Obligations
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="table">
+      <div class="row">
+        <div class="cell">
+          <div>Available Licenses</div>
+          <mat-form-field class="licenses-filter-field">
+            <input matInput type="text" #licenseSearchInput placeholder="Licenses Search Filter" [disabled]="isBusy">
+            <button mat-button *ngIf="licenseFilter" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="licenseFilter=''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <app-datatable
+            class="material striped"
+            #licensesDataTable
+            [columns]="allLicencesColumns"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="50"
+            [selected]="selectedLicenses"
+            [selectionType]="'single'"
+            [pageSize]="5"
+            (select)="onLicenseSelect($event)"
+            [getPageResults]="getLicensesPagedResults.bind(this)"
+          >
+          </app-datatable>
+        </div>
+        <div class="cell associated-obligations">
+          <div [ngClass]="['active-license', !selectedLicense ? 'red' : '']">
+            {{selectedLicense ? selectedLicense.name : '...Select a License...'}}
+          </div>
+          <div class="assoc-obligations">Associated Obligations</div>
+          <app-datatable
+            class="material striped"
+            #associatedObligationsDataTable
+            [columns]="associatedObligationsColumns"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [selected]="selectedAssociatedObligations"
+            [selectionType]="'none'"
+            [pageSize]="5"
+            [getPageResults]="getAssociatedObligationsPagedResults.bind(this)"
+          >
+          </app-datatable>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell all-obligations">
+          <div>Search Obligations</div>
+          <mat-form-field class="licenses-filter-field">
+            <input matInput type="text" #obligationsSearchInput placeholder="Obligations Search Filter"
+              [disabled]="isBusy">
+            <button mat-button *ngIf="obligationsFilter" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="licenseFilter=''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+          <app-datatable
+            class="material striped"
+            #allObligationsDataTable
+            [columns]="allObligationsColumns"
+            [columnMode]="'flex'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [selected]="selectedObligations"
+            [selectionType]="'none'"
+            [pageSize]="5"
+            [getPageResults]="getAllObligationsPagedResults.bind(this)"
+          >
+          </app-datatable>
+          <ng-template #associateObligationTemplate let-row="row" let-value="value" ngx-datatable-cell-template>
+            <button class="mat-raised-button" color="primary" (click)="onAssociateObligationClick($event, row)"
+                    [disabled]="!selectedLicense || isBusy">
+              Associate
+            </button>
+            &nbsp;
+            <button class="mat-raised-button" color="primary"
+                    (click)="onAssociateObligationToAllLicensesByFilter($event, row)" [disabled]="isBusy" >
+              Associate To All Filtered Licenses
+            </button>
+          </ng-template>
+          <ng-template #removeObligationAssociationTemplate let-row="row" let-value="value"
+                       ngx-datatable-cell-template>
+            <button class="mat-raised-button" color="primary" (click)="onDeleteAssociationClick($event, row)"
+                    [disabled]="isBusy">
+              Delete
+            </button>
+            &nbsp;
+            <button class="mat-raised-button" color="primary"
+                    (click)="onDeleteObligationFromAllLicensesByFilter($event, row)"
+                    [disabled]="isBusy">
+              Delete All
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<ng-template #buttonAssociateObligationTemplate>
+  <button class="mat-button">Associate</button>
+</ng-template>

@@ -1,0 +1,123 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      Licenses and Exceptions
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="main-container">
+      <div class="search-box">
+        <mat-form-field class="licenses-filter-field">
+          <input matInput type="text" #licenseSearchInput placeholder="Licenses Search Filter" [disabled]="isBusy">
+          <button mat-button *ngIf="licenseFilter" matSuffix mat-icon-button aria-label="Clear"
+                  (click)="licenseFilter=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="licenses-table">
+        <app-datatable
+          class="material striped"
+          #licensesDataTable
+          [columns]="allLicencesColumns"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="50"
+          [selected]="selectedLicenses"
+          [selectionType]="'single'"
+          [pageSize]="5"
+          (select)="onLicenseSelect($event)"
+          [getPageResults]="getLicensesPagedResults.bind(this)"
+        >
+        </app-datatable>
+      </div>
+      <div class="selected-license-container">
+        <div class="selected-license full-width">
+          Selected License: {{selectedLicense ? selectedLicense.name : '***No License selected'}}
+        </div>
+      </div>
+      <div class="selections-container">
+        <div class="deployment-type-container">
+          <div class="header">
+            Deployment Type
+          </div>
+          <div class="select">
+            <mat-form-field class="field full-width">
+              <mat-select [(ngModel)]="selectedDeploymentType" required name="deploymentType"
+                          [compareWith]="compareLookupModels">
+                <mat-option *ngFor="let type of deploymentTypes$ | async" [value]="type">
+                  {{type.description}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="add-exception">
+            <button class="mat-raised-button add-exceptions" color="primary"
+                    [disabled]="!selectedDeploymentType || !selectedProjectScanStatusType"
+              (click)="onAddExceptionToAllLicenses()">
+              Add Exception To {{licensesDataTable.page.total}} Licenses
+            </button>
+          </div>
+        </div>
+        <div class="status-container">
+          <div class="header">
+            Status
+          </div>
+          <div class="select">
+            <mat-form-field class="field full-width">
+              <mat-select [(ngModel)]="selectedProjectScanStatusType" required name="projectStatus"
+                          [compareWith]="compareLookupModels">
+                <mat-option *ngFor="let status of projectScanStatusTypes$ | async" [value]="status">
+                  {{status.description}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="remove-exceptions">
+            <button class="mat-raised-button remove-exception" color="primary"
+                    [disabled]="!selectedDeploymentType || !selectedProjectScanStatusType"
+            (click)="onDeleteFromAllLicenses()">
+              Delete Exception From {{licensesDataTable.page.total}} Licenses
+            </button>
+          </div>
+        </div>
+        <div class="add-exception-to-license-container">
+          <button class="mat-raised-button add-exception"
+                  [disabled]="!selectedLicense || !selectedDeploymentType || !selectedProjectScanStatusType"
+                  (click)="addExceptionToSelectedLicense()">
+            Add Exception To Selected License
+          </button>
+        </div>
+      </div>
+      <div class="exceptions-container">
+        <div class="header">
+          Exceptions for Selected License
+        </div>
+        <div class="table">
+          <app-datatable
+            class="material striped"
+            #licenseStatusDeploymentTypeDataTable
+            [columns]="licenseStatusDeploymentTypeColumns"
+            [columnMode]="'flex'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [selected]="selectedLicenseStatusDeploymentTypes"
+            [selectionType]="'none'"
+            [pageSize]="5"
+            [getPageResults]="getLicensesStatusDeploymentTypesPagedResults.bind(this)"
+          >
+          </app-datatable>
+          <ng-template #removeLicenseExceptionTemplate let-row="row" let-value="value"
+                       ngx-datatable-cell-template>
+            <button class="mat-raised-button" color="primary" (click)="onDeleteExceptionClick($event, row)"
+                    >
+              Delete
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,16 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      License Scan Results
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+    <app-license-scan-result-item-datatable
+      [filter]="'licenseScan.scan||eq||' + scanId"
+      [selected]="selected"
+      [onSelect]="onSelect.bind(this)"
+      >
+    </app-license-scan-result-item-datatable>
+
+  </mat-card-content>
+</mat-card>

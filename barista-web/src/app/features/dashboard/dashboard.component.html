@@ -1,0 +1,29 @@
+<div class="content-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-card>
+    <mat-card-header>
+      <div fxLayout="row" fxLayoutAlign="end center" fxFlex="grow">
+        <button class="add-button" [routerLink]="['/project/new']" mat-button>
+          <mat-icon>add</mat-icon> Create Project
+        </button>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab label="My Projects">
+        <app-projects [projectDataTableType]="'user'"></app-projects>
+        </mat-tab>
+        <mat-tab label="Organization Projects">
+          <app-projects [projectDataTableType]="'organization'"></app-projects>
+        </mat-tab>
+        <mat-tab label="Community Projects">
+          <app-projects [projectDataTableType]="'community'"></app-projects>
+        </mat-tab>
+        <mat-tab label="Module Search">
+          <app-module-search ></app-module-search>
+        </mat-tab>
+
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

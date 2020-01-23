@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Vuln-Severity" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="61456893-2c43-4f60-a981-b23709086ebc">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BaristaProd"/>
+	<parameter name="scanParameter" class="java.lang.Integer">
+		<parameterDescription><![CDATA[Scan Nuber for Report]]></parameterDescription>
+		<defaultValueExpression><![CDATA[56]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select sr.id as RESULTS_ID, s.id  as SCAN_ID ,  p.name as PROJECT_NAME,s.completed_at, sr.scan_tool,
+        ssri.cve_id, ssri.description,ssri."path",ssri.reference_url, ssri.severity
+from scan s, security_scan_result sr , project as p, security_scan_result_item as ssri
+where sr."scanId"=s.id and s."projectId"=p.id 
+      and ssri."securityScanId"=sr.id
+      and s.id=$P{scanParameter} 
+order by p.name]]>
+	</queryString>
+	<field name="project_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="project_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="project"/>
+	</field>
+	<field name="completed_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="completed_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="scan"/>
+	</field>
+	<field name="scan_tool" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="scan_tool"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="security_scan_result"/>
+	</field>
+	<field name="cve_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cve_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="security_scan_result_item"/>
+	</field>
+	<field name="description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="security_scan_result_item"/>
+	</field>
+	<field name="severity" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="severity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="security_scan_result_item"/>
+	</field>
+	<field name="scan_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="scan_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="scan"/>
+	</field>
+	<group name="project_name" isReprintHeaderOnEachPage="true" preventOrphanFooter="true">
+		<groupExpression><![CDATA[$F{project_name}]]></groupExpression>
+		<groupHeader>
+			<band height="64">
+				<textField>
+					<reportElement x="100" y="0" width="350" height="30" forecolor="#010500" uuid="25a4d529-2682-4bc2-ae04-17d3a8fa7647"/>
+					<textElement markup="none">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{project_name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="560" y="0" width="210" height="30" forecolor="#010500" uuid="c56ba36e-8b35-48e0-87af-918ff3e142f2"/>
+					<textElement markup="none">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{completed_at}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="project_name">
+					<reportElement x="0" y="0" width="100" height="30" forecolor="#010500" uuid="f3ec18fa-b24d-4c91-b21b-6132e6ede381"/>
+					<textElement markup="none">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Project:"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="32" width="202" height="30" forecolor="#010500" uuid="c9f3c402-04bb-4532-9e26-95658e36ee04"/>
+					<textElement markup="none">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Identifier"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="590" y="33" width="98" height="30" forecolor="#010500" uuid="00a6dbc8-42e7-40ca-a6bd-7f2505571640"/>
+					<textElement markup="none">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Severity"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="202" y="32" width="388" height="30" forecolor="#010500" uuid="bf0db785-224f-4969-ba7b-03ebd06673b1"/>
+					<textElement markup="none">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Description"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="693" y="32" width="108" height="30" forecolor="#010500" uuid="16faf902-ef50-4860-a421-c07d563a88c5"/>
+					<textElement markup="none">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Scan ID"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="8">
+				<line>
+					<reportElement x="1" y="4" width="801" height="1" uuid="4cb36867-ed87-4161-bdc3-d39780aad2d6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="3.0"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="scan_id">
+		<groupExpression><![CDATA[$F{scan_id}]]></groupExpression>
+	</group>
+	<title>
+		<band height="80">
+			<textField>
+				<reportElement x="0" y="0" width="440" height="51" uuid="0486a923-4545-4299-91d3-0bc28b3daf5a"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Barista Vulnerability Report"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="610" y="0" width="170" height="80" uuid="e9ae0f6b-c140-4281-bbf0-e644a33eabab"/>
+				<imageExpression><![CDATA["http://apsrd2058/images/barista.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="202" height="30" forecolor="#010500" uuid="a828d9c7-299c-4dfc-8525-1006ffe6d5dd"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$F{cve_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="590" y="1" width="98" height="30" forecolor="#010500" uuid="90f1c715-a450-4b00-a0fe-272e077d39a3"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$F{severity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="693" y="0" width="108" height="30" forecolor="#010500" uuid="2828f752-15f6-4af5-ba01-57e56d079956"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$F{scan_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="0" width="388" height="64" forecolor="#010500" uuid="488c67a7-71f3-44a1-b8e4-4c3ba0554dcb"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="31">
+			<textField>
+				<reportElement x="601" y="1" width="100" height="30" uuid="f85f5750-d261-4c9e-a282-274ee0583945"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="701" y="1" width="100" height="30" uuid="1b3f803a-6265-4a69-930f-d7d5ee47cdb7"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

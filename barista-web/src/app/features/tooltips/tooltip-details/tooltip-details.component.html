@@ -1,0 +1,13 @@
+<mat-card class="output-format-type-details" fxFill >
+  <mat-card-header>
+    <mat-card-title>
+      ToolTip Details
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content >
+    <form [formGroup]="form" (ngSubmit)="submit()" >
+      <formly-form type="submit" [model]="toolTip" [fields]="fields" [options]="options" [form]="form"></formly-form>
+      <button  type="submit" mat-button color="primary" *ngIf="!newToolTip">Update</button>
+    </form>
+  </mat-card-content>
+</mat-card>

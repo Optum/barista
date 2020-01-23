@@ -1,0 +1,25 @@
+.content-card {
+  width: 100%;
+
+  .content-header {
+    width: 100%;
+
+    ::ng-deep .mat-card-header-text {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+
+  mat-card-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .note-btn {
+      display: inline-flex;
+      margin-left: auto;
+      justify-content: center;
+    }
+  }
+}

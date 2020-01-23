@@ -1,0 +1,10 @@
+<app-breadcrumbs [breadcrumbs]="breadcrumbs" [isLastSelectable]="false"></app-breadcrumbs>
+
+<mat-tab-group [selectedIndex]="selectedTabIndex">
+  <mat-tab label="License Results">
+    <app-license-scan-result></app-license-scan-result>
+  </mat-tab>
+  <mat-tab label="Security Results">
+    <app-security-scan-result></app-security-scan-result>
+  </mat-tab>
+</mat-tab-group>

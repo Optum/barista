@@ -1,0 +1,27 @@
+<mat-card class="content-card" fxFill>
+    <mat-card-header>
+      <mat-card-title>
+        Package Managers
+      </mat-card-title>
+      <div fxLayout="row" fxLayoutAlign="end center" fxFlex="grow">
+        <button class="add-button" [routerLink]="['/package-manager/new']" mat-icon-button>
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="package-manager-card-content">
+      <app-datatable
+        class="material striped"
+        [columns]="columns"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="50"
+        [selected]="selected"
+        [selectionType]="'single'"
+        (select)="onSelect($event)"
+        [getPageResults]="getPagedResults.bind(this)"
+      >
+      </app-datatable>
+    </mat-card-content>
+  </mat-card>

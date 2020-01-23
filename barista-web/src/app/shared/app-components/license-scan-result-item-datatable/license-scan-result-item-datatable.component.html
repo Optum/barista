@@ -1,0 +1,24 @@
+<div>
+<app-datatable
+  #datatable
+  [columns]="columns"
+  [columnMode]="'flex'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [selectionType]="allowLicenseOverride ? 'none' : 'single'"
+  [scrollbarV]="false"
+  (select)="onSelectInternal($event)"
+  [selected]="selected"
+  [getPageResults]="getPagedResults" >
+</app-datatable>
+  <ng-template #overrideTemplate let-row="row" let-value="value"
+               ngx-datatable-cell-template>
+    <button class="mat-raised-button" color="primary" (click)="onOverrideButtonClick($event, row)">
+      Override
+    </button>
+  </ng-template>
+  <ng-template #statusTemplate let-row="row" let-value="value" ngx-datatable-cell-template>
+    <app-project-scan-status-type [statusCode]="value"></app-project-scan-status-type>
+  </ng-template>
+</div>

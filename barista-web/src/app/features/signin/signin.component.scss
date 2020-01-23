@@ -1,0 +1,41 @@
+@import 'variables';
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.signin-card {
+  width: 70%;
+  max-width: 35%;
+  height: 35%;
+  min-width: 210px;
+  padding-bottom: 30px;
+  margin: 60px auto 10px;
+  text-align: center;
+}
+
+.signin-page {
+  //hard coded value, gets footer to be on bottom of screen
+  min-height: 92.5vh;
+}
+
+.error {
+  color: red;
+}
+
+mat-card {
+  background-color: rgba(0, 0, 0, 0.55);
+  text-align: center;
+  color: white;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label,
+mat-form-field.mat-form-field {
+  color: white !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple.mat-accent {
+  background-color: mat-color($accent);
+}

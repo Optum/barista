@@ -1,0 +1,21 @@
+<div class="icon-padding" *ngIf="statusCode">
+  <div [ngSwitch]="statusCode" fxLayout="row" fxLayoutAlign="center center">
+
+    <div *ngSwitchCase="'green'">
+      <mat-icon class="green-icon">done_outline</mat-icon>
+    </div>
+
+    <div *ngSwitchCase="'yellow'">
+      <mat-icon class="yellow-icon">warning</mat-icon>
+    </div>
+
+    <div *ngSwitchCase="'red'">
+      <mat-icon class="red-icon">error</mat-icon>
+    </div>
+
+    <div *ngSwitchDefault>
+      <mat-icon class="unknown-icon">help</mat-icon>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "id": "jQuery",
+  "version": "1.9.1",
+  "title": "jQuery",
+  "authors": "jQuery Foundation, Inc.",
+  "owners": "jQuery Foundation, Inc.",
+  "licenseUrl": "http://jquery.org/license",
+  "projectUrl": "http://jquery.com/",
+  "requireLicenseAcceptance": "false",
+  "description": "jQuery is a new kind of JavaScript Library.\n        jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript.\n        NOTE: This package is maintained on behalf of the library owners by the NuGet Community Packages project at http://nugetpackages.codeplex.com/",
+  "language": "en-US",
+  "tags": "jQuery",
+  "dir": "/Users/vincilbishop/Documents/Code/Surge/UHG/UHG-Code/barista/barista-scan/src/default-scan/scanners/license-nuget/dependencies/jquery/1.9.1"
+}

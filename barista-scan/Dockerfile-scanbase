@@ -1,0 +1,72 @@
+ARG REPO=""
+ARG TAG=compose
+ARG BARISTA_VERSION=unspecified
+
+FROM ${REPO}barista-base:${TAG}
+
+ADD tools/docker-entrypoint.ksh /docker-entrypoint.ksh
+ARG MAVEN_VERSION=3.6.1
+ARG MAVEN_TGZ=
+ARG MAVEN_SITE=
+
+
+
+#Install mono
+RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg \
+    && mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/ \
+    && wget -q https://packages.microsoft.com/config/debian/9/prod.list \
+    && mv prod.list /etc/apt/sources.list.d/microsoft-prod.list \
+    && chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg \
+    && chown root:root /etc/apt/sources.list.d/microsoft-prod.list \
+    && apt-get install -y apt-transport-https dirmngr gnupg ca-certificates \
+    &&  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
+    &&  echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | tee /etc/apt/sources.list.d/mono-official-stable.list \
+    &&  apt-get update \
+    &&  apt-get install -y mono-complete \
+    &&  apt-get install -y dotnet-sdk-2.2
+
+
+
+#Install MAVEN
+#Install maven from source so as to get a more modern version that is supplied with Ubuntu
+RUN wget -q https://archive.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz  -P /tmp\
+    && tar xzf /tmp/apache-maven-${MAVEN_VERSION}-bin.tar.gz -C /opt \
+    && mv /opt/apache-maven-${MAVEN_VERSION} /opt/maven
+ENV M2_HOME=/opt/maven
+ENV MAVEN_HOME=/opt/maven
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+ENV PATH=${M2_HOME}/bin:${PATH}
+
+#Install PyENV
+
+RUN apt-get install -y make \
+                       build-essential \
+                       libssl-dev zlib1g-dev \
+                       libbz2-dev \
+                       libreadline-dev \
+                       libsqlite3-dev \
+                       llvm \
+                       libncurses5-dev  \
+                       libncursesw5-dev \
+                       xz-utils \
+                       tk-dev \
+                       libffi-dev \
+                       liblzma-dev \
+                       python-openssl \
+                       python3-venv \
+                       unar
+
+
+
+USER 1011
+RUN     curl https://pyenv.run | bash
+
+
+EXPOSE 3000
+ENTRYPOINT ["/docker-entrypoint.ksh"]
+CMD [ "yarn", "start:prod" ]
+
+#Manual build
+# docker build -f barista-scan/Dockerfile-scanbase --tag docker.repo1.uhc.com/barista/barista-scanbase:feature barista-scan
+# for i in  dev master; do docker tag docker.repo1.uhc.com/barista/barista-scanbase:feature docker.repo1.uhc.com/barista/barista-scanbase:$i ; done
+# for i in feature dev master; do  docker push docker.repo1.uhc.com/barista/barista-scanbase:${i} ; done

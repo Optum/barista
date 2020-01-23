@@ -1,0 +1,22 @@
+<app-header  *ngIf="showHeader"></app-header>
+
+<mat-sidenav-container autosize>
+  <mat-sidenav
+    #appDrawer
+    fixedInViewport="false"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="isHandset ? 'over' : 'side'"
+    [opened]="!isHandset">
+    <mat-nav-list *ngIf="showSidebar">
+      <app-side-nav *ngFor="let item of navItems" [item]="item"></app-side-nav>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<app-footer *ngIf="showFooter" ></app-footer>
+

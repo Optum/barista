@@ -1,0 +1,15 @@
+<div>
+  <app-datatable
+    class="material striped"
+    #datatable
+    [columns]="columns"
+    [columnMode]="'flex'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [selected]="selected"
+    [selectionType]="'none'"
+    (select)="onSelect($event)"
+    [getPageResults]="getPagedResults.bind(this)">
+  </app-datatable>
+</div>

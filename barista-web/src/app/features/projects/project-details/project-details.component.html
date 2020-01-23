@@ -1,0 +1,182 @@
+<app-breadcrumbs [breadcrumbs]="breadcrumbs" [isLastSelectable]="false"></app-breadcrumbs>
+<mat-card class="content-card" *ngIf="project" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>{{project?.name || '*New Project'}}</h1>
+      <app-project-status [project]="project" *ngIf="!newProject && project.id"></app-project-status>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-tab-group [selectedIndex]="selectedTabIndex" (selectedTabChange)="onTabChanged($event)">
+      <mat-tab label="Project Overview" *ngIf="!newProject && project.id">
+
+        <app-project-stats [licenseData$]="licenseData$" [severityData$]="severityData$"
+                           [vulnerabilityData$]="vulnerabilityData$"
+                           *ngIf="licenseData$ && vulnerabilityData$"></app-project-stats>
+      </mat-tab>
+      <mat-tab label="Project Details" *ngIf="newProject || isProjectOwner">
+        <form (ngSubmit)="onSubmit()" #form="ngForm" *ngIf="project || newProject">
+          <mat-grid-list cols="2" rowHeight="100px">
+            <mat-grid-tile colspan="2">
+              <mat-form-field class="field">
+                <input matInput placeholder="Project Name" required [(ngModel)]="project.name" name="name"
+                  [matTooltip]="tooltips['name']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput placeholder="GitHub Repo"
+                       url pattern="https?://.+"
+                       [(ngModel)]="project.gitUrl"
+                       name="gitUrl"
+                       [attr.required]="project.developmentType && project.developmentType.code != 'community'"
+                       [matTooltip]="tooltips['gitUrl']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <mat-label>Package Manager</mat-label>
+                <mat-select [(ngModel)]="project.packageManager"
+                            name="packageManager"
+                            [compareWith]="compareLookupModels"
+                            [attr.required]="project.developmentType && project.developmentType.code != 'community'"
+                            [matTooltip]="tooltips['packageManager']">
+                  <mat-option *ngFor="let pm of packageManagers$ | async" [value]="pm">
+                    {{pm.description}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput placeholder="Custom Package Manager Path" [(ngModel)]="project.customPackageManagerPath"
+                       name="pomXmlFile"
+                       [disabled]="!project.packageManager" [matTooltip]="tooltips['pomXmlFile']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput placeholder="Custom Package Manager Filename" [(ngModel)]="project.customPackageManagerFilename"
+                       name="buildGradleFile"
+                       [disabled]="!project.packageManager" [matTooltip]="tooltips['buildGradleFile']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput placeholder="Requested Version" required [(ngModel)]="project.currentVersion"
+                       name="currentVersion" [matTooltip]="tooltips['currentVersion']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput [placeholder]="(systemConfiguration | async)?.askIdDisplayName" required [(ngModel)]="project.askID" name="askID"
+                       [disabled]="project?.developmentType?.code == 'community'"
+                       [matTooltip]="tooltips['askID']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput placeholder="Owner" required [(ngModel)]="project.owner" name="owner"
+                       [matTooltip]="tooltips['owner']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <mat-label>Deployment Type</mat-label>
+                <mat-select [(ngModel)]="project.deploymentType" required name="deploymentType"
+                            [compareWith]="compareLookupModels" [matTooltip]="tooltips['deploymentType']">
+                  <mat-option *ngFor="let dt of deploymentType$ | async" [value]="dt">
+                    {{dt.description}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </mat-grid-tile>
+
+
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput placeholder="Path to upload file for scanning"
+                       [(ngModel)]="project.pathToUploadFileForScanning" name="pathToUploadFileForScanning"
+                       [matTooltip]="tooltips['pathToUploadFileForScanning']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <mat-label>Output</mat-label>
+                <mat-select [(ngModel)]="project.outputFormat" required name="outputFormat"
+                            [compareWith]="compareLookupModels" [matTooltip]="tooltips['outputFormat']">
+                  <mat-option *ngFor="let outF of outputFormatType$ | async" [value]="outF">
+                    {{outF.description}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <input matInput placeholder="Output Email" required email [(ngModel)]="project.outputEmail"
+                       name="outputEmail" [matTooltip]="tooltips['outputEmail']">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="field">
+                <mat-label>Project Development Type</mat-label>
+                <mat-select [(ngModel)]="project.developmentType" required name="developmentType"
+                            [compareWith]="compareLookupModels"
+                            [matTooltip]="tooltips['developmentType']">
+                  <mat-option *ngFor="let dt of projectDevelopmentType$ | async" [value]="dt">
+                    {{dt.description}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <button mat-button
+                      color="primary"
+                      type=”button”
+                      (click)="addManualLicense()"
+                      [disabled]="project.developmentType.code != 'community' || project.id == undefined"
+                      *ngIf="!defaultManualLicense && project?.developmentType?.code == 'community'">
+                Add Manual License
+              </button>
+              <div *ngIf="defaultManualLicense && project.developmentType.code == 'community'">
+                <h4>License: {{defaultManualLicense.license.name}}</h4>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="2">
+              <mat-form-field class="field">
+            <textarea matInput placeholder="Project Description" required rows="3" [(ngModel)]="project.description"
+                      name="description" [matTooltip]="tooltips['description']"></textarea>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile *ngIf="authService.isAdmin">
+              <mat-form-field class="field">
+                <input matInput placeholder="User Id" required [(ngModel)]="project.userId"
+                       name="userId" [matTooltip]="tooltips['userId']">
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+          <button type="submit" mat-button color="primary" *ngIf="!newProject" [disabled]="!form.valid">Update</button>
+          <button type="submit" mat-button color="primary" *ngIf="newProject" [disabled]="!form.valid">
+            Create
+          </button>
+        </form>
+      </mat-tab>
+      <mat-tab label="Scans" *ngIf="!newProject && project.id">
+        <app-project-scans></app-project-scans>
+      </mat-tab>
+      <mat-tab label="Obligations" *ngIf="!newProject && project.id">
+        <app-obligations [project]="project"></app-obligations>
+      </mat-tab>
+      <mat-tab label="Bill of Materials" *ngIf="!newProject && project.id">
+        <app-bill-of-materials [project]="project"></app-bill-of-materials>
+      </mat-tab>
+      <mat-tab label="Notes" *ngIf="!newProject && project.id">
+        <app-project-notes [project]="project"></app-project-notes>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+
+
+

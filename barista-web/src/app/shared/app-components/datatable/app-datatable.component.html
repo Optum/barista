@@ -1,0 +1,21 @@
+<ngx-datatable
+  [ngClass]="_getTableClasses()"
+  [rows]="rows"
+  [columns]="columns"
+  [columnMode]="columnMode"
+  [headerHeight]="headerHeight"
+  [footerHeight]="footerHeight"
+  [rowHeight]="rowHeight"
+  [scrollbarV]="scrollbarV"
+  [selected]="selected"
+  [selectionType]="selectionType"
+  (select)="_onSelect($event)"
+  [selectCheck]="_checkSelectable.bind(this)"
+  [externalPaging]="externalPaging"
+  [count]="page.total"
+  [offset]="page.page"
+  [limit]="page.count"
+  [sorts]="sorts"
+  [loadingIndicator]="isLoading"
+  (page)='_setPage($event)'>
+</ngx-datatable>

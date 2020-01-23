@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-accordion>
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title *ngIf="title">
+          {{title}}
+        </mat-panel-title>
+        <mat-panel-description *ngIf="description">
+          {{description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div [innerHTML]="html | safe: 'html'"></div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          JSON Details
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+
+      <prettyjson [obj]="jsonObject"></prettyjson>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</mat-card>

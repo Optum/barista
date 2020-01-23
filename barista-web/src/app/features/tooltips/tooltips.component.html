@@ -1,0 +1,22 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      Tool Tips
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="output-format-card-content">
+    <app-datatable
+      class="material striped"
+      [columns]="columns"
+      [columnMode]="'flex'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="50"
+      [selected]="selected"
+      [selectionType]="'single'"
+      (select)="onSelect($event)"
+      [getPageResults]="getPagedResults.bind(this)"
+    >
+    </app-datatable>
+  </mat-card-content>
+</mat-card>

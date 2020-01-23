@@ -1,0 +1,534 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#", 
+  "id": "", 
+  "type": "object", 
+  "title": "package", 
+  "description": "A package object.", 
+  "required": [
+    "name"
+  ], 
+  "properties": {
+    "type": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "package type", 
+          "description": "Optional. A short code to identify what is the type of this package. For instance gem for a Rubygem, docker for container, pypi for Python Wheel or Egg, maven for a Maven Jar, deb for a Debian package, etc."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "namespace": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "package namespace", 
+          "description": "Optional namespace for this package."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "name": {
+      "type": "string", 
+      "title": "package name", 
+      "description": "Name of the package."
+    }, 
+    "version": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "package version", 
+          "description": "Optional version of the package as a string."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "qualifiers": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "package qualifiers", 
+          "description": "Optional mapping of key=value pairs qualifiers for this package"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "subpath": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "extra package subpath", 
+          "description": "Optional extra subpath inside a package and relative to the root of this package"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "description": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "Description", 
+          "description": "Description for this package. By convention the first should be a summary when available."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "release_date": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "release date", 
+          "description": "Release date of the package"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "primary_language": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "Primary programming language", 
+          "description": ""
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "contains_source_code": {
+      "oneOf": [
+        {
+          "type": "boolean", 
+          "title": "contains source code", 
+          "description": "Flag set to True if this package contains its own source code, None if this is unknown, False if not.", 
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "parties": {
+      "oneOf": [
+        {
+          "type": "array", 
+          "title": "parties", 
+          "description": "A list of parties such as a person, project or organization.", 
+          "items": {
+            "type": "object", 
+            "title": "party", 
+            "description": "A party is a person, project or organization related to a package.", 
+            "properties": {
+              "type": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "party type", 
+                    "description": "the type of this party: One of: person, project, organization", 
+                    "enum": [
+                      "person", 
+                      "project", 
+                      "organization"
+                    ]
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "name": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "name", 
+                    "description": "Name of this party."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "role": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "party role", 
+                    "description": "A role for this party. Something such as author, maintainer, contributor, owner, packager, distributor, vendor, developer, owner, etc."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "url": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "url", 
+                    "description": "URL to a primary web page for this party."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "email": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "email", 
+                    "description": "Email for this party."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "keywords": {
+      "oneOf": [
+        {
+          "type": "array", 
+          "title": "keywords", 
+          "description": "A list of keywords.", 
+          "items": {
+            "type": "string"
+          }
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "size": {
+      "oneOf": [
+        {
+          "type": "integer", 
+          "title": "download size", 
+          "description": "size of the package download in bytes"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "download_url": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "Download URL", 
+          "description": "A direct download URL."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "download_checksums": {
+      "oneOf": [
+        {
+          "type": "array", 
+          "title": "download checksums", 
+          "description": "A list of checksums for this download in hexadecimal and prefixed by the lowercased checksum algorithm and a colon e.g. sha1:c5095691347bd5ad3b5e180238c3914d16f05812", 
+          "items": {
+            "type": "string"
+          }
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "homepage_url": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "homepage URL", 
+          "description": "URL to the homepage for this package."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "vcs_tool": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "Version control system tool", 
+          "description": "The type of VCS tool for this package. One of: git, svn, hg, bzr, cvs", 
+          "enum": [
+            "git", 
+            "svn", 
+            "hg", 
+            "bzr", 
+            "cvs"
+          ]
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "vcs_repository": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "VCS Repository URL", 
+          "description": "a URL to the VCS repository in the SPDX form of:git+https://github.com/nexb/scancode-toolkit.git"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "vcs_revision": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "VCS revision", 
+          "description": "a revision, commit, branch or tag reference, etc. (can also be included in the URL)"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "code_view_url": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "code view URL", 
+          "description": "a URL where the code can be browsed online"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "bug_tracking_url": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "bug tracking URL", 
+          "description": "URL to the issue or bug tracker for this package"
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "copyright": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "Copyright", 
+          "description": "Copyright statements for this package. Typically one per line."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "license_expression": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "license expression", 
+          "description": "The license expression for this package."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "declared_licensing": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "declared licensing", 
+          "description": "The licensing text as declared in a package manifest."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "notice_text": {
+      "oneOf": [
+        {
+          "type": "string", 
+          "title": "notice text", 
+          "description": "A notice text for this package."
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "dependencies": {
+      "oneOf": [
+        {
+          "type": "array", 
+          "title": "dependencies", 
+          "description": "A list of DependentPackage for this package. ", 
+          "items": {
+            "type": "object", 
+            "title": "dependent package", 
+            "description": "An identifiable dependent package package object.", 
+            "properties": {
+              "purl": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "Dependent package URL", 
+                    "description": "A compact purl package URL"
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "requirement": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "dependent package version requirement", 
+                    "description": "A string defining version(s)requirements. Package-type specific."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "scope": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "dependency scope", 
+                    "description": "The scope of this dependency, such as runtime, install, etc. This is package-type specific and is the original scope string."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "is_runtime": {
+                "oneOf": [
+                  {
+                    "type": "boolean", 
+                    "title": "is optional flag", 
+                    "description": "True if this dependency is an optional dependency"
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "is_optional": {
+                "oneOf": [
+                  {
+                    "type": "boolean"
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "is_resolved": {
+                "oneOf": [
+                  {
+                    "type": "boolean", 
+                    "title": "is resolved flag", 
+                    "description": "True if this dependency version requirement has been resolved and this dependency url points to an exact version."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }, 
+    "related_packages": {
+      "oneOf": [
+        {
+          "type": "array", 
+          "title": "related packages", 
+          "description": "A list of package relationships for this package. For instance an SRPM is the \"source of\" a binary RPM.", 
+          "items": {
+            "type": "object", 
+            "title": "relationship between two packages", 
+            "description": "A directed relationship between two packages. This consiste of three attributes:The \"from\" (or subject) package \"purl\" in the relationship, the \"to\" (or object) package \"purl\" in the relationship, and the \"relationship\" (or predicate) string that specifies the relationship.", 
+            "properties": {
+              "from_purl": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "\"From\" purl package URL in the relationship", 
+                    "description": "A compact purl package URL."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "relationship": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "Relationship between two packages.", 
+                    "description": "Relationship between the from and to package URLs such as \"source_of\" when a package is the source code package for another package"
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }, 
+              "to_purl": {
+                "oneOf": [
+                  {
+                    "type": "string", 
+                    "title": "\"To\" purl package URL in the relationship", 
+                    "description": "A compact purl package URL."
+                  }, 
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        }, 
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<mat-card class="content-card" fxFill>
+  <mat-card-header>
+    <mat-card-title>
+      <h1 mat-dialog-title>Modules for License {{licenseDto.name}}</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div mat-dialog-content class="content">
+      <div class="search-box">
+        <mat-form-field class="licenses-filter-field">
+          <input matInput type="text" #searchInput placeholder="Module Search" [(ngModel)]="filter">
+          <button mat-button *ngIf="filter" matSuffix mat-icon-button aria-label="Clear"
+                  (click)="clearSearchField()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <app-datatable
+        #datatable
+        [columns]="columns"
+        [columnMode]="'flex'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [selectionType]="'none'"
+        (select)="onSelect($event)"
+        [selected]="selected"
+        [scrollbarV]="false"
+        [getPageResults]="getPagedResults.bind(this)"
+        [extraClasses]="['lib-modules']"
+      >
+      </app-datatable>
+      <ng-template #overrideTemplate let-row="row" let-value="value"
+                   ngx-datatable-cell-template>
+        <button class="mat-raised-button" color="primary" (click)="onOverrideButtonClick($event, row)">
+          Override
+        </button>
+      </ng-template>
+      <ng-template #statusTemplate let-row="row" let-value="value" ngx-datatable-cell-template>
+        <app-project-scan-status-type [statusCode]="value"></app-project-scan-status-type>
+      </ng-template>
+    </div>
+  </mat-card-content>
+</mat-card>

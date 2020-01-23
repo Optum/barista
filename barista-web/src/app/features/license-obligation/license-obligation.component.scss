@@ -1,0 +1,51 @@
+.licenses-filter-field {
+  width: 300px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.assoc-obligations {
+  margin-bottom: 25px;
+}
+
+.active-license {
+  margin-bottom: 15px;
+}
+
+.red {
+  color: red;
+}
+
+.tile-content {
+  width: 100%;
+  height: 100%;
+}
+
+.tile-content:first-child {
+  margin-right: 20px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.row div {
+  flex: 1;
+}
+
+.associated-obligations {
+  padding-left: 20px;
+}
+
+.all-obligations {
+  margin-top: 20px;
+}
