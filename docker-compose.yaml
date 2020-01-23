@@ -1,0 +1,85 @@
+version: "2"
+
+services:
+  barista-base:
+    image: barista-base:compose
+    build:
+      context: .
+      dockerfile: Dockerfile-base
+      
+  barista-scanbase:
+    image: barista-scanbase:compose
+    build:
+      context: barista-scan
+      dockerfile: Dockerfile-scanbase
+
+  barista-web:
+    env_file: barista-compose.env
+    image: barista-web:compose
+    build:
+      context: barista-web
+      dockerfile: Dockerfile
+      args:
+        - BARISTA_API_BASE_PATH=/api/v1
+        - REPO=
+        - TAG=compose
+    volumes:
+      - ./docker-compose/nginx-config:/etc/nginx/conf.d
+    networks:
+      - baristanetwork
+    ports:
+      - 8080:8080
+    depends_on:
+      - barista-api
+
+  barista-api:
+    env_file: barista-compose.env
+    image: barista-api:compose
+    build:
+      context: barista-api
+      dockerfile: Dockerfile
+      args:
+        - REPO=
+        - TAG=compose
+    networks:
+      - baristanetwork
+    depends_on:
+      - database
+      - redis
+
+  barista-scan:
+    env_file: barista-compose.env
+    image: barista-scan:compose
+    build:
+      context: barista-scan
+      dockerfile: Dockerfile
+      args:
+        - REPO=
+        - BASETAG=compose
+    networks:
+      - baristanetwork
+    volumes:
+      - ./docker-compose/pythons:/opt/pythons
+      - ./docker-compose/m2:/.m2
+    depends_on:
+      - database
+      - barista-api
+      - redis
+
+  database:
+    env_file: barista-compose.env
+    networks:
+      - baristanetwork
+    image: centos/postgresql-10-centos7:latest
+
+  redis:
+    env_file: barista-compose.env
+    image:  redis:5.0.1-alpine
+    networks:
+      - baristanetwork
+    volumes:
+      - ./docker-compose/redis-data:/data
+      - ./docker-compose/redis-config:/config
+
+networks:
+  baristanetwork:

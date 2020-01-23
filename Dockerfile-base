@@ -1,0 +1,23 @@
+# This is a docker file that forms the basis of the three images built
+# for Barista.  Much of the functionality is common, so the three images
+# will inherit this dockerfile in order to reduce build time and reduce errors.
+ARG REPO=""
+ARG TAG="10.16.0"
+FROM ${REPO}node:${TAG}
+LABEL maintainer=randy.olinger@optum.com
+
+# Create app directory
+WORKDIR /usr/src/app
+ENV HOME=/usr/src/app
+
+RUN rm -fr barista-scan barista-web barista-api  doc
+
+
+RUN mkdir -p -v -m 770 .config /.config /.cache/yarn  && chown root:root /.cache /.cache/yarn /.config .config\
+    && chmod -R g+rw . && chmod -R g+rwx .config /.config
+
+#Install JAVA
+RUN apt-get update && apt install -y openjdk-8-jre-headless
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+
+#Build this image with docker build -f Dockerfile-base -t barista-base:$(date +%Y%m%d%H%M) .
