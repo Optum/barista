@@ -18,4 +18,3 @@ Contributors:
 @woodrbe - developer
 @amyschoen - developer and our git/github guru
 @egb2016 - security consultant
-
