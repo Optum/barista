@@ -88,6 +88,7 @@ export class StatsController implements CrudController<Project> {
 
   @Get('/badges/:id/licensestate')
   @Header('Content-Type', 'image/svg+xml')
+  @Header('Content-Disposition', 'attachment; filename=licensestate.svg')
   async getLicenseState(@Param('id') id: string, @Res() res: Response) {
     const project = await this.service.db.findOne(Number(id));
 
@@ -107,6 +108,7 @@ export class StatsController implements CrudController<Project> {
 
   @Get('/badges/:id/securitystate')
   @Header('Content-Type', 'image/svg+xml')
+  @Header('Content-Disposition', 'attachment; filename=securitystate.svg')
   async getSecurityState(@Param('id') id: string, @Res() res: Response) {
     const project = await this.service.db.findOne(Number(id));
 
@@ -126,6 +128,7 @@ export class StatsController implements CrudController<Project> {
 
   @Get('/badges/:id/vulnerabilities')
   @Header('Content-Type', 'image/svg+xml')
+  @Header('Content-Disposition', 'attachment; filename=vulnerabilities.svg')
   async getvu(@Param('id') id: string, @Res() res: Response) {
     const project = await this.service.db.findOne(Number(id));
 
