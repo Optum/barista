@@ -73,6 +73,7 @@ export class StatsController implements CrudController<Project> {
     const format = {
       text: [label, value],
       color: color,
+      labelColor: '#855',
       template: 'flat',
     };
 
@@ -133,7 +134,7 @@ export class StatsController implements CrudController<Project> {
     const project = await this.service.db.findOne(Number(id));
 
     let securityStatus = await ProjectScanStatusTypeService.Unknown();
-    let valueString = '';
+    let valueString = 'none detected';
     if (project) {
       const vulnerabilities = await this.service.distinctSeverities(project);
       securityStatus = await this.service.highestSecurityStatus(project);
