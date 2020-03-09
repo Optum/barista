@@ -2,7 +2,19 @@ import { Index } from 'typeorm';
 import { Project, ProjectScanStatusType, VulnerabilityStatusDeploymentType } from '@app/models';
 import { ProjectScanStatusTypeService } from '@app/services/project-scan-status-type/project-scan-status-type.service';
 import { ProjectService } from '@app/services/project/project.service';
-import { Body, Controller, Get, Param, Res, Post, Query, Request, UseGuards, UseInterceptors } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Header,
+  Param,
+  Res,
+  Post,
+  Query,
+  Request,
+  UseGuards,
+  UseInterceptors,
+} from '@nestjs/common';
 import { ApiUseTags } from '@nestjs/swagger';
 import { Response } from 'express';
 
@@ -75,6 +87,7 @@ export class StatsController implements CrudController<Project> {
   }
 
   @Get('/badges/:id/licensestate')
+  @Header('Content-Type', 'image/svg+xml')
   async getLicenseState(@Param('id') id: string, @Res() res: Response) {
     const project = await this.service.db.findOne(Number(id));
 
@@ -93,6 +106,7 @@ export class StatsController implements CrudController<Project> {
   }
 
   @Get('/badges/:id/securitystate')
+  @Header('Content-Type', 'image/svg+xml')
   async getSecurityState(@Param('id') id: string, @Res() res: Response) {
     const project = await this.service.db.findOne(Number(id));
 
@@ -111,6 +125,7 @@ export class StatsController implements CrudController<Project> {
   }
 
   @Get('/badges/:id/vulnerabilities')
+  @Header('Content-Type', 'image/svg+xml')
   async getvu(@Param('id') id: string, @Res() res: Response) {
     const project = await this.service.db.findOne(Number(id));
 
