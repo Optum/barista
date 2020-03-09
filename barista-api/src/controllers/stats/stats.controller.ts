@@ -134,10 +134,13 @@ export class StatsController implements CrudController<Project> {
     const project = await this.service.db.findOne(Number(id));
 
     let securityStatus = await ProjectScanStatusTypeService.Unknown();
-    let valueString = 'none detected';
+    let valueString = '';
     if (project) {
       const vulnerabilities = await this.service.distinctSeverities(project);
       securityStatus = await this.service.highestSecurityStatus(project);
+      if (vulnerabilities.length === 0) {
+        valueString = 'none detected';
+      }
       vulnerabilities.forEach(vul => (valueString = valueString + vul.severity + ':' + vul.count + ' '));
     }
 
