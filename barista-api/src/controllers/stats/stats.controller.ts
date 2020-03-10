@@ -173,7 +173,7 @@ export class StatsController implements CrudController<Project> {
           .getMany();
 
         valueString = query.length.toString();
-        color = 'green';
+        color = '#edb';
       }
     }
 
