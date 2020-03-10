@@ -1,3 +1,5 @@
+import { LicenseScanResultItemService } from './../../services/license-scan-result-item/license-scan-result-item.service';
+import { LicenseScanResultItem } from './../../models/LicenseScanResultItem';
 import { Index } from 'typeorm';
 import { Project, ProjectScanStatusType, VulnerabilityStatusDeploymentType } from '@app/models';
 import { ProjectScanStatusTypeService } from '@app/services/project-scan-status-type/project-scan-status-type.service';
@@ -40,7 +42,7 @@ import {
 @ApiUseTags('Stats')
 @Controller('stats')
 export class StatsController implements CrudController<Project> {
-  constructor(public service: ProjectService) {}
+  constructor(public service: ProjectService, private licenseScanResultItemService: LicenseScanResultItemService) {}
   get base(): CrudController<Project> {
     return this;
   }
@@ -130,7 +132,7 @@ export class StatsController implements CrudController<Project> {
   @Get('/badges/:id/vulnerabilities')
   @Header('Content-Type', 'image/svg+xml')
   @Header('Content-Disposition', 'attachment; filename=vulnerabilities.svg')
-  async getvu(@Param('id') id: string, @Res() res: Response) {
+  async getvulnerabilities(@Param('id') id: string, @Res() res: Response) {
     const project = await this.service.db.findOne(Number(id));
 
     let securityStatus = await ProjectScanStatusTypeService.Unknown();
@@ -145,6 +147,37 @@ export class StatsController implements CrudController<Project> {
     }
 
     const svg = this.createSVG(this.createFormat('barista vulnerabilities', valueString, securityStatus.code));
+    return res
+      .status(200)
+      .send(svg)
+      .end();
+  }
+
+  @Get('/badges/:id/components')
+  @Header('Content-Type', 'image/svg+xml')
+  @Header('Content-Disposition', 'attachment; filename=components.svg')
+  async getComponentsResults(@Param('id') id: string, @Res() res: Response) {
+    const project = await this.service.db.findOne(Number(id));
+    let valueString = 'unknown';
+    let color = 'lightgrey';
+    if (project) {
+      const scan = await this.service.latestCompletedScan(project);
+      if (scan) {
+        const query = await this.licenseScanResultItemService.db
+          .createQueryBuilder('resultItem')
+          .leftJoin('resultItem.licenseScan', 'licenseScan')
+          .leftJoinAndSelect('resultItem.projectScanStatus', 'projectScanStatus')
+          .leftJoinAndSelect('resultItem.license', 'license')
+          .leftJoin('licenseScan.scan', 'scan')
+          .where('scan.id = :id', { id: scan.id })
+          .getMany();
+
+        valueString = query.length.toString();
+        color = 'green';
+      }
+    }
+
+    const svg = this.createSVG(this.createFormat('barista open source components', valueString, color));
     return res
       .status(200)
       .send(svg)
