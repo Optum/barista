@@ -107,7 +107,10 @@ export class StatsController implements CrudController<Project> {
     let licenseStatus = await ProjectScanStatusTypeService.Unknown();
     let latestScanDate = 'unknown';
     if (project) {
-      licenseStatus = await this.service.highestLicenseStatus(project);
+      const checklicenseStatus = await this.service.highestLicenseStatus(project);
+      if (checklicenseStatus) {
+        licenseStatus = checklicenseStatus;
+      }
       latestScanDate = await this.getLatestScanDate(project);
     }
 
@@ -127,7 +130,10 @@ export class StatsController implements CrudController<Project> {
     let securityStatus = await ProjectScanStatusTypeService.Unknown();
     let latestScanDate = 'unknown';
     if (project) {
-      securityStatus = await this.service.highestSecurityStatus(project);
+      const checksecurityStatus = await this.service.highestSecurityStatus(project);
+      if (checksecurityStatus) {
+        securityStatus = checksecurityStatus;
+      }
       latestScanDate = await this.getLatestScanDate(project);
     }
 
