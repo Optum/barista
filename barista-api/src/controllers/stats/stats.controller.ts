@@ -1,4 +1,3 @@
-import { Project } from './../../models/Project';
 import { LicenseScanResultItemService } from './../../services/license-scan-result-item/license-scan-result-item.service';
 import { LicenseScanResultItem } from './../../models/LicenseScanResultItem';
 import { Index } from 'typeorm';
