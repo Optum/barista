@@ -21,10 +21,29 @@ export class SecurityScanResultService extends AppServiceBase<SecurityScanResult
       .where('ri."securityScanId" = :id', { id: securityScan.id })
       .select('upper(ri.severity) as severity')
       .addSelect('count(*) as count')
-      .getRawMany()).map(row => ({
-      count: +row.count,
-      severity: row.severity,
-    }));
+      .getRawMany())
+      .map(row => ({
+        count: +row.count,
+        severity: row.severity,
+      }))
+      .map(row => ({
+        count: +row.count,
+        severity: row.severity,
+      }))
+      .sort((a, b) => {
+        const serverityA = a.severity.toUpperCase();
+        const severityB = b.severity.toUpperCase();
+        const sorting = ['0.0', 'UNKNOWN', 'LOW', 'MODERATE', 'MEDIUM', 'HIGH', 'CRITICAL'];
+
+        if (sorting.indexOf(serverityA) < sorting.indexOf(severityB)) {
+          return 1;
+        }
+        if (sorting.indexOf(serverityA) > sorting.indexOf(severityB)) {
+          return -1;
+        }
+
+        return 0;
+      });
   }
 
   /**
