@@ -43,7 +43,7 @@ export class BomGroupedLicensesComponent implements OnInit, OnDestroy {
 
   bomGlobalSearchFilter = '';
   columns = [{ flexGrow: 4, name: 'Name', prop: 'name' }, { flexGrow: 1, name: 'Modules Count', prop: 'modulesCount' }];
-  @ViewChild('datatable', { static: false }) datatable: AppDatatableComponent;
+  @ViewChild('datatable') datatable: AppDatatableComponent;
   projectId: string;
   selected = [];
 

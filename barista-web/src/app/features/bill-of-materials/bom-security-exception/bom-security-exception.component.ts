@@ -45,7 +45,7 @@ export class BomSecurityExceptionComponent extends ComponentWithMessage implemen
 
   bomGlobalSearchFilter = '';
   columns: IDataTableColumns[];
-  @ViewChild('datatableComponent', { static: false }) datatableComponent: AppDatatableComponent;
+  @ViewChild('datatableComponent') datatableComponent: AppDatatableComponent;
   @Input() project: Project = {} as Project;
   @ViewChild('removeRelationTemplate', { static: true }) removeRelationTemplate;
   selected = [];

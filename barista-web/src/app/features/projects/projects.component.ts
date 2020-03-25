@@ -29,9 +29,9 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
   filter: string;
   @ViewChild('nameTemplate', { static: true }) nameTemplate;
   @Input() projectDataTableType: ProjectDataTableType | ProjectDevelopmentTypeEnum;
-  @ViewChild('projectsSearchInput', { static: false })
+  @ViewChild('projectsSearchInput')
   projectsSearchInput: ElementRef;
-  @ViewChild('searchProjectsDataTable', { static: false })
+  @ViewChild('searchProjectsDataTable')
   searchProjectsDataTable: AppDatatableComponent;
   selected = [];
   selectedIndex = 0;

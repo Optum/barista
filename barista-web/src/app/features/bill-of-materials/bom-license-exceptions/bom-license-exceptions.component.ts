@@ -47,7 +47,7 @@ export class BomLicenseExceptionsComponent implements OnInit, OnDestroy {
   bomGlobalSearchFilter = '';
   columns: IDataTableColumns[] = [];
 
-  @ViewChild('datatable', { static: false }) datatable: AppDatatableComponent;
+  @ViewChild('datatable') datatable: AppDatatableComponent;
   projectId: string;
   selected = [];
   @ViewChild('statusTemplate', { static: true }) statusTemplate;

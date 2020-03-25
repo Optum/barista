@@ -60,7 +60,7 @@ export class ProjectNotesComponent implements OnInit, OnDestroy {
   }
 
   columns = [];
-  @ViewChild('datatableComponent', { static: false }) datatableComponent: AppDatatableComponent;
+  @ViewChild('datatableComponent') datatableComponent: AppDatatableComponent;
   @ViewChild('dateCellTmpl', { static: true }) dateCellTmpl;
   @Input() project: Project;
   selected = [];

@@ -79,7 +79,7 @@ export class AppComponent implements AfterViewInit, OnInit {
       ],
     },
   ];
-  @ViewChild('appDrawer', { static: false }) appDrawer: ElementRef;
+  @ViewChild('appDrawer') appDrawer: ElementRef;
   isHandset = false;
 
   private publicNavItems: NavItem[] = [

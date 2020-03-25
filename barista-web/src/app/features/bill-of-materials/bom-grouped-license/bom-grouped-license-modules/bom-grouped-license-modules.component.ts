@@ -31,12 +31,12 @@ export class BomGroupedLicenseModulesComponent implements OnInit, AfterViewInit,
   }
 
   columns = [];
-  @ViewChild('datatable', { static: false }) datatable: AppDatatableComponent;
+  @ViewChild('datatable') datatable: AppDatatableComponent;
   filter = '';
   @Input() licenseDto: LicenseDto;
   @ViewChild('overrideTemplate', { static: true }) overrideTemplate;
   @Input() projectId: number;
-  @ViewChild('searchInput', { static: false }) searchInput: ElementRef;
+  @ViewChild('searchInput') searchInput: ElementRef;
   selected = [];
   @ViewChild('statusTemplate', { static: true }) statusTemplate;
 

@@ -40,8 +40,8 @@ export class BomSecurityExceptionDetailsComponent extends ComponentWithMessage i
   @Input() project: Project;
   projectScanStatusType: ProjectScanStatusType;
   projectScanStatusTypes$: Observable<ProjectScanStatusType[]>;
-  @ViewChild('projectsSearchInput', { static: false }) projectsSearchInput: ElementRef;
-  @ViewChild('searchProjectsDataTable', { static: false }) searchProjectsDataTable: AppDatatableComponent;
+  @ViewChild('projectsSearchInput') projectsSearchInput: ElementRef;
+  @ViewChild('searchProjectsDataTable') searchProjectsDataTable: AppDatatableComponent;
 
   ngOnDestroy(): void {}
 

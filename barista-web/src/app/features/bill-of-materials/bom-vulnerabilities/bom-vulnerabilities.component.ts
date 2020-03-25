@@ -46,7 +46,7 @@ export class BomVulnerabilitiesComponent implements OnInit, OnDestroy {
 
   bomGlobalSearchFilter = '';
   columns: IDataTableColumns[];
-  @ViewChild('datatableComponent', { static: false }) datatableComponent: AppDatatableComponent;
+  @ViewChild('datatableComponent') datatableComponent: AppDatatableComponent;
   @ViewChild('overrideTemplate', { static: true }) overrideTemplate;
   project: string;
   selected = [];

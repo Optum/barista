@@ -41,10 +41,10 @@ export class LicensesExceptionsComponent extends ComponentWithMessage implements
   deploymentTypes$: Observable<DeploymentType[]>;
   isBusy = false;
   licenseFilter = '';
-  @ViewChild('licensesDataTable', { static: false }) licensesDataTable: AppDatatableComponent;
-  @ViewChild('licenseSearchInput', { static: false }) licenseSearchInput: ElementRef;
+  @ViewChild('licensesDataTable') licensesDataTable: AppDatatableComponent;
+  @ViewChild('licenseSearchInput') licenseSearchInput: ElementRef;
   licenseStatusDeploymentTypeColumns = [];
-  @ViewChild('licenseStatusDeploymentTypeDataTable', { static: false })
+  @ViewChild('licenseStatusDeploymentTypeDataTable')
   licenseStatusDeploymentTypeDataTable: AppDatatableComponent;
   projectScanStatusTypes$: Observable<ProjectScanStatusType[]>;
   @ViewChild('removeLicenseExceptionTemplate', { static: true }) removeLicenseExceptionTemplate;

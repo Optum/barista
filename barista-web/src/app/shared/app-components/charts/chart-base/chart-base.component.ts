@@ -1,5 +1,6 @@
-import { Input, OnInit } from '@angular/core';
+import { Input, OnInit, Directive } from '@angular/core';
 
+@Directive()
 export abstract class ChartBaseComponent implements OnInit {
   protected constructor() {}
   @Input() data: number[];

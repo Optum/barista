@@ -18,16 +18,16 @@ export class LicenseObligationComponent extends ComponentWithMessage implements 
 
   allLicencesColumns = [{ name: 'Name', prop: 'name', flexGrow: 1 }, { name: 'Code', prop: 'code', flexGrow: 1 }];
   allObligationsColumns = [];
-  @ViewChild('allObligationsDataTable', { static: false }) allObligationsDataTable: AppDatatableComponent;
+  @ViewChild('allObligationsDataTable') allObligationsDataTable: AppDatatableComponent;
   associatedObligationsColumns = [];
-  @ViewChild('associatedObligationsDataTable', { static: false }) associatedObligationsDataTable: AppDatatableComponent;
+  @ViewChild('associatedObligationsDataTable') associatedObligationsDataTable: AppDatatableComponent;
   @ViewChild('associateObligationTemplate', { static: true }) associateObligationTemplate;
   isBusy: boolean;
   licenseFilter = '';
-  @ViewChild('licensesDataTable', { static: false }) licensesDataTable: AppDatatableComponent;
-  @ViewChild('licenseSearchInput', { static: false }) licenseSearchInput: ElementRef;
+  @ViewChild('licensesDataTable') licensesDataTable: AppDatatableComponent;
+  @ViewChild('licenseSearchInput') licenseSearchInput: ElementRef;
   obligationsFilter = '';
-  @ViewChild('obligationsSearchInput', { static: false }) obligationsSearchInput: ElementRef;
+  @ViewChild('obligationsSearchInput') obligationsSearchInput: ElementRef;
   @ViewChild('removeObligationAssociationTemplate', { static: true }) removeObligationAssociationTemplate;
   selectedAssociatedObligations = [];
   selectedLicense: License = null;

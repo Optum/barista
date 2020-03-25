@@ -20,7 +20,7 @@ export class BillOfMaterialsComponent implements OnInit, AfterViewInit, OnDestro
 
   @Input() project: Project;
 
-  @ViewChild('searchInput', { static: false }) searchInput: ElementRef;
+  @ViewChild('searchInput') searchInput: ElementRef;
 
   clearSearchField() {
     this.filter = '';

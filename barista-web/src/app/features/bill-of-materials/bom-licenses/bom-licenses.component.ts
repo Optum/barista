@@ -41,7 +41,7 @@ export class BomLicensesComponent implements OnInit, OnDestroy {
   }
 
   bomGlobalSearchFilter = '';
-  @ViewChild('datatable', { static: false }) datatable: LicenseScanResultItemDatatableComponent;
+  @ViewChild('datatable') datatable: LicenseScanResultItemDatatableComponent;
   projectId: string;
   selected = [];
 

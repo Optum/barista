@@ -26,12 +26,12 @@ export class ModuleSearchComponent implements OnInit, AfterViewInit, OnDestroy {
       flexGrow: 1,
     },
   ];
-  @ViewChild('childrenRecordsDataTable', { static: false })
+  @ViewChild('childrenRecordsDataTable')
   childrenRecordsDataTable: AppDatatableComponent;
   childrenRecordsSelected = [];
 
   moduleFilter = '';
-  @ViewChild('moduleSearchInput', { static: false })
+  @ViewChild('moduleSearchInput')
   moduleSearchInput: ElementRef;
 
   parentRecordsColumns = [
@@ -66,7 +66,7 @@ export class ModuleSearchComponent implements OnInit, AfterViewInit, OnDestroy {
       flexGrow: 2,
     },
   ];
-  @ViewChild('parentRecordsDataTable', { static: false })
+  @ViewChild('parentRecordsDataTable')
   parentRecordsDataTable: AppDatatableComponent;
   parentRecordsSelected = [];
   selectedProject: ModuleSearchParentRecordDto = null;

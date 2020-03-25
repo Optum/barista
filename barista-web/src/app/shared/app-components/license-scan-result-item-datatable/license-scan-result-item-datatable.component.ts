@@ -18,7 +18,7 @@ export class LicenseScanResultItemDatatableComponent implements OnInit {
 
   @Input() allowLicenseOverride = false;
   columns: IDataTableColumns[] = [];
-  @ViewChild('datatable', { static: false }) datatable: AppDatatableComponent;
+  @ViewChild('datatable') datatable: AppDatatableComponent;
   @Input() filter: string;
   @Input() getPagedResults: (query: any) => Observable<any>;
   @Input() onLicenseOverrideClick: (l: LicenseScanResultItem) => void;
