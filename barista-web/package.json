@@ -50,7 +50,7 @@
     "@ngrx/store-devtools": "^9.0.0",
     "@ngx-formly/core": "^5.5.15",
     "@ngx-formly/material": "^5.5.15",
-    "@swimlane/ngx-datatable": "^15.0.2",
+    "@swimlane/ngx-datatable": "^16.0.3",
     "angular2-prettyjson": "^3.0.1",
     "chart.js": "^2.8.0",
     "chartjs-plugin-datalabels": "^0.6.0",
