@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 // tslint:disable-next-line:max-line-length
 import { BomManualLicenseDetailsDialogComponent } from '@app/features/bill-of-materials/bom-manual-licenses/bom-manual-license-details/bom-manual-license-details-dialog.component';

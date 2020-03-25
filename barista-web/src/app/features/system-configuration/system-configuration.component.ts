@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { MatDialog, MatSnackBar } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { SystemConfiguration, SystemConfigurationApiService } from '@app/shared/api';
 import { AppDialogComponent } from '@app/shared/app-components/app-dialog/app-dialog.component';
 import { validateJson } from '@app/shared/helpers';

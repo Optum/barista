@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '@app/features/auth/auth.service';
 import { BomLicenseExceptionDetailsDialogComponent } from '@app/features/bill-of-materials/bom-license-exceptions/bom-license-exception-details/bom-license-exception-details-dialog.component';

@@ -1,6 +1,6 @@
 // tslint:disable:max-line-length
 import { Component, Input, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { BomManualLicenseDetailsDialogComponent } from '@app/features/bill-of-materials/bom-manual-licenses/bom-manual-license-details/bom-manual-license-details-dialog.component';
 import { BomManualLicense, BomManualLicenseApiService, License, LicenseApiService, Project } from '@app/shared/api';
 import { AppDialogComponent } from '@app/shared/app-components/app-dialog/app-dialog.component';
