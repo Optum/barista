@@ -26,6 +26,10 @@ export class SecurityScanResultService extends AppServiceBase<SecurityScanResult
         count: +row.count,
         severity: row.severity,
       }))
+      .map(row => ({
+        count: +row.count,
+        severity: row.severity,
+      }))
       .sort((a, b) => {
         const serverityA = a.severity.toUpperCase();
         const severityB = b.severity.toUpperCase();
