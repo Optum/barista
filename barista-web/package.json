@@ -42,7 +42,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
-    "@nestjsx/crud-request": "^4.2.0",
+    "@nestjsx/crud-request": "^4.4.2",
     "@ngrx/data": "^9.0.0",
     "@ngrx/effects": "^9.0.0",
     "@ngrx/entity": "^9.0.0",
