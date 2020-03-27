@@ -1,21 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 //@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
 
-@import '~@swimlane/ngx-datatable/release/index.css';
-@import '~@swimlane/ngx-datatable/release/themes/material.css';
-@import '~@swimlane/ngx-datatable/release/assets/icons.css';
-
-@import "./assets/sass/spacing-helpers.scss";
+@import './assets/sass/spacing-helpers.scss';
 
 mat-card {
   box-sizing: border-box;
 }
 
 html,
-body{
-    height: 100%;
+body {
+  height: 100%;
 }
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
