@@ -40,7 +40,7 @@ export class LdapService {
             filter: `(&(objectClass=user)(sAMAccountName=${userName}))`,
             attributes: ['cn', 'displayName', 'givenName', 'sn', 'mail', 'group', 'gn', 'memberOf'],
           })
-          .then(result => {
+          .then((result) => {
             try {
               if (_.isEmpty(result.entries)) {
                 // not a primary account
@@ -53,9 +53,9 @@ export class LdapService {
 
               if (memberOf) {
                 const groups = memberOf
-                  .map(g => g.split(',')[0])
-                  .map(s => s.replace(/(.*)=(.*)/, '$2'))
-                  .map(group => group.toLowerCase());
+                  .map((g) => g.split(',')[0])
+                  .map((s) => s.replace(/(.*)=(.*)/, '$2'))
+                  .map((group) => group.toLowerCase());
                 return groups;
                 // const baristaGroups = _.filter(groups, group => group.startsWith('barista_'));
                 // this.logger.log(`User ${userName} is member of the following barista groups: ${baristaGroups}`);
@@ -67,22 +67,22 @@ export class LdapService {
             }
           });
       })
-      .catch(e => {
+      .catch((e) => {
         this.logger.error(`AD Groups query error: ${e}`);
         return null;
       });
   }
 
   getUserRole(groups: string[]): UserRole {
-    if (_.findIndex(groups, group => group.startsWith('CN=' + this.ldapConfig.adminGroup)) !== -1) {
+    if (_.findIndex(groups, (group) => group.startsWith('CN=' + this.ldapConfig.adminGroup)) !== -1) {
       return UserRole.Admin;
     }
 
-    if (_.findIndex(groups, group => group.startsWith('CN=' + this.ldapConfig.licenseAdminGroup)) !== -1) {
+    if (_.findIndex(groups, (group) => group.startsWith('CN=' + this.ldapConfig.licenseAdminGroup)) !== -1) {
       return UserRole.LicenseAdmin;
     }
 
-    if (_.findIndex(groups, group => group.startsWith('CN=' + this.ldapConfig.securityAdminGroup)) !== -1) {
+    if (_.findIndex(groups, (group) => group.startsWith('CN=' + this.ldapConfig.securityAdminGroup)) !== -1) {
       return UserRole.SecurityAdmin;
     }
 
@@ -100,10 +100,11 @@ export class LdapService {
       this.ldapConfig.group,
     ];
 
-    let adGroupsFilter = '(|' + adGroups.map(group => `(memberOf=CN=${group},${this.ldapConfig.base})`).join('') + ')';
-    if (!applyFilter) {
-      adGroupsFilter = '';
-    }
+    const adGroupsFilter =
+      '(|' + adGroups.map((group) => `(memberOf=CN=${group},${this.ldapConfig.base})`).join('') + ')';
+    // if (!applyFilter) {
+    //   adGroupsFilter = '';
+    // }
     this.logger.log(`AD Groups Filter ${adGroupsFilter}`);
     return client
       .bind(searchUser, pass)
@@ -114,7 +115,7 @@ export class LdapService {
             filter: `(&(objectClass=user)(sAMAccountName=${userName})${adGroupsFilter})`,
             attributes: ['cn', 'displayName', 'givenName', 'sn', 'mail', 'group', 'gn', 'memberOf'],
           })
-          .then(result => {
+          .then((result) => {
             try {
               if (_.isEmpty(result.entries)) {
                 // not a primary account
@@ -142,7 +143,7 @@ export class LdapService {
             }
           });
       })
-      .catch(e => {
+      .catch((e) => {
         this.logger.error(`AD query error: ${e}`);
         return null;
       });
