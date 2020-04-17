@@ -60,10 +60,11 @@ export class LdapService {
                 const baristaGroups = await this.projectService.distinctUserIds();
 
                 const ba = baristaGroups.map((g) => g.project_userId);
-                this.logger.log(`User ${userName} is member of the following barista groups: ${ba}`);
+                this.logger.log(`distinct barista groups: ${ba}`);
                 const intersection = groups.filter((element) =>
                   baristaGroups.map((g) => g.project_userId).includes(element),
                 );
+                this.logger.log(`User ${userName} is member of the following barista groups: ${intersection}`);
                 return intersection;
 
                 // return baristaGroups;
