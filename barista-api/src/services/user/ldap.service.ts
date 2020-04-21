@@ -41,7 +41,7 @@ export class LdapService {
             filter: `(&(objectClass=user)(sAMAccountName=${userName}))`,
             attributes: ['cn', 'displayName', 'givenName', 'sn', 'mail', 'group', 'gn', 'memberOf'],
           })
-          .then(async (result) => {
+          .then(async result => {
             try {
               if (_.isEmpty(result.entries)) {
                 // not a primary account
@@ -53,16 +53,16 @@ export class LdapService {
 
               if (memberOf) {
                 const groups = memberOf
-                  .map((g) => g.split(',')[0])
-                  .map((s) => s.replace(/(.*)=(.*)/, '$2'))
-                  .map((group) => group.toLowerCase());
+                  .map(g => g.split(',')[0])
+                  .map(s => s.replace(/(.*)=(.*)/, '$2'))
+                  .map(group => group.toLowerCase());
 
                 const baristaGroups = await this.projectService.distinctUserIds();
 
-                const ba = baristaGroups.map((g) => g.project_userId);
+                const ba = baristaGroups.map(g => g.project_userId);
                 this.logger.log(`distinct barista groups: ${ba}`);
-                const intersection = groups.filter((element) =>
-                  baristaGroups.map((g) => g.project_userId).includes(element),
+                const intersection = groups.filter(element =>
+                  baristaGroups.map(g => g.project_userId).includes(element),
                 );
                 this.logger.log(`User ${userName} is member of the following barista groups: ${intersection}`);
                 return intersection;
@@ -75,22 +75,22 @@ export class LdapService {
             }
           });
       })
-      .catch((e) => {
+      .catch(e => {
         this.logger.error(`AD Groups query error: ${e}`);
         return null;
       });
   }
 
   getUserRole(groups: string[]): UserRole {
-    if (_.findIndex(groups, (group) => group.startsWith('CN=' + this.ldapConfig.adminGroup)) !== -1) {
+    if (_.findIndex(groups, group => group.startsWith('CN=' + this.ldapConfig.adminGroup)) !== -1) {
       return UserRole.Admin;
     }
 
-    if (_.findIndex(groups, (group) => group.startsWith('CN=' + this.ldapConfig.licenseAdminGroup)) !== -1) {
+    if (_.findIndex(groups, group => group.startsWith('CN=' + this.ldapConfig.licenseAdminGroup)) !== -1) {
       return UserRole.LicenseAdmin;
     }
 
-    if (_.findIndex(groups, (group) => group.startsWith('CN=' + this.ldapConfig.securityAdminGroup)) !== -1) {
+    if (_.findIndex(groups, group => group.startsWith('CN=' + this.ldapConfig.securityAdminGroup)) !== -1) {
       return UserRole.SecurityAdmin;
     }
 
@@ -108,18 +108,18 @@ export class LdapService {
       this.ldapConfig.group,
     ];
 
-    const adGroupsFilter =
-      '(|' + adGroups.map((group) => `(memberOf=CN=${group},${this.ldapConfig.base})`).join('') + ')';
+    // const adGroupsFilter =
+    //   '(|' + adGroups.map((group) => `(memberOf=CN=${group},${this.ldapConfig.base})`).join('') + ')';
     return client
       .bind(searchUser, pass)
       .then(() => {
         return client
           .search(searchUser, {
             scope: 'sub',
-            filter: `(&(objectClass=user)(sAMAccountName=${userName})${adGroupsFilter})`,
+            filter: `(&(objectClass=user)(sAMAccountName=${userName}))`,
             attributes: ['cn', 'displayName', 'givenName', 'sn', 'mail', 'group', 'gn', 'memberOf'],
           })
-          .then((result) => {
+          .then(result => {
             try {
               if (_.isEmpty(result.entries)) {
                 // not a primary account
@@ -127,7 +127,7 @@ export class LdapService {
                 return null;
               }
 
-              // this.logger.log(`AD answer: ${result.entries.map(entryLocal => JSON.stringify(entryLocal.object))}`);
+              this.logger.log(`AD answer: ${result.entries.map(entryLocal => JSON.stringify(entryLocal.object))}`);
               const memberOf = result.entries[0].object.memberOf;
 
               // Only look at the first response
@@ -147,7 +147,7 @@ export class LdapService {
             }
           });
       })
-      .catch((e) => {
+      .catch(e => {
         this.logger.error(`AD query error: ${e}`);
         return null;
       });
