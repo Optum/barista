@@ -2,7 +2,7 @@
 # for Barista.  Much of the functionality is common, so the three images
 # will inherit this dockerfile in order to reduce build time and reduce errors.
 ARG REPO=""
-ARG TAG="10.16.0"
+ARG TAG="12.16.1"
 FROM ${REPO}node:${TAG}
 LABEL maintainer=randy.olinger@optum.com
 
