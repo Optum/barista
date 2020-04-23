@@ -127,7 +127,7 @@ export class LdapService {
                 return null;
               }
 
-              this.logger.log(`AD answer: ${result.entries.map(entryLocal => JSON.stringify(entryLocal.object))}`);
+              // this.logger.log(`AD answer: ${result.entries.map(entryLocal => JSON.stringify(entryLocal.object))}`);
               const memberOf = result.entries[0].object.memberOf;
 
               // Only look at the first response
