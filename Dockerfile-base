@@ -2,7 +2,7 @@
 # for Barista.  Much of the functionality is common, so the three images
 # will inherit this dockerfile in order to reduce build time and reduce errors.
 ARG REPO=""
-ARG TAG="12.16.1"
+ARG TAG="12.16-stretch-slim"
 FROM ${REPO}node:${TAG}
 LABEL maintainer=randy.olinger@optum.com
 
@@ -16,13 +16,18 @@ RUN rm -fr barista-scan barista-web barista-api  doc
 RUN mkdir -p -v -m 770 .config /.config /.cache/yarn  && chown root:root /.cache /.cache/yarn /.config .config\
     && chmod -R g+rw . && chmod -R g+rwx .config /.config
 
-#Install JAVA
-RUN apt-get update && apt install -y openjdk-8-jre-headless
+#Install JAVA mkdir fixes bug in java install on slim
+RUN mkdir -p /usr/share/man/man1 && \
+    apt-get update && \
+    apt-get install --no-install-recommends -y man-db openjdk-8-jre-headless && \
+    apt-get clean
+    
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 
-#Install Yarn
-RUN rm /usr/local/bin/yarnpkg
-RUN rm /usr/local/bin/yarn
-RUN npm config ls -l && npm install -g  yarn yarnrc
+#Install Yarn, 
+RUN rm /usr/local/bin/yarnpkg && \
+    rm /usr/local/bin/yarn && \
+    npm config ls -l && \
+    npm install -g yarn yarnrc
 
 #Build this image with docker build -f Dockerfile-base -t barista-base:$(date +%Y%m%d%H%M) .
