@@ -70,6 +70,7 @@
     "@types/axios": "^0.14.0",
     "@types/bull": "^3.12.2",
     "@types/cheerio": "^0.22.17",
+    "@types/express-serve-static-core": "^4.17.0",
     "@types/find": "^0.2.1",
     "@types/html-to-text": "^1.4.31",
     "@types/lodash": "^4.14.149",
