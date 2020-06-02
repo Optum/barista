@@ -8,7 +8,7 @@ export class AskIdDisplayName1578943828432 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<any> {
     await queryRunner.query(
-      `ALTER TABLE "system_configuration" ADD "ask_id_display_name" character varying DEFAULT 'Ask ID'`,
+      `ALTER TABLE "system_configuration" ADD "ask_id_display_name" character varying DEFAULT 'Project ID'`,
     );
   }
 }

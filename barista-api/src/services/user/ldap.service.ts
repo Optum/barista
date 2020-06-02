@@ -2,11 +2,12 @@ import { UserRole } from '@app/models/User';
 import { Injectable, Logger } from '@nestjs/common';
 import * as _ from 'lodash';
 import LdapClient from 'promised-ldap';
+import { ProjectService } from '@app/services/project/project.service';
 import { UserInfo } from '../../models/DTOs';
 
 @Injectable()
 export class LdapService {
-  constructor() {
+  constructor(private projectService: ProjectService) {
     this.ldapConfig = {
       url: process.env.LDAP_SERVER,
       base: process.env.LDAP_BASE,
@@ -27,7 +28,7 @@ export class LdapService {
     });
   }
 
-  getUserGroups(userName: string, pass: string): Promise<string[]> {
+  async getUserGroups(userName: string, pass: string): Promise<string[]> {
     const ldapClient = this.createLdapClient();
     const searchUser = `cn=${userName},${this.ldapConfig.base}`;
 
@@ -40,7 +41,7 @@ export class LdapService {
             filter: `(&(objectClass=user)(sAMAccountName=${userName}))`,
             attributes: ['cn', 'displayName', 'givenName', 'sn', 'mail', 'group', 'gn', 'memberOf'],
           })
-          .then(result => {
+          .then(async result => {
             try {
               if (_.isEmpty(result.entries)) {
                 // not a primary account
@@ -49,16 +50,23 @@ export class LdapService {
               }
 
               const memberOf = result.entries[0].object.memberOf;
-              this.logger.log(`User ${userName} is member of ${memberOf}`);
 
               if (memberOf) {
                 const groups = memberOf
                   .map(g => g.split(',')[0])
                   .map(s => s.replace(/(.*)=(.*)/, '$2'))
                   .map(group => group.toLowerCase());
-                return groups;
-                // const baristaGroups = _.filter(groups, group => group.startsWith('barista_'));
-                // this.logger.log(`User ${userName} is member of the following barista groups: ${baristaGroups}`);
+
+                const baristaGroups = await this.projectService.distinctUserIds();
+
+                const ba = baristaGroups.map(g => g.project_userId);
+                this.logger.log(`distinct barista groups: ${ba}`);
+                const intersection = groups.filter(element =>
+                  baristaGroups.map(g => g.project_userId).includes(element),
+                );
+                this.logger.log(`User ${userName} is member of the following barista groups: ${intersection}`);
+                return intersection;
+
                 // return baristaGroups;
               }
               return [];
@@ -100,18 +108,15 @@ export class LdapService {
       this.ldapConfig.group,
     ];
 
-    let adGroupsFilter = '(|' + adGroups.map(group => `(memberOf=CN=${group},${this.ldapConfig.base})`).join('') + ')';
-    if (!applyFilter) {
-      adGroupsFilter = '';
-    }
-    this.logger.log(`AD Groups Filter ${adGroupsFilter}`);
+    // const adGroupsFilter =
+    //   '(|' + adGroups.map((group) => `(memberOf=CN=${group},${this.ldapConfig.base})`).join('') + ')';
     return client
       .bind(searchUser, pass)
       .then(() => {
         return client
           .search(searchUser, {
             scope: 'sub',
-            filter: `(&(objectClass=user)(sAMAccountName=${userName})${adGroupsFilter})`,
+            filter: `(&(objectClass=user)(sAMAccountName=${userName}))`,
             attributes: ['cn', 'displayName', 'givenName', 'sn', 'mail', 'group', 'gn', 'memberOf'],
           })
           .then(result => {

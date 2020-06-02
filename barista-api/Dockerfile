@@ -7,8 +7,6 @@ ARG BARISTA_VERSION=unspecified
 # Create app directory
 WORKDIR /usr/src/app
 ENV HOME=/usr/src/app
-RUN npm config ls -l && npm install -g  yarn yarnrc
-
 
 COPY . .
 

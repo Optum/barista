@@ -73,4 +73,4 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
-[email]: mailto:insert_maintainer_email_here
+[email]: mailto:opensource@optum.com

@@ -1,4 +1,4 @@
-# Builing and Running Barista using docker
+# Building and Running Barista using docker
 
 While you are free to buid and run Barista on your own, we find it easiest to use docker images to manage the process.  Using [docker-compose](https://docs.docker.com/compose/), one can get a demo version of Barista up and running in a short time with very few customizations.
 The compose configuration will build the application with docker and  run the 5 major components with a single command.
@@ -8,7 +8,7 @@ The compose configuration will build the application with docker and  run the 5 
 - barista-api - The main processing to manage the state of the application and service the users.
 - barista-scan - The engine that takes care of scanning, building, and evaluating the software under test.
 
-While a deployment based on docker-compose is certainly viable for a small instance, it would be a very good idea to use a system like [Kubernetes](https://kubernetes.io/) to to manage and schedule the containers.  This gives the administrator finer grained control over things like secrets, resources, and monitoring.  We have built out templates for [Openshift OKD](https://www.okd.io/), contact the authors for more info.
+While a deployment based on docker-compose is certainly viable for a small instance, it would be a very good idea to use a system like [Kubernetes](https://kubernetes.io/) to to manage and schedule the containers.  This gives the administrator finer grained control over things like secrets, resources, and monitoring.  We have built out templates for [Openshift OKD](https://www.okd.io/) and [Helm](https://helm.sh/), contact the authors for more info.
 
 # Barista Source, Build, and Deploy files
 
@@ -18,7 +18,8 @@ This set of files are used to build the application with docker and to deploy th
 - Ensure [docker](https://docs.docker.com/install/) is running on your workstation or server.  Docker version 19.0.3 or greater is preferred, but anything over 18 should work.  (but has not been tested)
   - Be aware that RHEL and CentOs and others may ship earlier versions of docker and not be viable
 - Ensure [docker-compose](https://docs.docker.com/compose/install/) is installed
-- Run commands to replace some specific symlinks with actual files.  (only needed if you do not use the pre-built docker images)
+- **Optional - skip this step unless you want to build from source**
+  - Run commands to replace some specific symlinks with actual files.  (only needed if you do not use the pre-built docker images)
 
     `cd barista;
     rm -fr barista-scan/src/{models,services,shared} &&

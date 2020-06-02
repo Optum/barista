@@ -125,34 +125,7 @@ export class DefaultScanWorkerService {
         break;
       }
       default: {
-        // Let's check for a .sln file in case this might be a nuGet project
-        const slnFiles = fs.readdirSync(workingDirectory).filter(fn => fn.endsWith('.sln'));
-
-        if (fs.existsSync(join(workingDirectory, 'go.mod'))) {
-          this.logger.log('Detected a go.mod - Assigning Golang as a dependency client');
-          client = this.golangService;
-        } else if (fs.existsSync(join(workingDirectory, 'package.json'))) {
-          this.logger.log('Detected a package.json - Assigning NPM as a dependency client');
-          client = this.npmService;
-        } else if (fs.existsSync(join(workingDirectory, 'pom.xml'))) {
-          this.logger.log('Detected a pom.xml - Assigning Maven as a dependency client');
-          client = this.mavenService;
-        } else if (fs.existsSync(join(workingDirectory, 'packages.config'))) {
-          this.logger.log('Detected a packages.config - Assigning NuGet as a dependency client');
-          client = this.nugetService;
-        } else if (fs.existsSync(join(workingDirectory, 'project.json'))) {
-          this.logger.log('Detected a project.json - Assigning NuGet as a dependency client');
-          client = this.nugetService;
-        } else if (fs.existsSync(join(workingDirectory, 'requirements.txt'))) {
-          this.logger.log('Detected a requirements.txt - Assigning python3-pip as a dependency client');
-          client = this.python3Service;
-        } else if (slnFiles && slnFiles.length > 0) {
-          this.logger.log('Detected a .sln file - Assigning NuGet as a dependency client');
-          client = this.nugetService;
-        } else {
-          client = null;
-        }
-
+        client = null;
         break;
       }
     }

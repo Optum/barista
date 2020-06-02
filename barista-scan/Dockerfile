@@ -26,11 +26,11 @@ RUN mkdir -p -v -m 770  /usr/src/app/tools/scancode-toolkit/lib \
     /usr/src/app/tools/* \
     /usr/src/app/tools/scancode-toolkit/*   \
     /.m2/repo1 /usr/src/app/.m2\
-    && chmod g+rw       . \
-    ./* \
+    && chmod g+rw       .   ./* .*  .npm/* \
     && chmod -R g+rwx   .pyenv \
     /usr/src/app/.python-version \
-    /usr/src/app/.cache
+    /usr/src/app/.cache \
+    && chown -R 1011 .npm
 
 RUN ln -fs /bin/bash /bin/sh
 
@@ -38,6 +38,7 @@ COPY --from=go /usr/local/go /usr/local/go
 ENV PATH="/usr/local/go/bin:$PATH"
 RUN go version
 
-RUN GOBIN=/usr/local/bin/ go get github.com/google/go-licenses
+RUN GO111MODULE=on GOBIN=/usr/local/bin/ go get github.com/google/go-licenses
+RUN chmod -R g+rwx /usr/src/app/go/
 
 USER 1011

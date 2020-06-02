@@ -20,4 +20,9 @@ RUN mkdir -p -v -m 770 .config /.config /.cache/yarn  && chown root:root /.cache
 RUN apt-get update && apt install -y openjdk-8-jre-headless
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 
+#Install Yarn
+RUN rm /usr/local/bin/yarnpkg
+RUN rm /usr/local/bin/yarn
+RUN npm config ls -l && npm install -g  yarn yarnrc
+
 #Build this image with docker build -f Dockerfile-base -t barista-base:$(date +%Y%m%d%H%M) .

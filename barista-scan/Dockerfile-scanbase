@@ -23,7 +23,7 @@ RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor 
     &&  echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | tee /etc/apt/sources.list.d/mono-official-stable.list \
     &&  apt-get update \
     &&  apt-get install -y mono-complete \
-    &&  apt-get install -y dotnet-sdk-2.2
+    &&  apt-get install -y dotnet-sdk-3.1
 
 #Install MAVEN
 #Install maven from source so as to get a more modern version that is supplied with Ubuntu

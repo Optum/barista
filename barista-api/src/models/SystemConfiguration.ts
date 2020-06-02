@@ -16,7 +16,7 @@ export class SystemConfiguration extends OptionValueModelBase {
   aboutPageContent: string;
 
   @ApiProperty()
-  @Column({ name: 'ask_id_display_name', nullable: true, default: 'Ask ID' })
+  @Column({ name: 'ask_id_display_name', nullable: true, default: 'Project ID' })
   askIdDisplayName: string;
 
   @ApiProperty()
@@ -61,7 +61,7 @@ export class SystemConfiguration extends OptionValueModelBase {
    * An `.npm` directory will be created at this path if the directory exists.
    */
   @ApiProperty()
-  @Column({ name: 'npm_cache_directory', nullable: true })
+  @Column({ name: 'npm_cache_directory', nullable: true, default: '/usr/src/app/tools' })
   npmCacheDirectory: string;
 
   /**
@@ -71,7 +71,7 @@ export class SystemConfiguration extends OptionValueModelBase {
    * If the client cannot reach the registry, install will not fail but the custom registry will not be used.
    */
   @ApiProperty()
-  @Column({ name: 'npm_registry', nullable: true })
+  @Column({ name: 'npm_registry', nullable: true, default: 'https://registry.npmjs.org/' })
   npmRegistry: string;
 
   @ApiProperty()

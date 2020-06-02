@@ -61,7 +61,7 @@ export class ProjectService extends AppServiceBase<Project> {
             where l.id = t.licenseId
             group by l.id`;
     const rows = await this.db.manager.query(query, [project.id]);
-    return rows.map(row => ({
+    return rows.map((row) => ({
       license: {
         name: row.name,
       },
@@ -106,6 +106,10 @@ export class ProjectService extends AppServiceBase<Project> {
     } else {
       return [];
     }
+  }
+
+  async distinctUserIds(): Promise<any> {
+    return this.db.createQueryBuilder('project').select('project.userId').addGroupBy('project.userId').getRawMany();
   }
 
   getUsersProjectsQuery(userId: string): SelectQueryBuilder<Project> {
@@ -274,7 +278,7 @@ export class ProjectService extends AppServiceBase<Project> {
                     group by l.code)
                 group by loo."obligationCode")`;
 
-    return await PaginateRawQuery(this.db.manager, query, [projectId], page, pageSize, record => ({
+    return await PaginateRawQuery(this.db.manager, query, [projectId], page, pageSize, (record) => ({
       id: record.id,
       code: record.code,
       name: record.name,
