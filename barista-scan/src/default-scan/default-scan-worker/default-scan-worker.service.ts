@@ -152,7 +152,7 @@ export class DefaultScanWorkerService {
       } else if (project.packageManager.code === PackageManagerEnum.NUGET.toString()) {
         // If this is a nuget project, let's look for a solution file in the root of the repo if one does not exist.
         // Let's check for a .sln file since the user did not specify one
-        const slnFiles = fs.readdirSync(workingDirectory).filter(fn => fn.endsWith('.sln'));
+        const slnFiles = fs.readdirSync(workingDirectory).filter((fn) => fn.endsWith('.sln'));
 
         if (slnFiles && slnFiles.length > 0) {
           // If we did find a solution file in the working directory, let's go ahead and take the first one we find
@@ -262,7 +262,7 @@ export class DefaultScanWorkerService {
 
           for (const scanner of scanners) {
             scannerPromises.push(
-              new Promise(async scanPromiseResolve => {
+              new Promise(async (scanPromiseResolve) => {
                 this.logger.log(`Starting ${scanner.name}`);
 
                 await scanner.execute(this.jobInfo);
@@ -285,7 +285,11 @@ export class DefaultScanWorkerService {
           scan.completedAt = new Date();
           await scan.save();
 
-          await this.scanService.sendMailOnScanCompletion(scan);
+          try {
+            await this.scanService.sendMailOnScanCompletion(scan);
+          } catch (error) {
+            this.logger.error(error);
+          }
 
           this.cleanup(this.jobInfo, null, resolve, reject);
         };
