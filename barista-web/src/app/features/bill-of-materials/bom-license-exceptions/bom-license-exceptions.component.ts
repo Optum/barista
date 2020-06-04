@@ -54,7 +54,7 @@ export class BomLicenseExceptionsComponent implements OnInit, OnDestroy {
 
   getPagedResults(query: any): Observable<any> {
     if (_.isEmpty(this.bomGlobalSearchFilter)) {
-      query.filter = `project||eq||${this.projectId}`;
+      query.filter = `project.id||eq||${this.projectId}`;
       return this.bomLicenseExceptionApiService.bomLicenseExceptionGet(
         query.fields,
         query.filter,
@@ -131,7 +131,7 @@ export class BomLicenseExceptionsComponent implements OnInit, OnDestroy {
       data,
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       // Refresh results
       if (result) {
         this.datatable.refresh();

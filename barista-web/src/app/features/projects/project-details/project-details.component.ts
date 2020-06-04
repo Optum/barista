@@ -142,8 +142,8 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       this.projectDevelopmentTypeService.entities$,
     ])
       .pipe(untilDestroyed(this))
-      .subscribe(result => {
-        if (_.every(result, r => _.size(r))) {
+      .subscribe((result) => {
+        if (_.every(result, (r) => _.size(r))) {
           this.project.projectStatus = getDefaultValue(result[0], projectStatusCode) as ProjectStatusType;
           this.project.outputFormat = getDefaultValue(result[1], outputFormatCode) as OutputFormatType;
           this.project.packageManager = getDefaultValue(result[2], packageManagerCode) as PackageManager;
@@ -167,7 +167,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       // can't use ProjectDetailsComponent.name, after minification this name is no more relevant.
       .getToolTipsForPage('ProjectDetailsComponent')
       .pipe(untilDestroyed(this))
-      .subscribe(tooltips => {
+      .subscribe((tooltips) => {
         this.tooltips = tooltips;
       });
 
@@ -196,7 +196,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       this.projectService.setFilter(this.projectId); // ngrx entity data service and entity service
       this.projectService.filteredEntities$ // subscribe to observables, look at entity-metadata.ts
         .pipe(untilDestroyed(this))
-        .subscribe(projects => {
+        .subscribe((projects) => {
           // unsubscribe, subscribe is async, can be called a lot
           if (projects.length > 0) {
             this.project = { ...projects[0] };
@@ -228,7 +228,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
         });
     }
 
-    this.route.queryParams.subscribe(queryParams => {
+    this.route.queryParams.subscribe((queryParams) => {
       this.selectedTabIndex = queryParams.tab;
     });
   }
@@ -239,7 +239,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
         .projectPost(this.project)
         .pipe(first())
         .subscribe(
-          project => {
+          (project) => {
             this.project = { ...project };
 
             this.newProject = false;
@@ -254,7 +254,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
 
             return this.router.navigate(['/project', project.id]);
           },
-          error => {
+          (error) => {
             this.dialog.open(AppDialogComponent, {
               data: { title: 'Error', message: JSON.stringify(error) },
             });
@@ -265,7 +265,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
         .update(this.project)
         .pipe(first())
         .subscribe(
-          project => {
+          (project) => {
             this.project = { ...project };
 
             this.snackBar.open(`Project ${project.name}`, 'OK', {
@@ -274,7 +274,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
               verticalPosition: 'top',
             });
           },
-          error => {
+          (error) => {
             this.dialog.open(AppDialogComponent, {
               data: { title: 'Error', message: JSON.stringify(error) },
             });
@@ -296,7 +296,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
     this.manualLicenses$ = this.bomManualLicenseApiService
       .bomManualLicenseGet(
         null,
-        `project||eq||${this.project.id}`,
+        `project.id||eq||${this.project.id}`,
         null,
         null,
         null,
@@ -309,8 +309,8 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       )
       .pipe(untilDestroyed(this));
 
-    this.manualLicenses$.subscribe(items => {
-      const result = items.filter(item => item.isDefault === true);
+    this.manualLicenses$.subscribe((items) => {
+      const result = items.filter((item) => item.isDefault === true);
 
       if (result && result.length > 0) {
         this.defaultManualLicense = result[0];

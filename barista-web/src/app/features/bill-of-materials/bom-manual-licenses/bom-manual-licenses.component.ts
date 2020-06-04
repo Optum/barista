@@ -46,7 +46,7 @@ export class BomManualLicensesComponent implements OnInit, OnDestroy {
   @ViewChild('statusTemplate', { static: true }) statusTemplate;
 
   getPagedResults(query: any): Observable<any> {
-    query.filter = `project||eq||${this.projectId}`;
+    query.filter = `project.id||eq||${this.projectId}`;
 
     if (!this.bomGlobalSearchFilter) {
       return this.bomManualLicenseApiService.bomManualLicenseGet(
@@ -110,7 +110,7 @@ export class BomManualLicensesComponent implements OnInit, OnDestroy {
       data,
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       // Refresh results
       this.datatable.refresh();
     });
