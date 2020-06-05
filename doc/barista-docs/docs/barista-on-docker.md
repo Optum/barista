@@ -34,7 +34,7 @@ This set of files are used to build the application with docker and to deploy th
 - check the settings in the file barista-compose.env .  Make modifications as necessary.  (Things like SMTP server, usernames and passwords for internal Git servers, personal access token for public github server if private repos are in play)
 - Start the program using docker-compose, wait about 3 minutes for initialization (or watch the logs), then seed with basic data if you wish..
 
-      docker-compose -d  up ;
+      docker-compose up -d ;
       sleep 180 ;
       docker-compose exec barista-api yarn db:reset:seed;
 - You can watch container logs using "docker logs" command, or use
