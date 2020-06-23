@@ -336,4 +336,10 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       },
     ];
   }
+
+  clearPathToUploadFileForScanning() {
+    if(this.project.gitUrl != ''){
+      this.project.pathToUploadFileForScanning = '';
+    }
+  }
 }
