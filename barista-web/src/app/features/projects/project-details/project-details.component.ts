@@ -40,6 +40,9 @@ import * as _ from 'lodash';
 import { untilDestroyed } from 'ngx-take-until-destroy';
 import { combineLatest, Observable } from 'rxjs';
 import { first } from 'rxjs/operators';
+import { chain } from 'lodash';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+//import { MustMatch } from './_helpers/must-match.validator';
 
 @Component({
   selector: 'app-project-details',
@@ -67,6 +70,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
     private tabChangedMessageService: ProjectDetailsTabChangedMessageService,
     private toolTipsCacheService: ToolTipsCacheService,
     private systemConfigService: SystemConfigurationService,
+    private formBuilder: FormBuilder,
   ) {
     this.projectStatusType$ = this.projectStatusTypeService.entities$;
     this.outputFormatType$ = this.outputFormatTypeService.entities$;
@@ -95,6 +99,11 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
   systemConfiguration: Observable<SystemConfiguration>;
   tooltips = null;
   vulnerabilityData$: Observable<ProjectDistinctVulnerabilityDto[]>;
+  pathIsDisabled = true;
+  gitHubRepoIsDisabled = true;
+  validFileType = true;
+  projectDetailsForm: FormGroup;
+  
 
   addManualLicense() {
     if (this.project.name && this.project.currentVersion) {
@@ -231,6 +240,8 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
     this.route.queryParams.subscribe(queryParams => {
       this.selectedTabIndex = queryParams.tab;
     });
+    //this.projectDetailsForm = new FormGroup({projectDetailsForm: new FormControl()});
+    this.projectDetailsForm = this.formBuilder.group({validator: this.fileMatch('this.project.pathToUploadFileForScanning')});
   }
 
   onSubmit() {
@@ -336,10 +347,36 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       },
     ];
   }
+  
 
-  clearPathToUploadFileForScanning() {
-    if(this.project.gitUrl != ''){
-      this.project.pathToUploadFileForScanning = '';
+  toggle(choice){
+    if(choice==1){
+      this.pathIsDisabled=true;
+      this.gitHubRepoIsDisabled=false;
+      this.project.pathToUploadFileForScanning='';
+    }
+    else if(choice==2){
+      this.pathIsDisabled=false;
+      this.gitHubRepoIsDisabled=true;
+      this.project.gitUrl='';
+    }
+    else{
+      this.pathIsDisabled=true;
+      this.gitHubRepoIsDisabled=true;
+    }
+  }
+  getPath(){
+    return this.project.pathToUploadFileForScanning;
+  }
+  fileMatch(pathName: string){
+    return(formGroup: FormGroup) => {
+      const path = formGroup.controls[pathName]
+      var regexp = new RegExp('.*zip$|.*tar')
+      if(path.value !== regexp){
+        path.setErrors({fileMatch: true})
+      }else{
+        path.setErrors(null);
+      }
     }
   }
 }

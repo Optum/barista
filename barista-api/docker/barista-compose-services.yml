@@ -16,7 +16,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=barista-${APP_UNIQUE_ID}
+      - POSTGRES_DB=barista-dev #${APP_UNIQUE_ID}
   db-test: # Test database for integration test
     image: postgres:11.3
     container_name: db-test
