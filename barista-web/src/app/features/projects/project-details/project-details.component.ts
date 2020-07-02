@@ -241,7 +241,8 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       this.selectedTabIndex = queryParams.tab;
     });
     //this.projectDetailsForm = new FormGroup({projectDetailsForm: new FormControl()});
-    this.projectDetailsForm = this.formBuilder.group({validator: this.fileMatch('this.project.pathToUploadFileForScanning')});
+    this.projectDetailsForm = this.formBuilder.group({pathToUploadFileForScanning: ['', Validators.required]}, 
+      {validator: this.fileMatch('this.project.pathToUploadFileForScanning')});
   }
 
   onSubmit() {

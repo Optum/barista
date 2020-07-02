@@ -65,6 +65,7 @@
               </mat-radio-group>
                 <mat-form-field class="field">
               <input matInput placeholder="Path to upload file for scanning"
+                      formControlName="pathToUploadFileForScanning"
                      [(ngModel)]="project.pathToUploadFileForScanning"
                      name="pathToUploadFileForScanning"
                      [disabled]="pathIsDisabled"
