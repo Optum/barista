@@ -8,7 +8,7 @@ on:
   push:
     branches:
 #      - $default-branch
-      - 'develop'
+#     - 'develop'
       - 'rolinge/gitactions'
 
     # Publish `v1.2.3` tags as releases.
@@ -38,4 +38,4 @@ jobs:
         run: rm -fr barista-scan/src/{models,services,shared} && cp -r barista-api/src/{models,services,shared} barista-scan/src;
 
       - name: "Build with compose"
-        run:  cp -f docker-compose/docker-compose-build.yaml ./docker-compose.yaml &&  docker-compose build
+        run:  cp -f docker-compose/docker-compose-build.yaml  ./docker-compose.yaml &&  docker-compose build --build-args TAG=test

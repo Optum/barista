@@ -59,7 +59,7 @@
     "dotenv": "^8.2.0",
     "file-saver": "^2.0.2",
     "json2html": "^0.0.8",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "ngx-take-until-destroy": "^5.4.0",
     "rxjs": "^6.5.4",
     "safe-pipe": "^1.0.2",
