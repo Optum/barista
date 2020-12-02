@@ -8,6 +8,6 @@
 module.exports = {
   someSidebar: {
     Barista: ['overview','setup-admin-tables','setup-scan-project','contributions','code-of-conduct','icla'],
-    Technical: ['local-dev-environment','architecture','license-scanners','licenses','develop-web-feature','barista-on-docker'],
+    Technical: ['local-dev-environment','barista-on-docker','architecture','license-scanners','licenses','develop-web-feature',]
   },
 };

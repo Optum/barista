@@ -28,7 +28,6 @@ const routes: Routes = [
     component: HomeComponent,
     data: { showHeader: true, showSidebar: false, showFooter: true },
   },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 ---
 id: barista-on-docker
 title: Building and Running Barista using Docker
-sidebar_label: barista-on-docker
+sidebar_label: Demo Environment Setup
 ---
 
 

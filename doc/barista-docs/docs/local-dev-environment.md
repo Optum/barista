@@ -1,7 +1,7 @@
 ---
 id: local-dev-environment
 title: Development Environment Setup
-sidebar_label: local-dev-environment
+sidebar_label: Development Environment Setup
 ---
 
 Follow these steps on your Macintosh to load a development instance of the system:

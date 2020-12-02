@@ -14,15 +14,13 @@ services:
       - db
       - db-test
       - redis
-    env_file:
-      - ../.env.local
     environment:
       - NODE_ENV=PRODUCTION
       - DB_USER=postgres
       - DB_PASSWORD=password
       - DB_HOST=db
       - DB_PORT=5432
-      - DB_NAME=barista-${APP_UNIQUE_ID}
+      - DB_NAME=barista-dev
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - API_PORT=3000
@@ -38,15 +36,13 @@ services:
       - db
       - db-test
       - redis
-    env_file:
-      - ../.env.local
     environment:
       - NODE_ENV=PRODUCTION
       - DB_USER=postgres
       - DB_PASSWORD=password
       - DB_HOST=db
       - DB_PORT=5432
-      - DB_NAME=barista-${APP_UNIQUE_ID}
+      - DB_NAME=barista-dev
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - API_PORT=4000

@@ -11,19 +11,15 @@ services:
     container_name: db
     ports:
       - '5432:5432'
-    env_file:
-      - ../.env.local
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=barista-${APP_UNIQUE_ID}
+      - POSTGRES_DB=barista-dev
   db-test: # Test database for integration test
     image: postgres:11.3
     container_name: db-test
     ports:
       - '5433:5432'
-    env_file:
-      - ../.env.local
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
