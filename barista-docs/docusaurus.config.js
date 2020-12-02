@@ -6,6 +6,7 @@ module.exports = {
   favicon: 'img/barista-icon.ico',
   organizationName: 'Optum', // Usually your GitHub org/user name.
   projectName: 'barista', // Usually your repo name.
+  onBrokenLinks: 'ignore',
   themeConfig: {
     navbar: {
       title: 'Barista Docs',
