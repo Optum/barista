@@ -1,7 +1,7 @@
 ---
 id: architecture
 title: System Architecture
-sidebar_label: architecture
+sidebar_label: System Architecture
 ---
 
 ## Summary
