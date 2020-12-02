@@ -1,0 +1,39 @@
+name: deploydocs
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest        
+    defaults:
+      run:
+        working-directory: barista-docs    
+    steps:      
+      - uses: actions/checkout@v2
+      - run: ls
+      - name: Install
+        run: yarn install --no-lockfile
+      - name: Build
+        run: yarn build
+      - uses: actions/upload-artifact@master
+        with:
+          name: docsite
+          # working-directory doesn't appear to be honored when using `uses`
+          path: barista-docs/build/
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: docsite
+          path: docsite
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docsite
+          # This is my personal taste, it can always be removed:
+          force_orphan: true

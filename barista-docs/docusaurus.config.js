@@ -13,7 +13,7 @@ module.exports = {
         alt: 'Barista logo',
         src: 'img/barista.png',
       },
-      links: [
+      items: [
         {to: 'docs/overview', label: 'Docs', position: 'left'},
         {
           href: 'https://github.com/Optum/barista',
