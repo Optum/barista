@@ -125,7 +125,7 @@
     "spdx-expression-parse": "^3.0.0",
     "string-similarity": "^4.0.3",
     "tmp": "^0.1.0",
-    "typeorm": "^0.2.18",
+    "typeorm": "^0.2.25",
     "winston": "^3.3.3",
     "xml2js": "^0.4.19",
     "yarn": "^1.17.3"
