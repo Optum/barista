@@ -104,7 +104,7 @@
     "module-alias": "^2.2.0",
     "nest-bull": "^0.8.0",
     "node-wget": "^0.4.3",
-    "nodemailer": "^6.3.1",
+    "nodemailer": "^6.4.16",
     "nuget": "^2.0.2",
     "p-all": "^3.0.0",
     "p-iteration": "^1.1.8",
