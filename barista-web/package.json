@@ -82,7 +82,7 @@
     "@openapitools/openapi-generator-cli": "^2.1.16",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.8",
-    "@types/jest": "^25.1.4",
+    "@types/jest": "^27.0.2",
     "@types/lodash": "^4.14.165",
     "@types/node": "^14.14.13",
     "codelyzer": "^6.0.0",
