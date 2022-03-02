@@ -74,7 +74,7 @@
     "@nestjs/typeorm": "^7.1.5",
     "@nestjsx/crud": "~4.4.3",
     "@nestjsx/crud-request": "~4.4.3",
-    "@nestjsx/crud-typeorm": "~4.4.3",
+    "@nestjsx/crud-typeorm": "~4.6.2",
     "@types/lodash": "^4.14.168",
     "@types/nodemailer": "^6.4.1",
     "@types/string-similarity": "^4.0.0",
