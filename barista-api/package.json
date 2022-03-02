@@ -72,7 +72,7 @@
     "@nestjs/platform-express": "^7.6.17",
     "@nestjs/swagger": "^4.8.0",
     "@nestjs/typeorm": "^7.1.5",
-    "@nestjsx/crud": "~4.4.3",
+    "@nestjsx/crud": "~4.6.2",
     "@nestjsx/crud-request": "~4.4.3",
     "@nestjsx/crud-typeorm": "~4.4.3",
     "@types/lodash": "^4.14.168",
