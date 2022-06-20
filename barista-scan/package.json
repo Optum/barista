@@ -133,7 +133,7 @@
     "@types/jest": "^26.0.23",
     "@types/node": "^15.0.2",
     "@types/supertest": "^2.0.11",
-    "concurrently": "^6.1.0",
+    "concurrently": "^7.2.2",
     "jest": "26.6.3",
     "jest-junit": "^12.0.0",
     "majestic": "^1.8.0",
