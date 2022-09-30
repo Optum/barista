@@ -25,6 +25,7 @@ export class LdapService {
     return new LdapClient({
       url: this.ldapConfig.url,
       tlsOptions: { rejectUnauthorized: false },
+      reconnect: true
     });
   }
 
