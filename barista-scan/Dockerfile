@@ -16,7 +16,7 @@ COPY . .
 
 
 RUN  yarn install && yarn build
-RUN yarn global add @angular/cli
+RUN yarn global add @angular/cli@9.1.15
 RUN yarn config set "strict-ssl" false;
 
 RUN mkdir -p -v -m 770  /usr/src/app/tools/scancode-toolkit/lib \
