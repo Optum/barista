@@ -2,7 +2,7 @@ ARG BASETAG=compose
 ARG REPO=""
 ARG DOCKER=""
 
-FROM ${DOCKER}golang:1.16 as go
+FROM ${DOCKER}golang:1.17 as go
 
 FROM ${REPO}barista-scanbase:${BASETAG}
 ADD tools/docker-entrypoint.ksh /docker-entrypoint.ksh
@@ -34,7 +34,7 @@ RUN mkdir -p -v -m 770  /usr/src/app/tools/scancode-toolkit/lib \
     /usr/src/app/.python-version \
     /usr/src/app/.cache \
     && chown -R 1011 .npm 
-    
+
 RUN mkdir /usr/src/app/tools/scancode-toolkit/src/licensedcode/data/cache \
     && chmod -R g+rw /usr/src/app/tools/scancode-toolkit/src/licensedcode/data/cache
 
