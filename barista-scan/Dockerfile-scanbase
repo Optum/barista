@@ -53,8 +53,7 @@ RUN apt-get update || : && \
     libffi-dev \
     liblzma-dev \
     python-openssl \
-    python3.9-venv \
-    unar
+    python3.10-venv 
 
 USER 1011
 RUN     curl https://pyenv.run | bash
