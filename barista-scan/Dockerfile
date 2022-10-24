@@ -16,7 +16,7 @@ COPY . .
 
 
 RUN  yarn install && yarn build
-RUN yarn global add @angular/cli
+RUN yarn global add @angular/cli@9.1.15
 RUN yarn config set "strict-ssl" false;
 
 RUN mkdir -p -v -m 770  /usr/src/app/tools/scancode-toolkit/lib \
@@ -34,7 +34,7 @@ RUN mkdir -p -v -m 770  /usr/src/app/tools/scancode-toolkit/lib \
     /usr/src/app/.python-version \
     /usr/src/app/.cache \
     && chown -R 1011 .npm 
-    
+
 RUN mkdir /usr/src/app/tools/scancode-toolkit/src/licensedcode/data/cache \
     && chmod -R g+rw /usr/src/app/tools/scancode-toolkit/src/licensedcode/data/cache
 
