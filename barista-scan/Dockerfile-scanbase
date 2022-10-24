@@ -38,23 +38,28 @@ ENV PATH=${M2_HOME}/bin:${PATH}
 
 #Install PyENV
 
-RUN apt-get update \
-    && apt-get install -y make \
-    build-essential \
-    libssl-dev zlib1g-dev \
-    libbz2-dev \
-    libreadline-dev \
-    libsqlite3-dev \
-    llvm \
-    libncurses5-dev  \
-    libncursesw5-dev \
-    xz-utils \
-    tk-dev \
-    libffi-dev \
-    liblzma-dev \
-    python-openssl \
-    python3.9-venv \
-    unar
+# RUN apt-get update \
+#     && apt-get install -y make \
+#     build-essential \
+#     libssl-dev zlib1g-dev \
+#     libbz2-dev \
+#     libreadline-dev \
+#     libsqlite3-dev \
+#     llvm \
+#     libncurses5-dev  \
+#     libncursesw5-dev \
+#     xz-utils \
+#     tk-dev \
+#     libffi-dev \
+#     liblzma-dev \
+#     python-openssl \
+#     python3.9-venv \
+#     unar
+RUN apt update \
+    && apt install software-properties-common \
+    && add-apt-repository ppa:deadsnakes/ppa \
+    && apt update \
+    && apt install python3.10
 
 USER 1011
 RUN     curl https://pyenv.run | bash
