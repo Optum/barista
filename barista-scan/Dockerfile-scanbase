@@ -53,7 +53,7 @@ RUN apt-get update \
     libffi-dev \
     liblzma-dev \
     python-openssl \
-    python3.10-venv \
+    python3.9-venv \
     unar
 
 USER 1011
