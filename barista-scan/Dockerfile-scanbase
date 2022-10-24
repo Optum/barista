@@ -55,11 +55,11 @@ ENV PATH=${M2_HOME}/bin:${PATH}
 #     python-openssl \
 #     python3.9-venv \
 #     unar
-RUN apt update \
-    && apt install software-properties-common \
+RUN apt-get update \
+    && apt-get install software-properties-common \
     && add-apt-repository ppa:deadsnakes/ppa \
-    && apt update \
-    && apt install python3.10
+    && apt-get update \
+    && apt-get install python3.10
 
 USER 1011
 RUN     curl https://pyenv.run | bash
