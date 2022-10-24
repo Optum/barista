@@ -28,10 +28,10 @@ export PATH="$HOME/.pyenv/bin:$PATH" \
 
 # if still no pythons, download a default v2 and a default v3
 test -x /usr/src/app/.pyenv/versions/2.7.17/bin/python2.7 || pyenv install 2.7.17
-test -x /usr/src/app/.pyenv/versions/3.6.8/bin/python3.7 || pyenv install 3.6.8
+test -x /usr/src/app/.pyenv/versions/3.10.8/bin/python3.10 || pyenv install 3.10.8
 
 
-pyenv virtualenv -f 3.6.8 python3
+pyenv virtualenv -f 3.10.8 python3
 pyenv virtualenv -f 2.7.17 python2
 echo "The following python versions are available"
 
