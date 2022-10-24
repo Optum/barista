@@ -39,7 +39,7 @@ ENV PATH=${M2_HOME}/bin:${PATH}
 #Install PyENV
 
 RUN apt-get update || : && \
-    install -y make \
+    install make \
     build-essential \
     libssl-dev zlib1g-dev \
     libbz2-dev \
