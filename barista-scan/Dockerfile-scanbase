@@ -52,7 +52,7 @@ RUN apt-get install -y make \
     libffi-dev \
     liblzma-dev \
     python-openssl \
-    python3.10-venv \
+    python3.10-full \
     unar
 
 USER 1011
