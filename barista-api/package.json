@@ -88,7 +88,7 @@
     "convert-to-object": "^0.0.4",
     "csv-parse": "^4.15.4",
     "dotenv": "^9.0.2",
-    "elastic-apm-node": "^3.14.0",
+    "elastic-apm-node": "^3.39.0",
     "lodash": "^4.17.21",
     "module-alias": "^2.2.2",
     "nestjs-config": "^1.4.7",
