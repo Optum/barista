@@ -7,7 +7,7 @@ FROM ${REPO}node:16.18.0
 WORKDIR /usr/src/app
 ENV HOME=/usr/src/app
 
-RUN rm -fr barista-scan barista-web barista-api cicd doc Openshift
+# RUN rm -fr barista-scan barista-web barista-api cicd doc Openshift
 
 RUN touch .yarnrc .npmrc && chmod g+rw .yarnrc .npmrc \
     && echo registry=https://repo1.uhc.com/artifactory/api/npm/npm-virtual/ > .npmrc \
