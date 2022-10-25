@@ -276,7 +276,7 @@ export class DefaultScanWorkerService {
 
             await this.fetchDependencies(scan, depClient, this.jobInfo);
 
-            scanners.push(this.dependencyCheckService);
+            //scanners.push(this.dependencyCheckService);
 
             if (depClient) {
               // Let's decide which license services to user based on the package manager.

@@ -18,7 +18,7 @@ export class Python3PipService extends DepClientBaseService {
       requirementsFile = options.customPackageManagerFilename;
     }
 
-    let pythonVersion = '3.7.5';
+    let pythonVersion = '3.10.8';
 
     const packageManager = await this.getPackageManager();
     if (
