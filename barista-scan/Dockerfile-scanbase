@@ -2,9 +2,12 @@ ARG REPO=""
 ARG TAG=compose
 ARG BARISTA_VERSION=unspecified
 
-FROM ${REPO}node:16.18.0
+FROM ${REPO}barista-base:${TAG}
 
-
+ADD tools/docker-entrypoint.ksh /docker-entrypoint.ksh
+ARG MAVEN_VERSION=3.6.1
+ARG MAVEN_TGZ=
+ARG MAVEN_SITE=
 
 
 
