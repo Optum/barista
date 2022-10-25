@@ -92,7 +92,7 @@
     "csv-parse": "^4.15.4",
     "decompress": "^4.2.1",
     "dotenv": "^9.0.2",
-    "elastic-apm-node": "^3.14.0",
+    "elastic-apm-node": "^3.39.0",
     "execa": "^5.0.0",
     "find": "^0.3.0",
     "hads": "^3.0.0",
