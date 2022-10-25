@@ -2,7 +2,7 @@ ARG REPO=""
 ARG TAG=compose
 ARG BARISTA_VERSION=unspecified
 
-FROM ${REPO}barista-base:feature
+FROM ${REPO}nikolaik/python-nodejs
 
 ADD tools/docker-entrypoint.ksh /docker-entrypoint.ksh
 ARG MAVEN_VERSION=3.6.1
@@ -55,10 +55,10 @@ ARG MAVEN_SITE=
 #     python-openssl \
 #     python3.9-venv \
 #     unar
-RUN apt-get update \
-    && apt-get install software-properties-common -y \
-    && apt-get update \
-    && apt-get install python3.10
+# RUN apt-get update \
+#     && apt-get install software-properties-common -y \
+#     && apt-get update \
+#     && apt-get install python3.10
 
 USER 1011
 RUN     curl https://pyenv.run | bash
