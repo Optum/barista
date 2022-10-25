@@ -9,6 +9,23 @@ ARG MAVEN_VERSION=3.6.1
 ARG MAVEN_TGZ=
 ARG MAVEN_SITE=
 
+WORKDIR /usr/src/app
+ENV HOME=/usr/src/app
+
+# RUN rm -fr barista-scan barista-web barista-api cicd doc Openshift
+
+RUN touch .yarnrc .npmrc && chmod g+rw .yarnrc .npmrc \
+    && echo registry=https://repo1.uhc.com/artifactory/api/npm/npm-virtual/ > .npmrc \
+    && cp .npmrc /usr/local/etc/npmrc \
+    && npm config ls -l && npm install --force -g yarn yarnrc
+
+
+RUN   echo "registry \"https://repo1.uhc.com/artifactory/api/npm/npm-virtual/\"" > .yarnrc \
+    && cp .yarnrc /usr/local/etc/yarnrc \
+    && yarn config get registry
+
+RUN mkdir -p -v -m 770 .config /.config /.cache/yarn  && chown root:root /.cache /.cache/yarn /.config .config\
+    && chmod -R g+rw . && chmod -R g+rwx .config /.config
 
 
 #Install mono
