@@ -39,7 +39,7 @@ export class GoLicensesService extends ScannerBaseService {
     const binary = 'go-licenses';
 
     // tslint:disable-next-line:max-line-length
-    const command = `cd ${targetDir}; GOPATH=${targetDir}/.go ${binary} csv ./ > ${jobInfo.dataDir}/go-licenses.csv 2> errors`;
+    const command = `cd ${targetDir}; GOPATH=${targetDir}/.go ${binary} report ./ > ${jobInfo.dataDir}/go-licenses.csv 2> ${jobInfo.dataDir}/errors`;
     return command;
   }
 
