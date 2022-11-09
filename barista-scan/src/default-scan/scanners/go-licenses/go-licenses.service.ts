@@ -61,6 +61,10 @@ export class GoLicensesService extends ScannerBaseService {
       return item.indexOf('-') !== 0;
     });
 
+    arr = arr.filter(function (item) {
+      return item.indexOf('/') !== 0;
+    });
+
     csvText = arr.join('\n');
     this.logger.debug(csvText);
     const json = parse(csvText, {
