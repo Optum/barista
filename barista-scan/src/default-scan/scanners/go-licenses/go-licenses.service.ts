@@ -71,7 +71,7 @@ export class GoLicensesService extends ScannerBaseService {
       skip_lines_with_error: true,
       quote: false,
     });
-    this.logger.debug(json);
+    this.logger.debug(JSON.stringify(json));
     return json;
   }
 
