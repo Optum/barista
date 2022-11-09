@@ -54,6 +54,10 @@ export class GoLicensesService extends ScannerBaseService {
     });
 
     arr = arr.filter(function (item) {
+      return item.indexOf('W11') !== 0;
+    });
+
+    arr = arr.filter(function (item) {
       return item.indexOf('-') !== 0;
     });
 
