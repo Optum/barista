@@ -66,7 +66,6 @@ export class GoLicensesService extends ScannerBaseService {
     });
 
     csvText = arr.join('\n');
-    this.logger.debug(csvText);
     const json = parse(csvText, {
       // columns: true,
       skip_empty_lines: true,
