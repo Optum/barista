@@ -7293,9 +7293,9 @@ jest-mock@^25.5.0:
     "@jest/types" "^25.5.0"
 
 jest-pnp-resolver@^1.2.1:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz#b704ac0ae028a89108a4d040b3f919dfddc8e33c"
-  integrity sha1-twSsCuAoqJEIpNBAs/kZ393I4zw=
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.3.tgz#930b1546164d4ad5937d5540e711d4d38d4cad2e"
+  integrity sha512-+3NpwQEnRoIBtx4fyhblQDPgJI0H1IEIkX7ShLUjPGA7TtUTvI1oiKi3SR4oBR0hQhQR80l4WAe5RrXBwWMA8w==
 
 jest-preset-angular@^8.1.2, jest-preset-angular@^8.3.2:
   version "8.3.2"
