@@ -115,7 +115,7 @@
     "request-promise": "^4.2.6",
     "rimraf": "^3.0.2",
     "rxjs": "^6.1.1",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "simple-git": "^2.38.1",
     "spawn-rx": "^3.0.0",
     "spdx-correct": "^3.1.1",
