@@ -11,7 +11,7 @@ jobs:
       run:
         working-directory: barista-docs    
     steps:      
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: ls
       - name: Install
         run: yarn install --no-lockfile
