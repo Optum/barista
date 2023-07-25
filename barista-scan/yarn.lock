@@ -5635,10 +5635,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-majestic@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/majestic/-/majestic-1.8.0.tgz#09f50fe293a36ee2fe5d36e985e5ca1a172e57f0"
-  integrity sha1-CfUP4pOjbuL+XTbpheXKGhcuV/A=
+majestic@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/majestic/-/majestic-1.8.1.tgz#b9ee3d18371aa07e1ebd514221e23f1474945749"
+  integrity sha512-YsSmJHrgF5JfJkbcez4oPE9xrSf9XSC7j2kFytOgVJY72vkWQqXH2gJHnMsjCrKdtxh3GX2oDP5akNDXpYAGxQ==
   dependencies:
     node-fetch "^2.3.0"
     open "^6.0.0"
