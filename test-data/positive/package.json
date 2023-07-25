@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/vsurge/hello-insecure#readme",
   "dependencies": {
-    "jquery": "^2.1.1"
+    "jquery": "^3.5.0"
   }
 }
