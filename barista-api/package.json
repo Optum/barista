@@ -84,7 +84,7 @@
     "bull-arena": "^3.20.1",
     "chalk": "^4.1.1",
     "class-transformer": "0.3.1",
-    "class-validator": "^0.13.1",
+    "class-validator": "^0.14.0",
     "convert-to-object": "^0.0.4",
     "csv-parse": "^4.15.4",
     "dotenv": "^9.0.2",
