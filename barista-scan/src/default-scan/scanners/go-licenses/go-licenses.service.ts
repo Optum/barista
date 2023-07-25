@@ -39,22 +39,33 @@ export class GoLicensesService extends ScannerBaseService {
     const binary = 'go-licenses';
 
     // tslint:disable-next-line:max-line-length
-    const command = `cd ${targetDir}; GOPATH=${targetDir}/.go ${binary} csv ./ > ${jobInfo.dataDir}/go-licenses.csv`;
+    const command = `cd ${targetDir}; GOPATH=${targetDir}/.go ${binary} report ./ > ${jobInfo.dataDir}/go-licenses.csv 2> ${jobInfo.dataDir}/errors`;
     return command;
   }
 
   public convertCsvResultsToJson(csvText: string) {
     let arr = csvText.split('\n');
-    arr = arr.filter(function(item) {
+    arr = arr.filter(function (item) {
       return item.indexOf('E0') !== 0;
     });
 
-    arr = arr.filter(function(item) {
+    arr = arr.filter(function (item) {
+      return item.indexOf('E11') !== 0;
+    });
+
+    arr = arr.filter(function (item) {
+      return item.indexOf('W11') !== 0;
+    });
+
+    arr = arr.filter(function (item) {
       return item.indexOf('-') !== 0;
     });
 
-    csvText = arr.join('\n');
+    arr = arr.filter(function (item) {
+      return item.indexOf('/') !== 0;
+    });
 
+    csvText = arr.join('\n');
     const json = parse(csvText, {
       // columns: true,
       skip_empty_lines: true,

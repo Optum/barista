@@ -381,6 +381,7 @@ export class DefaultScanWorkerService {
           try {
             await this.scanService.sendMailOnScanCompletion(scan);
           } catch (error) {
+            this.logger.log('Send Mail Error');
             this.logger.error(error);
           }
           const scanLog = this.scanLogService.db.create();

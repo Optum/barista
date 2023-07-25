@@ -5,6 +5,10 @@
 
 # Barista ![alt text](./barista-web/src/assets/images/barista-icon.png)
 
+
+# We regret to inform you that the Optum organization will no longer being maintaining Barista. As of 7/15/2023, all updates, bug fixes, and support for the project will be discontinued. We sincerely appreciate your support and contributions to Barista during its active phase.
+
+
 Project Barista is a developer focused, cloud native, pure open source solution for open source license and vulnerability management.  
 
 Project goals include but are not limited to:
