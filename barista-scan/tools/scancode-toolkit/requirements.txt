@@ -26,7 +26,7 @@ intbitset==2.4.1
 isodate==0.6.0
 jaraco.functools==2.0
 javaproperties==0.5.1
-Jinja2==2.10
+Jinja2==2.11.3
 jsonstreams==0.5.0
 license-expression==1.2
 lxml==4.6.2
