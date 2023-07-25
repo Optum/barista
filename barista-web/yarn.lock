@@ -2002,15 +2002,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jasmine@*":
-  version "3.5.11"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.5.11.tgz#ba8e80639dffbe277f49c708b45373a320d158e2"
-  integrity sha1-uo6AY53/vid/SccItFNzoyDRWOI=
-
-"@types/jasmine@~3.6.0":
-  version "3.6.11"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.6.11.tgz#4b1d77aa9dfc757407cb9e277216d8e83553f09d"
-  integrity sha1-Sx13qp38dXQHy54nchbY6DVT8J0=
+"@types/jasmine@*", "@types/jasmine@~4.3.5":
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-4.3.5.tgz#05c6b401c041b8a4f3303c3a58c9580aac2b898c"
+  integrity sha512-9YHUdvuNDDRJYXZwHqSsO72Ok0vmqoJbNn73ttyITQp/VA60SarnZ+MPLD37rJAhVoKp+9BWOvJP5tHIRfZylQ==
 
 "@types/jasminewd2@~2.0.8":
   version "2.0.8"
