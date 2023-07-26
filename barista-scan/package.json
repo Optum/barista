@@ -71,7 +71,7 @@
     "@types/cheerio": "^0.22.28",
     "@types/find": "^0.2.1",
     "@types/html-to-text": "^6.0.0",
-    "@types/lodash": "^4.14.168",
+    "@types/lodash": "^4.14.196",
     "@types/nodegit": "^0.27.2",
     "@types/nodemailer": "^6.4.1",
     "@types/request": "^2.48.5",
